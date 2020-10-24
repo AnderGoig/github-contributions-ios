@@ -65,14 +65,16 @@
 	<key>INIntentDefinitionSystemVersion</key>
 	<string>19H2</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>12A7300</string>
+	<string>12A7403</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>12.0.1</string>
+	<string>12.1</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
 			<key>INIntentCategory</key>
 			<string>information</string>
+			<key>INIntentDescription</key>
+			<string>Customize contributions widget.</string>
 			<key>INIntentDescriptionID</key>
 			<string>tVvJ9c</string>
 			<key>INIntentEligibleForWidgets</key>
@@ -97,9 +99,11 @@
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataCapitalization</key>
-						<string>Sentences</string>
+						<string>None</string>
 						<key>INIntentParameterMetadataDefaultValueID</key>
 						<string>YADB8j</string>
+						<key>INIntentParameterMetadataDisableAutocorrect</key>
+						<true/>
 					</dict>
 					<key>INIntentParameterName</key>
 					<string>username</string>
