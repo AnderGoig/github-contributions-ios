@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  GitHubContributions
+
+  Created by Ander Goig on 22/10/2020.
+  
+*/
+
+"app-title" = "GitHub Contributions";
+"app-version-%@" = "Version %@";
+
+"settings-row-widget-guide-title" = "Widget Setup";
+"settings-row-widget-guide-subtitle" = "Learn to customize your home screen";
+
+"settings-row-rate-title" = "Rate the App";
+"settings-row-rate-subtitle" = "Are you loving it?";
+
+"settings-row-share-title" = "Share";
+"settings-row-share-subtitle" = "Spread the word!";
+
+"settings-row-feedback-title" = "Feedback";
+"settings-row-feedback-subtitle" = "goig.ander@icloud.com";
+
+"settings-row-open-source-title" = "Open Source";
+"settings-row-open-source-subtitle" = "Feel free to contribute!";
+
+"widget-guide-title" = "Widget Setup";
+
+"widget-guide-step-%u-title" = "Step %u";
+"widget-guide-step-1-subtitle" = "Touch and hold an empty area on your screen until your apps jiggle.";
+"widget-guide-step-2-subtitle" = "Tap the plus sign in the upper-left corner to bring up the widgets menu.";
+"widget-guide-step-3-subtitle" = "Search for the \"Contributions\" widget and tap the first result.";
+"widget-guide-step-4-subtitle" = "Swipe left and right to choose the widget's size and shape, then tap \"Add Widget\".";
+"widget-guide-step-5-subtitle" = "Tap the widget while it jiggles and you'll bring up the Widget settings menu.";
+"widget-guide-step-6-subtitle" = "Adjust the widget with your preferred GitHub username and theme color.";
+"widget-guide-step-7-subtitle" = "... and, you're done! Enjoy your custom GitHub contributions widget!";
