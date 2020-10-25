@@ -10,13 +10,22 @@ import SwiftUI
 struct GuideView: View {
 
     var body: some View {
-        TabView {
-            ForEach(Step.allCases) { step in
-                StepView(step: step)
+        ZStack(alignment: .bottom) {
+            Color(UIColor.systemGroupedBackground)
+                .edgesIgnoringSafeArea(.bottom)
+
+            RoundedRectangle(cornerRadius: 20.0, style: .continuous)
+                .fill(Color(UIColor.secondarySystemFill))
+                .frame(width: 132.0, height: 24.0, alignment: .bottom)
+                .padding(.bottom, 14.0)
+
+            TabView {
+                ForEach(Step.allCases) { step in
+                    StepView(step: step)
+                }
             }
+            .tabViewStyle(PageTabViewStyle())
         }
-        .edgesIgnoringSafeArea(.bottom)
-        .tabViewStyle(PageTabViewStyle())
         .navigationTitle(LocalizedStringKey("widget-guide-title"))
     }
 
