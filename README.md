@@ -2,6 +2,8 @@
 
 # GitHub Contribution Graphs for iOS
 
+[![App Store](https://img.shields.io/itunes/v/1537192731?label=app%20store)](https://apps.apple.com/app/id1537192731) [![Product Hunt](https://img.shields.io/badge/product%20hunt-v1.x-da542f)](https://www.producthunt.com/posts/contribution-graphs-for-github)
+
 <a href="https://apps.apple.com/app/id1537192731"><img align="right" src=".assets/app-store-badge.svg" alt="App Store Badge"></a>
 
 Quickly check in on your GitHub contributions from your iOS Home Screen!
