@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contributions-count</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@contributions_count@</string>
+		<key>contributions_count</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>u</string>
+			<key>one</key>
+			<string>%u contribución</string>
+			<key>other</key>
+			<string>%u contribuciones</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

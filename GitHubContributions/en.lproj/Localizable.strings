@@ -6,7 +6,7 @@
   
 */
 
-"app-title" = "GitHub Contributions";
+"app-title" = "Contributions";
 "app-version-%@" = "Version %@";
 
 "settings-row-widget-guide-title" = "Widget Setup";

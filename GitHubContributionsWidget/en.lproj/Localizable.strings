@@ -10,4 +10,4 @@
 "widget-graph-description" = "Check in on your GitHub contributions.";
 
 "contributions-empty-text" = "Set a GitHub username";
-"contributions-fetch-error" = "An error occurred while fetching your GitHub contributions";
+"contributions-fetch-error" = "An error occurred while fetching contributions from GitHub";

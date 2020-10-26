@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  GitHubContributions
+
+  Created by Ander Goig on 22/10/2020.
+  
+*/
+
+"widget-graph-display-name" = "Gráfico";
+"widget-graph-description" = "Consulta tus contribuciones de GitHub.";
+
+"contributions-empty-text" = "Editar usuario de GitHub";
+"contributions-fetch-error" = "Se produjo un error al obtener las contribuciones";
