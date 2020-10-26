@@ -22,7 +22,7 @@ struct SettingsRow: View {
                 .foregroundColor(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 6.0, style: .continuous))
 
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 3.0) {
                 Text(item.title)
                     .font(.body)
                     .foregroundColor(.primary)
@@ -34,7 +34,7 @@ struct SettingsRow: View {
                     .lineLimit(1)
             }
         }
-        .padding(.vertical, 4.0)
+        .padding(.vertical, 5.0)
     }
 
 }
