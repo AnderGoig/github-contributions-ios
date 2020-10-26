@@ -15,3 +15,25 @@ Quickly check in on your GitHub contributions from your iOS Home Screen!
 ## Screenshots
 
 <img src=".assets/app-screenshot-1.png" width="250" alt="App Screenshot 1"> <img src=".assets/app-screenshot-2.png" width="250" alt="App Screenshot 2">
+
+## Requirements
+
+- iOS 14.0+
+- Xcode 12.0+
+
+## Contributing
+
+If you have feature requests or bug reports, feel free to help out by sending pull requests or by [creating new issues](https://github.com/AnderGoig/github-contributions-ios/issues/new). Please take a moment to
+review the [CONTRIBUTING](.github/CONTRIBUTING.md) guidelines.
+
+## Credits
+
+"Contribution Graphs for GitHub" is brought to you by [Ander Goig](https://github.com/AnderGoig) and [contributors to the project](https://github.com/AnderGoig/github-contributions-ios/contributors).
+
+### Third-Party Libraries
+
+"Contribution Graphs for GitHub" uses [Kingfisher](https://github.com/onevcat/Kingfisher) by [@onevcat](https://github.com/onevcat).
+
+## License
+
+"Contribution Graphs for GitHub" is released under the MIT license. See [LICENSE](LICENSE) for details.
