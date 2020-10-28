@@ -22,7 +22,7 @@ extension GitHub {
 
         /// Constants that indicate the amount of contributions:
         /// Level `.zero` means zero contributions.
-        public enum Level: CaseIterable {
+        public enum Level: Int, CaseIterable {
             case zero, first, second, third, fourth
         }
 
@@ -32,24 +32,6 @@ extension GitHub {
             self.level = level
         }
 
-    }
-
-}
-
-// MARK: - Convenience
-
-extension GitHub.Contribution.Level {
-
-    /// Returns the corresponding level of contribution according to GitHub's default hex colors.
-    /// - Parameter hexColor: String representing the hex color.
-    init(hexColor: String) {
-        switch hexColor.lowercased() {
-        case "#9be9a8": self = .first
-        case "#40c463": self = .second
-        case "#30a14e": self = .third
-        case "#216e39": self = .fourth
-        default: self = .zero
-        }
     }
 
 }

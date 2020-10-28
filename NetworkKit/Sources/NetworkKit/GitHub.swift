@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftSoup
 
 public struct GitHub {
 
@@ -25,10 +26,9 @@ public struct GitHub {
             do {
                 let url = try contributionsURL(for: username)
                 let html = try String(contentsOf: url, encoding: .utf8)
-                let pattern = "(fill=\")(#[^\"]{6})(\" data-count=\")([^\"]{1,})(\" data-date=\")([^\"]{10})(\"/>)"
-                let regex = try NSRegularExpression(pattern: pattern, options: .caseInsensitive)
-                let matches = regex.matches(in: html, options: [], range: NSRange(location: 0, length: html.count))
-                let contributions = matches.compactMap { contribution(from: $0, in: html as NSString) }
+                let document = try SwiftSoup.parse(html)
+                let defaultColors = try colors(from: document)
+                let contributions = try document.select("rect").compactMap { try contribution(from: $0, colors: defaultColors) }
                 promise(.success(contributions))
             } catch {
                 promise(.failure(error))
@@ -43,12 +43,21 @@ public struct GitHub {
         return url
     }
 
-    private static func contribution(from match: NSTextCheckingResult, in html: NSString) -> Contribution? {
-        let fill = html.substring(with: match.range(at: 2))
-        let dataCount = html.substring(with: match.range(at: 4))
-        let dataDate = html.substring(with: match.range(at: 6))
-        guard let count = Int(dataCount), let date = dateFormatter.date(from: dataDate) else { return nil }
-        return Contribution(date: date, count: count, level: .init(hexColor: fill))
+    private static func colors(from document: Document) throws -> [String] {
+        try document.getElementsByClass("legend").first()?.children().map { try $0.attr("style") } ?? []
+    }
+
+    private static func contribution(from element: Element, colors: [String]) throws -> Contribution? {
+        let fill = try element.attr("fill")
+        let dataCount = try element.attr("data-count")
+        let dataDate = try element.attr("data-date")
+
+        guard let colorIndex = colors.firstIndex(where: { $0.contains(fill) }),
+              let count = Int(dataCount),
+              let date = dateFormatter.date(from: dataDate)
+        else { return nil }
+
+        return Contribution(date: date, count: count, level: Contribution.Level(rawValue: colorIndex) ?? .zero)
     }
 
 }
