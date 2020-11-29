@@ -52,8 +52,8 @@ public struct GitHub {
         let dataCount = try element.attr("data-count")
         let dataDate = try element.attr("data-date")
 
-        guard let colorIndex = colors.firstIndex(where: { $0.contains(fill) }),
-              let count = Int(dataCount),
+        let colorIndex = colors.firstIndex(where: { $0.contains(fill) }) ?? 0
+        guard let count = Int(dataCount),
               let date = dateFormatter.date(from: dataDate)
         else { return nil }
 
