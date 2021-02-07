@@ -21,16 +21,18 @@ public struct GitHub {
 
     // MARK: - Public Methods
 
-    public static func getContributions(for username: String) -> Future<[Contribution], Error> {
+    public static func getContributions(for username: String, queue: DispatchQueue) -> Future<[Contribution], Error> {
         Future { promise in
-            do {
-                let url = try contributionsURL(for: username)
-                let html = try String(contentsOf: url, encoding: .utf8)
-                let document = try SwiftSoup.parse(html)
-                let contributions = try document.select("rect").compactMap(contribution)
-                promise(.success(contributions))
-            } catch {
-                promise(.failure(error))
+            queue.async {
+                do {
+                    let url = try contributionsURL(for: username)
+                    let html = try String(contentsOf: url, encoding: .utf8)
+                    let document = try SwiftSoup.parse(html)
+                    let contributions = try document.select("rect").compactMap(contribution)
+                    promise(.success(contributions))
+                } catch {
+                    promise(.failure(error))
+                }
             }
         }
     }

@@ -34,10 +34,10 @@ final class GitHubContributionsProvider: IntentTimelineProvider {
         let currentDate = Date()
         let refreshDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
         let username = configuration.username?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-        timelineCancellable = GitHub.getContributions(for: username)
+        timelineCancellable = GitHub.getContributions(for: username, queue: queue)
+            .subscribe(on: queue)
             .map { Timeline(entries: [Entry(contributions: $0, configuration: configuration)], policy: .after(refreshDate)) }
             .replaceError(with: Timeline(entries: [Entry(contributions: [], configuration: configuration)], policy: .after(refreshDate)))
-            .subscribe(on: queue)
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: completion)
     }

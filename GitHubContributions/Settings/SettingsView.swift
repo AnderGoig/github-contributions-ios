@@ -34,7 +34,7 @@ struct SettingsView: View {
                 }
             }
             .listStyle(InsetGroupedListStyle())
-            .navigationBarTitle(LocalizedStringKey("app-title"), displayMode: .inline)
+            .navigationBarTitle(LocalizedStringKey("settings-title"), displayMode: .automatic)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

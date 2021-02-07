@@ -9,6 +9,16 @@
 "app-title" = "Contributions";
 "app-version-%@" = "Version %@";
 
+"contributions-empty-title" = "No contributions";
+"contributions-empty-subtitle" = "Tap the '+' button to add your favorite GitHub usernames";
+
+"contributions-add-title" = "Add Contributions";
+"contributions-add-placeholder" = "Enter a GitHub username";
+"contributions-add-accept" = "Add";
+"contributions-add-cancel" = "Cancel";
+
+"settings-title" = "Settings";
+
 "settings-row-widget-guide-title" = "Widget Setup";
 "settings-row-widget-guide-subtitle" = "Learn to customize your home screen";
 
