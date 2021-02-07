@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7702E18A25CF2DC9003ECC3D /* ContributionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702E18925CF2DC9003ECC3D /* ContributionsListView.swift */; };
 		771E3B54253CEB7600984A0B /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3B4E253CEADD00984A0B /* ArrayExtensions.swift */; };
 		771E3B5A253CEBCE00984A0B /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3B59253CEBCE00984A0B /* DateExtensions.swift */; };
 		771E3B89253E2C7700984A0B /* InterfaceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 771E3B88253E2C7700984A0B /* InterfaceKit */; };
@@ -37,6 +38,9 @@
 		77A7226325461F6400B6064B /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 77A7226225461F6400B6064B /* KingfisherSwiftUI */; };
 		77A722D92546620600B6064B /* GitHubContributionsWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 77A722DC2546620600B6064B /* GitHubContributionsWidget.intentdefinition */; };
 		77A722DA2546620600B6064B /* GitHubContributionsWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 77A722DC2546620600B6064B /* GitHubContributionsWidget.intentdefinition */; };
+		77B39C9225CF3D6500B5D0B8 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B39C9125CF3D6500B5D0B8 /* UIAlertControllerExtensions.swift */; };
+		77B39CB825CF59B000B5D0B8 /* ContributionsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B39CB725CF59B000B5D0B8 /* ContributionsListViewModel.swift */; };
+		77B39CC225CF5ACF00B5D0B8 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B39CC125CF5ACF00B5D0B8 /* UserDefaultsExtensions.swift */; };
 		77BD1E982540EDDF00830186 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77BD1E9A2540EDDF00830186 /* Localizable.strings */; };
 		77BD1EA02540EF0800830186 /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BD1E9F2540EF0800830186 /* SettingsRow.swift */; };
 		77BD1EA62540EF4300830186 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BD1EA52540EF4300830186 /* SettingsItem.swift */; };
@@ -88,6 +92,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7702E18925CF2DC9003ECC3D /* ContributionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsListView.swift; sourceTree = "<group>"; };
 		771E3B4E253CEADD00984A0B /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		771E3B59253CEBCE00984A0B /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		771E3B73253E249100984A0B /* InterfaceKit */ = {isa = PBXFileReference; lastKnownFileType = text; path = InterfaceKit; sourceTree = SOURCE_ROOT; };
@@ -127,6 +132,9 @@
 		77A7227E2546572500B6064B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = es; path = es.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		77A722DB2546620600B6064B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/GitHubContributionsWidget.intentdefinition; sourceTree = "<group>"; };
 		77A722E22546622100B6064B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/GitHubContributionsWidget.strings; sourceTree = "<group>"; };
+		77B39C9125CF3D6500B5D0B8 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
+		77B39CB725CF59B000B5D0B8 /* ContributionsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsListViewModel.swift; sourceTree = "<group>"; };
+		77B39CC125CF5ACF00B5D0B8 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		77BD1E992540EDDF00830186 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		77BD1E9F2540EF0800830186 /* SettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRow.swift; sourceTree = "<group>"; };
 		77BD1EA52540EF4300830186 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
@@ -178,6 +186,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7702E17E25CF2D76003ECC3D /* Contributions */ = {
+			isa = PBXGroup;
+			children = (
+				77B39CB725CF59B000B5D0B8 /* ContributionsListViewModel.swift */,
+				7702E18925CF2DC9003ECC3D /* ContributionsListView.swift */,
+				7761A6FA2543BDB6000871E3 /* ContributionsRowViewModel.swift */,
+				7761A6F42543BD82000871E3 /* ContributionsRow.swift */,
+			);
+			path = Contributions;
+			sourceTree = "<group>";
+		};
 		771E3B4D253CEACD00984A0B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				777D65EF25379A23001029C4 /* GitHubContributionsApp.swift */,
+				7702E17E25CF2D76003ECC3D /* Contributions */,
 				77BF7B4A2543B38D006DA340 /* Settings */,
 				77BF7B492543B380006DA340 /* Guide */,
 				77BF7B482543B373006DA340 /* Extensions */,
@@ -280,6 +300,8 @@
 			isa = PBXGroup;
 			children = (
 				77BD1EAB2540EFB500830186 /* NetworkKitExtensions.swift */,
+				77B39C9125CF3D6500B5D0B8 /* UIAlertControllerExtensions.swift */,
+				77B39CC125CF5ACF00B5D0B8 /* UserDefaultsExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -301,8 +323,6 @@
 				779B0F05253F8DA40046B7E1 /* SettingsViewModel.swift */,
 				777D65F125379A23001029C4 /* SettingsView.swift */,
 				77BD1E9F2540EF0800830186 /* SettingsRow.swift */,
-				7761A6FA2543BDB6000871E3 /* ContributionsRowViewModel.swift */,
-				7761A6F42543BD82000871E3 /* ContributionsRow.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -514,12 +534,16 @@
 				777D65F225379A23001029C4 /* SettingsView.swift in Sources */,
 				77BD1EB82540F60000830186 /* GuideView.swift in Sources */,
 				77A722D92546620600B6064B /* GitHubContributionsWidget.intentdefinition in Sources */,
+				77B39C9225CF3D6500B5D0B8 /* UIAlertControllerExtensions.swift in Sources */,
 				77BD1EA02540EF0800830186 /* SettingsRow.swift in Sources */,
 				777D65F025379A23001029C4 /* GitHubContributionsApp.swift in Sources */,
 				77BF7B3D2543B33B006DA340 /* StepView.swift in Sources */,
 				779B0F06253F8DA40046B7E1 /* SettingsViewModel.swift in Sources */,
+				77B39CC225CF5ACF00B5D0B8 /* UserDefaultsExtensions.swift in Sources */,
 				77BF7B432543B361006DA340 /* Step.swift in Sources */,
+				77B39CB825CF59B000B5D0B8 /* ContributionsListViewModel.swift in Sources */,
 				77BD1EAC2540EFB500830186 /* NetworkKitExtensions.swift in Sources */,
+				7702E18A25CF2DC9003ECC3D /* ContributionsListView.swift in Sources */,
 				77BD1EA62540EF4300830186 /* SettingsItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -760,7 +784,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"GitHubContributions/Preview Content\"";
 				DEVELOPMENT_TEAM = 75Z728ZJJT;
 				ENABLE_PREVIEWS = YES;
@@ -785,7 +809,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"GitHubContributions/Preview Content\"";
 				DEVELOPMENT_TEAM = 75Z728ZJJT;
 				ENABLE_PREVIEWS = YES;
@@ -809,7 +833,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 75Z728ZJJT;
 				INFOPLIST_FILE = GitHubContributionsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -833,7 +857,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 75Z728ZJJT;
 				INFOPLIST_FILE = GitHubContributionsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -856,7 +880,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 75Z728ZJJT;
 				INFOPLIST_FILE = GitHubContributionsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -878,7 +902,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 75Z728ZJJT;
 				INFOPLIST_FILE = GitHubContributionsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -901,7 +925,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 75Z728ZJJT;
 				INFOPLIST_FILE = GitHubContributionsWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -924,7 +948,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 75Z728ZJJT;
 				INFOPLIST_FILE = GitHubContributionsWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -997,7 +1021,7 @@
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.15.6;
+				minimumVersion = 5.15.8;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

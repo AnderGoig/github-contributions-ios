@@ -21,17 +21,18 @@ public struct GitHub {
 
     // MARK: - Public Methods
 
-    public static func getContributions(for username: String) -> Future<[Contribution], Error> {
+    public static func getContributions(for username: String, queue: DispatchQueue) -> Future<[Contribution], Error> {
         Future { promise in
-            do {
-                let url = try contributionsURL(for: username)
-                let html = try String(contentsOf: url, encoding: .utf8)
-                let document = try SwiftSoup.parse(html)
-                let defaultColors = try colors(from: document)
-                let contributions = try document.select("rect").compactMap { try contribution(from: $0, colors: defaultColors) }
-                promise(.success(contributions))
-            } catch {
-                promise(.failure(error))
+            queue.async {
+                do {
+                    let url = try contributionsURL(for: username)
+                    let html = try String(contentsOf: url, encoding: .utf8)
+                    let document = try SwiftSoup.parse(html)
+                    let contributions = try document.select("rect").compactMap(contribution)
+                    promise(.success(contributions))
+                } catch {
+                    promise(.failure(error))
+                }
             }
         }
     }
@@ -43,21 +44,17 @@ public struct GitHub {
         return url
     }
 
-    private static func colors(from document: Document) throws -> [String] {
-        try document.getElementsByClass("legend").first()?.children().map { try $0.attr("style") } ?? []
-    }
+    private static func contribution(from htmlElement: Element) throws -> Contribution? {
+        let dataCount = try htmlElement.attr("data-count")
+        let dataDate = try htmlElement.attr("data-date")
+        let dataLevel = try htmlElement.attr("data-level")
 
-    private static func contribution(from element: Element, colors: [String]) throws -> Contribution? {
-        let fill = try element.attr("fill")
-        let dataCount = try element.attr("data-count")
-        let dataDate = try element.attr("data-date")
-
-        guard let colorIndex = colors.firstIndex(where: { $0.contains(fill) }),
+        guard let level = Int(dataLevel),
               let count = Int(dataCount),
               let date = dateFormatter.date(from: dataDate)
         else { return nil }
 
-        return Contribution(date: date, count: count, level: Contribution.Level(rawValue: colorIndex) ?? .zero)
+        return Contribution(date: date, count: count, level: Contribution.Level(rawValue: level) ?? .zero)
     }
 
 }
