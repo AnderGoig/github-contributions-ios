@@ -17,6 +17,10 @@ struct GitHubContributionsViewModel {
         configuration.theme
     }
 
+    var isPureBlackEnabled: Bool {
+        configuration.pureBlack?.boolValue ?? false
+    }
+
     var username: String? {
         configuration.username
     }
