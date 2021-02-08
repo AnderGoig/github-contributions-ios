@@ -37,56 +37,22 @@ public extension Color {
 
     // MARK: - Blue Theme
 
-    static var blueLevel1: Color {
-        Color(.sRGB, red: 0.475, green: 0.722, blue: 1.0, opacity: 1.0)
-    }
-
-    static var blueLevel2: Color {
-        Color(.sRGB, red: 0.129, green: 0.533, blue: 1.0, opacity: 1.0)
-    }
-
-    static var blueLevel3: Color {
-        Color(.sRGB, red: 0.0, green: 0.361, blue: 0.773, opacity: 1.0)
-    }
-
-    static var blueLevel4: Color {
-        Color(.sRGB, red: 0.016, green: 0.259, blue: 0.537, opacity: 1.0)
-    }
+    static let blueLevel1 = Color("BlueLevel1", bundle: .module)
+    static let blueLevel2 = Color("BlueLevel2", bundle: .module)
+    static let blueLevel3 = Color("BlueLevel3", bundle: .module)
+    static let blueLevel4 = Color("BlueLevel4", bundle: .module)
 
     // MARK: - Green Theme
 
-    static var greenLevel1: Color {
-        Color(.sRGB, red: 0.608, green: 0.914, blue: 0.659, opacity: 1.0)
-    }
-
-    static var greenLevel2: Color {
-        Color(.sRGB, red: 0.251, green: 0.769, blue: 0.388, opacity: 1.0)
-    }
-
-    static var greenLevel3: Color {
-        Color(.sRGB, red: 0.188, green: 0.631, blue: 0.306, opacity: 1.0)
-    }
-
-    static var greenLevel4: Color {
-        Color(.sRGB, red: 0.129, green: 0.431, blue: 0.224, opacity: 1.0)
-    }
+    static let greenLevel1 = Color("GreenLevel1", bundle: .module)
+    static let greenLevel2 = Color("GreenLevel2", bundle: .module)
+    static let greenLevel3 = Color("GreenLevel3", bundle: .module)
+    static let greenLevel4 = Color("GreenLevel4", bundle: .module)
 
     // MARK: - Red Theme
 
-    static var redLevel1: Color {
-        Color(.sRGB, red: 0.976, green: 0.459, blue: 0.514, opacity: 1.0)
-    }
-
-    static var redLevel2: Color {
-        Color(.sRGB, red: 0.918, green: 0.290, blue: 0.353, opacity: 1.0)
-    }
-
-    static var redLevel3: Color {
-        Color(.sRGB, red: 0.796, green: 0.141, blue: 0.192, opacity: 1.0)
-    }
-
-    static var redLevel4: Color {
-        Color(.sRGB, red: 0.702, green: 0.114, blue: 0.157, opacity: 1.0)
-    }
-
+    static let redLevel1 = Color("RedLevel1", bundle: .module)
+    static let redLevel2 = Color("RedLevel2", bundle: .module)
+    static let redLevel3 = Color("RedLevel3", bundle: .module)
+    static let redLevel4 = Color("RedLevel4", bundle: .module)
 }

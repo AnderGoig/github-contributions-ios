@@ -14,7 +14,7 @@
 		771E3BA9253E423700984A0B /* GitHubContributionsGraphWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3BA8253E423700984A0B /* GitHubContributionsGraphWidget.swift */; };
 		771E3BAF253E42BA00984A0B /* GitHubContributionsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3BAE253E42BA00984A0B /* GitHubContributionsProvider.swift */; };
 		771E3BB9253E440500984A0B /* ThemeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3BB8253E440500984A0B /* ThemeExtensions.swift */; };
-		771E3BC3253E480800984A0B /* InterfaceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 771E3BC2253E480800984A0B /* InterfaceKit */; };
+		771E3BC3253E480800984A0B /* InterfaceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 771E3BC2253E480800984A0B /* InterfaceKit */; settings = {ATTRIBUTES = (Required, ); }; };
 		771E3BDB253E496900984A0B /* NetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 771E3BDA253E496900984A0B /* NetworkKit */; };
 		771E3BE1253E497000984A0B /* NetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 771E3BE0253E497000984A0B /* NetworkKit */; };
 		7761A6F52543BD82000871E3 /* ContributionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A6F42543BD82000871E3 /* ContributionsRow.swift */; };
