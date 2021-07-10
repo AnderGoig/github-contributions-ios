@@ -55,6 +55,16 @@
 					<key>INEnumValueName</key>
 					<string>red</string>
 				</dict>
+                <dict>
+					<key>INEnumValueDisplayName</key>
+					<string>Purple</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>U83kJs</string>
+					<key>INEnumValueIndex</key>
+					<integer>4</integer>
+					<key>INEnumValueName</key>
+					<string>purple</string>
+				</dict>
 			</array>
 		</dict>
 	</array>
