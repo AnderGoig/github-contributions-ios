@@ -34,7 +34,6 @@
 		777D665C2537A18F001029C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 777D665B2537A18F001029C4 /* Assets.xcassets */; };
 		777D66622537A18F001029C4 /* GitHubContributionsWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 777D66522537A18D001029C4 /* GitHubContributionsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		779B0F06253F8DA40046B7E1 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779B0F05253F8DA40046B7E1 /* SettingsViewModel.swift */; };
-		77A7226325461F6400B6064B /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 77A7226225461F6400B6064B /* KingfisherSwiftUI */; };
 		77A722D92546620600B6064B /* GitHubContributionsWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 77A722DC2546620600B6064B /* GitHubContributionsWidget.intentdefinition */; };
 		77A722DA2546620600B6064B /* GitHubContributionsWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 77A722DC2546620600B6064B /* GitHubContributionsWidget.intentdefinition */; };
 		77B39C9225CF3D6500B5D0B8 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B39C9125CF3D6500B5D0B8 /* UIAlertControllerExtensions.swift */; };
@@ -50,6 +49,7 @@
 		77BF7AE725435FB1006DA340 /* GitHubContributionsGraphWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF7AE625435FB1006DA340 /* GitHubContributionsGraphWidgetView.swift */; };
 		77BF7B3D2543B33B006DA340 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF7B3C2543B33A006DA340 /* StepView.swift */; };
 		77BF7B432543B361006DA340 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF7B422543B361006DA340 /* Step.swift */; };
+		BE67BFC326DBBF3B00B09345 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BE67BFC226DBBF3B00B09345 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,7 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77A7226325461F6400B6064B /* KingfisherSwiftUI in Frameworks */,
+				BE67BFC326DBBF3B00B09345 /* Kingfisher in Frameworks */,
 				771E3BE1253E497000984A0B /* NetworkKit in Frameworks */,
 				771E3BC3253E480800984A0B /* InterfaceKit in Frameworks */,
 			);
@@ -343,7 +343,7 @@
 			packageProductDependencies = (
 				771E3BC2253E480800984A0B /* InterfaceKit */,
 				771E3BE0253E497000984A0B /* NetworkKit */,
-				77A7226225461F6400B6064B /* KingfisherSwiftUI */,
+				BE67BFC226DBBF3B00B09345 /* Kingfisher */,
 			);
 			productName = GitHubContributions;
 			productReference = 777D65EC25379A23001029C4 /* GitHubContributions.app */;
@@ -420,7 +420,7 @@
 			);
 			mainGroup = 777D65E325379A23001029C4;
 			packageReferences = (
-				77A7226125461F6400B6064B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				BE67BFC126DBBF3B00B09345 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 777D65ED25379A23001029C4 /* Products */;
 			projectDirPath = "";
@@ -891,12 +891,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		77A7226125461F6400B6064B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		BE67BFC126DBBF3B00B09345 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.15.8;
+				kind = upToNextMinorVersion;
+				minimumVersion = 6.3.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -918,10 +918,10 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkKit;
 		};
-		77A7226225461F6400B6064B /* KingfisherSwiftUI */ = {
+		BE67BFC226DBBF3B00B09345 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 77A7226125461F6400B6064B /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = KingfisherSwiftUI;
+			package = BE67BFC126DBBF3B00B09345 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

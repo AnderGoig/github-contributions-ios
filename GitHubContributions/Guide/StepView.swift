@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import KingfisherSwiftUI
+import Kingfisher
 
 struct StepView: View {
 
@@ -15,7 +15,7 @@ struct StepView: View {
 
     var body: some View {
         VStack(spacing: 32.0) {
-            VStack(alignment: .center, spacing: 6.0) {
+            VStack(spacing: 6.0) {
                 Text(step.title)
                     .font(.system(size: 28.0, weight: .bold, design: .default))
                     .foregroundColor(.primary)
@@ -27,7 +27,8 @@ struct StepView: View {
                     .lineLimit(2)
             }
 
-            KFImage(colorScheme == .dark ? step.darkImage : step.lightImage, options: [.backgroundDecode])
+            KFImage(colorScheme == .dark ? step.darkImage : step.lightImage)
+                .backgroundDecode()
                 .placeholder {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle())
