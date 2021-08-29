@@ -120,7 +120,6 @@
 		77A7227D2546572500B6064B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		77A7227E2546572500B6064B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = es; path = es.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		77A722DB2546620600B6064B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/GitHubContributionsWidget.intentdefinition; sourceTree = "<group>"; };
-		77A722E22546622100B6064B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/GitHubContributionsWidget.strings; sourceTree = "<group>"; };
 		77B39C9125CF3D6500B5D0B8 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
 		77B39CB725CF59B000B5D0B8 /* ContributionsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsListViewModel.swift; sourceTree = "<group>"; };
 		77B39CC125CF5ACF00B5D0B8 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
@@ -134,6 +133,7 @@
 		77BF7AE625435FB1006DA340 /* GitHubContributionsGraphWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubContributionsGraphWidgetView.swift; sourceTree = "<group>"; };
 		77BF7B3C2543B33A006DA340 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 		77BF7B422543B361006DA340 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		BE67BFC726DBC57600B09345 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/GitHubContributionsWidget.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -570,7 +570,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				77A722DB2546620600B6064B /* Base */,
-				77A722E22546622100B6064B /* es */,
+				BE67BFC726DBC57600B09345 /* es */,
 			);
 			name = GitHubContributionsWidget.intentdefinition;
 			sourceTree = "<group>";
