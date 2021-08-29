@@ -22,7 +22,7 @@ struct ContributionsListView: View {
                     listView
                 }
             }
-            .navigationBarTitle(LocalizedStringKey("app-title"), displayMode: .automatic)
+            .navigationBarTitle("app-title")
             .navigationBarItems(trailing: addButton)
         }
         .navigationViewStyle(StackNavigationViewStyle())
