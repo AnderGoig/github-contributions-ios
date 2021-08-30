@@ -26,6 +26,7 @@ extension Theme {
         case .green: return .greenLevel1
         case .blue: return .blueLevel1
         case .red: return .redLevel1
+        case .purple: return .purpleLevel1
         }
     }
 
@@ -35,6 +36,7 @@ extension Theme {
         case .green: return .greenLevel2
         case .blue: return .blueLevel2
         case .red: return .redLevel2
+        case .purple: return .purpleLevel2
         }
     }
 
@@ -44,6 +46,7 @@ extension Theme {
         case .green: return .greenLevel3
         case .blue: return .blueLevel3
         case .red: return .redLevel3
+        case .purple: return .purpleLevel3
         }
     }
 
@@ -53,6 +56,7 @@ extension Theme {
         case .green: return .greenLevel4
         case .blue: return .blueLevel4
         case .red: return .redLevel4
+        case .purple: return .purpleLevel4
         }
     }
 

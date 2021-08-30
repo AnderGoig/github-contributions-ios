@@ -36,12 +36,12 @@ extension GitHubContributionsApp {
 
     /// App's current version.
     static var version: String? {
-        return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     }
 
     /// App's current build number.
     static var build: String? {
-        return Bundle.main.infoDictionary?["CFBundleVersion"] as? String
+        Bundle.main.infoDictionary?["CFBundleVersion"] as? String
     }
 
     /// App's current version and build number.
