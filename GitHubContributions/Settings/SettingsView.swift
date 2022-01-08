@@ -33,10 +33,8 @@ struct SettingsView: View {
                     }
                 }
             }
-            .listStyle(InsetGroupedListStyle())
             .navigationTitle("settings-title")
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 
     var footer: some View {
@@ -46,7 +44,7 @@ struct SettingsView: View {
             .foregroundColor(.secondary)
             .font(.caption2)
             .multilineTextAlignment(.center)
-            .frame(maxWidth: .infinity, alignment: .center)
+            .frame(maxWidth: .infinity)
             .listRowInsets(EdgeInsets(top: 24.0, leading: 0.0, bottom: 24.0, trailing: 0.0))
     }
 

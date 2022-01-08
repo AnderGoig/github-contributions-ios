@@ -17,8 +17,8 @@ struct GitHubContributionsGraphWidget: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: GitHubContributionsProvider()) { entry in
             GitHubContributionsGraphEntryView(entry: entry)
         }
-        .configurationDisplayName(LocalizedStringKey("widget-graph-display-name"))
-        .description(LocalizedStringKey("widget-graph-description"))
+        .configurationDisplayName("widget-graph-display-name")
+        .description("widget-graph-description")
         .supportedFamilies([.systemSmall, .systemMedium])
     }
 

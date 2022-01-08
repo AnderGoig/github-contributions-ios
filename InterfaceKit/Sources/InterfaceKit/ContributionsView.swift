@@ -21,9 +21,9 @@ public struct ContributionsView: View {
     private let tileSpacing: CGFloat = 3.0
 
     public var body: some View {
-        VStack(alignment: .center, spacing: nil) {
-            HStack(alignment: .center, spacing: nil) {
-                HStack(alignment: .center, spacing: 6.0) {
+        VStack {
+            HStack {
+                HStack(spacing: 6.0) {
                     Image("GitHubMark", bundle: .module)
                         .resizable()
                         .frame(width: 12.0, height: 12.0)
@@ -36,14 +36,12 @@ public struct ContributionsView: View {
             .captionStyle()
 
             if colors.isEmpty {
-                Button(action: {}) {
-                    Image(systemName: "info.circle")
-                    emptyText.map(Text.init)
-                }
-                .font(.system(size: 16.0, weight: .semibold, design: .default))
-                .foregroundColor(.blue)
-                .frame(maxHeight: .infinity, alignment: .center)
-                .unredacted()
+                Spacer()
+                Label(emptyText ?? "", systemImage: "info.circle")
+                    .font(.callout.weight(.semibold))
+                    .foregroundColor(.blue)
+                    .unredacted()
+                Spacer()
             } else {
                 GridStack(rows: rowsCount, columns: columnsCount, spacing: tileSpacing) { row, column in
                     if let color = colors.element(at: row)?.element(at: column) {

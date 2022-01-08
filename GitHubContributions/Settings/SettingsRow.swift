@@ -12,7 +12,18 @@ struct SettingsRow: View {
     let item: SettingsItem
 
     var body: some View {
-        HStack(alignment: .center, spacing: 16.0) {
+        Label {
+            VStack(alignment: .leading, spacing: 3.0) {
+                Text(item.title)
+                    .font(.body)
+                    .foregroundColor(.primary)
+
+                Text(item.subtitle)
+                    .font(.footnote)
+                    .foregroundColor(.secondary)
+                    .tint(.secondary)
+            }
+        } icon: {
             Image(systemName: item.systemImageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -21,20 +32,23 @@ struct SettingsRow: View {
                 .background(item.color)
                 .foregroundColor(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 6.0, style: .continuous))
-
-            VStack(alignment: .leading, spacing: 3.0) {
-                Text(item.title)
-                    .font(.body)
-                    .foregroundColor(.primary)
-                    .lineLimit(1)
-
-                Text(item.subtitle)
-                    .font(.footnote)
-                    .foregroundColor(.secondary)
-                    .lineLimit(1)
-            }
         }
-        .padding(.vertical, 5.0)
+        .labelStyle(SettingsLabelStyle())
+        .padding(.vertical, 4.0)
+        .lineLimit(1)
+    }
+
+}
+
+// MARK: -
+
+struct SettingsLabelStyle: LabelStyle {
+
+    func makeBody(configuration: Configuration) -> some View {
+        HStack(spacing: 12.0) {
+            configuration.icon
+            configuration.title
+        }
     }
 
 }

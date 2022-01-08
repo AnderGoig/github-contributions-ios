@@ -17,7 +17,7 @@ struct StepView: View {
         VStack(spacing: 32.0) {
             VStack(spacing: 6.0) {
                 Text(step.title)
-                    .font(.system(size: 28.0, weight: .bold, design: .default))
+                    .font(.title.bold())
                     .foregroundColor(.primary)
 
                 Text(step.subtitle)

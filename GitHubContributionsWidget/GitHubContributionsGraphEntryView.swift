@@ -14,7 +14,7 @@ struct GitHubContributionsGraphEntryView: View {
 
     var body: some View {
         if entry.showError {
-            Text(LocalizedStringKey("contributions-fetch-error"))
+            Text("contributions-fetch-error")
                 .font(.callout)
                 .multilineTextAlignment(.center)
                 .modifier(WidgetStyle(isPureBlackEnabled: entry.isPureBlackEnabled))

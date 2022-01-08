@@ -7,11 +7,9 @@
 
 import Foundation
 
-enum Step: Int, CaseIterable, Identifiable {
+enum Step: Int, CaseIterable {
 
     case one = 1, two, three, four, five, six, seven
-
-    var id: Int { rawValue }
 
     var title: String {
         .localizedStringWithFormat(NSLocalizedString("widget-guide-step-%u-title", comment: ""), rawValue)

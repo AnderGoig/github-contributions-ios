@@ -9,6 +9,8 @@
 "app-title" = "Contributions";
 "app-version-%@" = "Version %@";
 
+"contributions-loading" = "Loading...";
+
 "contributions-empty-title" = "No contributions";
 "contributions-empty-subtitle" = "Tap the '+' button to add your favorite GitHub usernames";
 

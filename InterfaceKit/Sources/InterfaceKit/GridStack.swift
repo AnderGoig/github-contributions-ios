@@ -15,9 +15,9 @@ struct GridStack<Content: View>: View {
     let content: (Int, Int) -> Content
 
     var body: some View {
-        HStack(alignment: .center, spacing: spacing) {
+        HStack(spacing: spacing) {
             ForEach(0 ..< columns, id: \.self) { row in
-                VStack(alignment: .center, spacing: spacing) {
+                VStack(spacing: spacing) {
                     ForEach(0 ..< rows, id: \.self) { column in
                         content(row, column)
                     }

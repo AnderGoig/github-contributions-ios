@@ -9,6 +9,8 @@
 "app-title" = "Contribuciones";
 "app-version-%@" = "Versión %@";
 
+"contributions-loading" = "Cargando...";
+
 "contributions-empty-title" = "Sin contribuciones";
 "contributions-empty-subtitle" = "Toca el botón '+' para añadir tus usuarios de GitHub favoritos";
 

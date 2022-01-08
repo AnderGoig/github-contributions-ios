@@ -15,7 +15,7 @@ struct ContributionsListView: View {
 
     var body: some View {
         NavigationView {
-            ZStack {
+            Group {
                 if viewModel.contributions.isEmpty {
                     emptyView
                 } else {
@@ -24,29 +24,25 @@ struct ContributionsListView: View {
             }
             .navigationTitle("app-title")
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: { showsAlert = true }) {
-                        Image(systemName: "plus")
-                    }
+                Button(action: { showsAlert = true }) {
+                    Image(systemName: "plus.circle.fill")
                 }
             }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
         .alert(isPresented: $showsAlert, addContributionsAlert)
     }
 
     private var emptyView: some View {
-        VStack(alignment: .center, spacing: 6.0, content: {
+        VStack(spacing: 6.0) {
             Text("contributions-empty-title")
                 .font(.headline)
                 .foregroundColor(.primary)
-                .multilineTextAlignment(.center)
 
             Text("contributions-empty-subtitle")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
-                .multilineTextAlignment(.center)
-        })
+        }
+        .multilineTextAlignment(.center)
         .padding(EdgeInsets(top: 0.0, leading: 44.0, bottom: 0.0, trailing: 44.0))
     }
 
@@ -58,7 +54,7 @@ struct ContributionsListView: View {
             .onDelete(perform: onDelete)
             .onMove(perform: onMove)
         }
-        .listStyle(PlainListStyle())
+        .ignoresSafeArea(.keyboard)
     }
 
     private var addContributionsAlert: TextAlert {

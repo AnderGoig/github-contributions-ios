@@ -5,8 +5,8 @@
 //  Created by Ander Goig on 14/10/2020.
 //
 
-import WidgetKit
 import SwiftUI
+import WidgetKit
 
 @main
 struct GitHubContributionsWidgetBundle: WidgetBundle {
