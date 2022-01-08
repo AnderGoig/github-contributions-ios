@@ -26,7 +26,8 @@ struct GuideView: View {
             }
             .tabViewStyle(PageTabViewStyle())
         }
-        .navigationBarTitle("widget-guide-title", displayMode: .inline)
+        .navigationTitle("widget-guide-title")
+        .navigationBarTitleDisplayMode(.inline)
     }
 
 }

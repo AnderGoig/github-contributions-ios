@@ -22,8 +22,14 @@ struct ContributionsListView: View {
                     listView
                 }
             }
-            .navigationBarTitle("app-title")
-            .navigationBarItems(trailing: addButton)
+            .navigationTitle("app-title")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { showsAlert = true }) {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .alert(isPresented: $showsAlert, addContributionsAlert)
@@ -53,12 +59,6 @@ struct ContributionsListView: View {
             .onMove(perform: onMove)
         }
         .listStyle(PlainListStyle())
-    }
-
-    private var addButton: some View {
-        AnyView(Button(action: { showsAlert = true }) {
-            Image(systemName: "plus")
-        })
     }
 
     private var addContributionsAlert: TextAlert {

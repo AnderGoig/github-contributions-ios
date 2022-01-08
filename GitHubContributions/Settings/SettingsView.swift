@@ -34,7 +34,7 @@ struct SettingsView: View {
                 }
             }
             .listStyle(InsetGroupedListStyle())
-            .navigationBarTitle("settings-title")
+            .navigationTitle("settings-title")
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
