@@ -13,7 +13,7 @@ struct GitHubContributionsApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                ContributionsListView(viewModel: .init())
+                ContributionsList(viewModel: .init())
                     .tabItem {
                         Image(systemName: "square.grid.3x3.fill")
                         Text("app-title")

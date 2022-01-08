@@ -11,11 +11,16 @@ import NetworkKit
 
 final class ContributionsRowViewModel: ObservableObject {
 
-    let rowsCount = 7
-    let columnsCount = 20
-    let username: String
+    struct Contributions {
+        var levels: [[GitHub.Contribution.Level]] = []
+        var count: Int = .zero
+    }
 
-    @Published private(set) var contributions: (levels: [[GitHub.Contribution.Level]], count: Int) = ([], 0)
+    static let rowsCount = 7
+    static let columnsCount = 20
+
+    let username: String
+    @Published private(set) var contributions: Contributions = .init()
 
     private let queue = DispatchQueue(label: "com.andergoig.GitHubContributions.network")
 
@@ -29,17 +34,17 @@ final class ContributionsRowViewModel: ObservableObject {
         GitHub.getContributions(for: username, queue: queue)
             .subscribe(on: queue)
             .replaceError(with: [])
-            .map(contributions)
+            .map(Self.mapContributions)
             .receive(on: DispatchQueue.main)
             .assign(to: &$contributions)
     }
 
-    private func contributions(from contributions: [GitHub.Contribution]) -> ([[GitHub.Contribution.Level]], Int) {
-        guard let lastData = contributions.last?.date else { return ([], 0) }
-        let tilesCount = rowsCount * columnsCount - (rowsCount - Calendar.current.component(.weekday, from: lastData))
+    private static func mapContributions(_ contributions: [GitHub.Contribution]) -> Contributions {
+        guard let lastDate = contributions.last?.date else { return .init() }
+        let tilesCount = rowsCount * columnsCount - (rowsCount - Calendar.current.component(.weekday, from: lastDate))
         let levels = contributions.suffix(tilesCount).map(\.level).chunked(into: rowsCount)
         let count = contributions.reduce(0) { $0 + $1.count }
-        return (levels, count)
+        return Contributions(levels: levels, count: count)
     }
 
 }

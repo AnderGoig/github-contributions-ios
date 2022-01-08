@@ -45,7 +45,7 @@ struct SettingsView: View {
             .font(.caption2)
             .multilineTextAlignment(.center)
             .frame(maxWidth: .infinity)
-            .listRowInsets(EdgeInsets(top: 24.0, leading: 0.0, bottom: 24.0, trailing: 0.0))
+            .listRowInsets(EdgeInsets(top: 24, leading: 0, bottom: 24, trailing: 0))
     }
 
     // MARK: -

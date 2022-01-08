@@ -24,7 +24,7 @@ struct TextCaption: ViewModifier {
 extension View {
 
     func captionStyle() -> some View {
-        self.modifier(TextCaption())
+        modifier(TextCaption())
     }
 
 }

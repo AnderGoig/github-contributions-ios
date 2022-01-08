@@ -1,5 +1,5 @@
 //
-//  ContributionsListView.swift
+//  ContributionsList.swift
 //  GitHubContributions
 //
 //  Created by Ander Goig on 06/02/2021.
@@ -8,7 +8,7 @@
 import SwiftUI
 import InterfaceKit
 
-struct ContributionsListView: View {
+struct ContributionsList: View {
 
     @State private var showsAlert = false
     @ObservedObject var viewModel: ContributionsListViewModel
@@ -33,7 +33,7 @@ struct ContributionsListView: View {
     }
 
     private var emptyView: some View {
-        VStack(spacing: 6.0) {
+        VStack(spacing: 6) {
             Text("contributions-empty-title")
                 .font(.headline)
                 .foregroundColor(.primary)
@@ -43,7 +43,7 @@ struct ContributionsListView: View {
                 .foregroundColor(.secondary)
         }
         .multilineTextAlignment(.center)
-        .padding(EdgeInsets(top: 0.0, leading: 44.0, bottom: 0.0, trailing: 44.0))
+        .padding(EdgeInsets(top: 0, leading: 44, bottom: 0, trailing: 44))
     }
 
     private var listView: some View {

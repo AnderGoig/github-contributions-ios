@@ -23,10 +23,10 @@ public struct ContributionsView: View {
     public var body: some View {
         VStack {
             HStack {
-                HStack(spacing: 6.0) {
+                HStack(spacing: 6) {
                     Image("GitHubMark", bundle: .module)
                         .resizable()
-                        .frame(width: 12.0, height: 12.0)
+                        .frame(width: 12, height: 12)
                         .unredacted()
                     topLeadingText.map(Text.init)
                 }

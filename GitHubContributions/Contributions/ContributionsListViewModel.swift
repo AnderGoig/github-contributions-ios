@@ -9,17 +9,22 @@ import Foundation
 
 final class ContributionsListViewModel: ObservableObject {
 
-    @Published private(set) var contributions: [ContributionsRowViewModel]
+    @Published private(set) var contributions: [ContributionsRowViewModel] = []
+
+    private var usernames: [String] {
+        get { UserDefaults.standard.codable(forKey: "usernames") ?? [] }
+        set { UserDefaults.standard.set(value: newValue, forKey: "usernames") }
+    }
 
     init() {
-        let usernames: [String]? = UserDefaults.standard.codable(forKey: "usernames")
-        contributions = usernames?.map(ContributionsRowViewModel.init) ?? []
+        contributions = usernames.map(ContributionsRowViewModel.init)
     }
 
     func addContributions(from username: String) {
-        guard !username.trimmingCharacters(in: .whitespaces).isEmpty else { return }
-        contributions.append(.init(username: username))
-        updateStorage()
+        if !username.trimmingCharacters(in: .whitespaces).isEmpty, !contributions.contains(where: { $0.username.lowercased() == username.lowercased() }) {
+            contributions.append(.init(username: username))
+            updateStorage()
+        }
     }
 
     func removeContributions(atOffsets offsets: IndexSet) {
@@ -33,7 +38,7 @@ final class ContributionsListViewModel: ObservableObject {
     }
 
     private func updateStorage() {
-        UserDefaults.standard.set(value: contributions.map(\.username), forKey: "usernames")
+        usernames = contributions.map(\.username)
     }
 
 }

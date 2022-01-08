@@ -14,15 +14,15 @@ struct ContributionsRow: View {
 
     var body: some View {
         ContributionsView(
-            rowsCount: viewModel.rowsCount,
-            columnsCount: viewModel.columnsCount,
+            rowsCount: ContributionsRowViewModel.rowsCount,
+            columnsCount: ContributionsRowViewModel.columnsCount,
             colors: viewModel.contributions.levels.map { $0.map(\.color) },
             topLeadingText: viewModel.username,
             topTrailingText: .localizedStringWithFormat(NSLocalizedString("contributions-count", comment: ""), viewModel.contributions.count),
             emptyText: NSLocalizedString("contributions-loading", comment: "")
         )
-        .frame(height: 136.0)
-        .padding(.vertical, 12.0)
+        .frame(height: 136)
+        .padding(.vertical, 12)
         .onAppear(perform: getContributions)
     }
 

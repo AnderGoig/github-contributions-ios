@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7702E18A25CF2DC9003ECC3D /* ContributionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702E18925CF2DC9003ECC3D /* ContributionsListView.swift */; };
+		7702E18A25CF2DC9003ECC3D /* ContributionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702E18925CF2DC9003ECC3D /* ContributionsList.swift */; };
 		771E3B54253CEB7600984A0B /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3B4E253CEADD00984A0B /* ArrayExtensions.swift */; };
 		771E3B5A253CEBCE00984A0B /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3B59253CEBCE00984A0B /* DateExtensions.swift */; };
 		771E3BA9253E423700984A0B /* GitHubContributionsGraphWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3BA8253E423700984A0B /* GitHubContributionsGraphWidget.swift */; };
@@ -84,7 +84,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7702E18925CF2DC9003ECC3D /* ContributionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsListView.swift; sourceTree = "<group>"; };
+		7702E18925CF2DC9003ECC3D /* ContributionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsList.swift; sourceTree = "<group>"; };
 		771E3B4E253CEADD00984A0B /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		771E3B59253CEBCE00984A0B /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		771E3BA8253E423700984A0B /* GitHubContributionsGraphWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubContributionsGraphWidget.swift; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 		7702E17E25CF2D76003ECC3D /* Contributions */ = {
 			isa = PBXGroup;
 			children = (
-				7702E18925CF2DC9003ECC3D /* ContributionsListView.swift */,
+				7702E18925CF2DC9003ECC3D /* ContributionsList.swift */,
 				77B39CB725CF59B000B5D0B8 /* ContributionsListViewModel.swift */,
 				7761A6F42543BD82000871E3 /* ContributionsRow.swift */,
 				7761A6FA2543BDB6000871E3 /* ContributionsRowViewModel.swift */,
@@ -492,7 +492,7 @@
 				77BF7B432543B361006DA340 /* Step.swift in Sources */,
 				77B39CB825CF59B000B5D0B8 /* ContributionsListViewModel.swift in Sources */,
 				77BD1EAC2540EFB500830186 /* NetworkKitExtensions.swift in Sources */,
-				7702E18A25CF2DC9003ECC3D /* ContributionsListView.swift in Sources */,
+				7702E18A25CF2DC9003ECC3D /* ContributionsList.swift in Sources */,
 				77BD1EA62540EF4300830186 /* SettingsItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

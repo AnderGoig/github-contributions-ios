@@ -14,8 +14,8 @@ struct StepView: View {
     let step: Step
 
     var body: some View {
-        VStack(spacing: 32.0) {
-            VStack(spacing: 6.0) {
+        VStack(spacing: 32) {
+            VStack(spacing: 6) {
                 Text(step.title)
                     .font(.title.bold())
                     .foregroundColor(.primary)
@@ -37,9 +37,9 @@ struct StepView: View {
                 .scaledToFit()
         }
         .frame(maxHeight: .infinity, alignment: .top)
-        .padding(.horizontal, 24.0)
-        .padding(.bottom, 64.0)
-        .padding(.top, 32.0)
+        .padding(.horizontal, 24)
+        .padding(.bottom, 64)
+        .padding(.top, 32)
     }
 
 }

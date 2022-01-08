@@ -13,7 +13,7 @@ struct SettingsRow: View {
 
     var body: some View {
         Label {
-            VStack(alignment: .leading, spacing: 3.0) {
+            VStack(alignment: .leading, spacing: 3) {
                 Text(item.title)
                     .font(.body)
                     .foregroundColor(.primary)
@@ -27,14 +27,14 @@ struct SettingsRow: View {
             Image(systemName: item.systemImageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 17.0, height: 17.0)
-                .padding(6.0)
+                .frame(width: 17, height: 17)
+                .padding(6)
                 .background(item.color)
                 .foregroundColor(.white)
-                .clipShape(RoundedRectangle(cornerRadius: 6.0, style: .continuous))
+                .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
         }
         .labelStyle(SettingsLabelStyle())
-        .padding(.vertical, 4.0)
+        .padding(.vertical, 4)
         .lineLimit(1)
     }
 
@@ -45,7 +45,7 @@ struct SettingsRow: View {
 struct SettingsLabelStyle: LabelStyle {
 
     func makeBody(configuration: Configuration) -> some View {
-        HStack(spacing: 12.0) {
+        HStack(spacing: 12) {
             configuration.icon
             configuration.title
         }

@@ -17,21 +17,21 @@ final class GitHubContributionsProvider: IntentTimelineProvider {
     private let queue = DispatchQueue(label: "com.andergoig.GitHubContributionsWidget.network")
 
     func placeholder(in context: Context) -> Entry {
-        let currentDate = Date()
+        let currentDate = Date.now
         let dateRange = Calendar.current.date(byAdding: .year, value: -1, to: currentDate)?.range(to: currentDate) ?? []
         let contributions = dateRange.map { GitHub.Contribution(date: $0, count: 0, level: .zero) }
         return Entry(contributions: contributions, configuration: ConfigurationIntent())
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Entry) -> Void) {
-        let currentDate = Date()
+        let currentDate = Date.now
         let dateRange = Calendar.current.date(byAdding: .year, value: -1, to: currentDate)?.range(to: currentDate) ?? []
         let contributions = dateRange.map { GitHub.Contribution(date: $0, count: .random(in: 0...20), level: .random()) }
         completion(Entry(contributions: contributions, configuration: configuration))
     }
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
-        let currentDate = Date()
+        let currentDate = Date.now
         let refreshDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
         let username = configuration.username?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         timelineCancellable = GitHub.getContributions(for: username, queue: queue)
@@ -49,7 +49,7 @@ final class GitHubContributionsProvider: IntentTimelineProvider {
 extension GitHubContributionsViewModel: TimelineEntry {
 
     var date: Date {
-        lastContributionDate ?? Date()
+        lastContributionDate ?? .now
     }
 
 }
@@ -59,7 +59,7 @@ extension GitHubContributionsViewModel: TimelineEntry {
 private extension GitHub.Contribution.Level {
 
     static func random() -> Self {
-        Self.allCases.randomElement()!
+        allCases.randomElement()!
     }
 
 }

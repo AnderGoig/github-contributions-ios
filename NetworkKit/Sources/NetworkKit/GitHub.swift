@@ -13,7 +13,7 @@ public struct GitHub {
 
     // MARK: - Private Properties
 
-    private static var dateFormatter: DateFormatter = {
+    private static let dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         return dateFormatter
