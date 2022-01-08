@@ -72,13 +72,27 @@ struct SettingsView: View {
     }
 
     private func present(_ viewController: UIViewController, animated: Bool, completion: (() -> Void)? = nil) {
-        guard var topController = UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.rootViewController else { return }
+        guard var topController = UIApplication.shared.keyWindow?.rootViewController else { return }
 
         while let presentedViewController = topController.presentedViewController {
             topController = presentedViewController
         }
 
         topController.present(viewController, animated: animated, completion: completion)
+    }
+
+}
+
+// MARK: -
+
+private extension UIApplication {
+
+    var keyWindow: UIWindow? {
+        UIApplication.shared.connectedScenes
+            .filter { $0.activationState == .foregroundActive }
+            .first { $0 is UIWindowScene }
+            .flatMap { $0 as? UIWindowScene }?.windows
+            .first(where: \.isKeyWindow)
     }
 
 }
