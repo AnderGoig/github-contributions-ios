@@ -21,8 +21,5 @@ let package = Package(
         .target(
             name: "NetworkKit",
             dependencies: ["SwiftSoup"]),
-        .testTarget(
-            name: "NetworkKitTests",
-            dependencies: ["NetworkKit"]),
     ]
 )
