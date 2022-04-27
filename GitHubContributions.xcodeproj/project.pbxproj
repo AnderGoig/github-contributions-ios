@@ -76,6 +76,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1CC490D22819102200C3EC87 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/GitHubContributionsWidget.strings; sourceTree = "<group>"; };
+		1CC490D32819102200C3EC87 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1CC490D42819102200C3EC87 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ja; path = ja.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		1CC490D52819102200C3EC87 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1CC490D62819102200C3EC87 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1CC490D72819102200C3EC87 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ja; path = ja.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		7702E18925CF2DC9003ECC3D /* ContributionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsList.swift; sourceTree = "<group>"; };
 		771E3B4E253CEADD00984A0B /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		771E3B59253CEBCE00984A0B /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
@@ -374,6 +380,7 @@
 				en,
 				es,
 				Base,
+				ja,
 			);
 			mainGroup = 777D65E325379A23001029C4;
 			packageReferences = (
@@ -471,6 +478,7 @@
 			children = (
 				7761A75E2544A24C000871E3 /* en */,
 				77A7227D2546572500B6064B /* es */,
+				1CC490D62819102200C3EC87 /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -480,6 +488,7 @@
 			children = (
 				7761A7652544A24F000871E3 /* en */,
 				77A7227E2546572500B6064B /* es */,
+				1CC490D72819102200C3EC87 /* ja */,
 			);
 			name = Localizable.stringsdict;
 			sourceTree = "<group>";
@@ -489,6 +498,7 @@
 			children = (
 				7761A76C2544A256000871E3 /* en */,
 				77A7227B2546572500B6064B /* es */,
+				1CC490D42819102200C3EC87 /* ja */,
 			);
 			name = Localizable.stringsdict;
 			sourceTree = "<group>";
@@ -498,6 +508,7 @@
 			children = (
 				7761A7732544A259000871E3 /* en */,
 				77A7227C2546572500B6064B /* es */,
+				1CC490D52819102200C3EC87 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -507,6 +518,7 @@
 			children = (
 				77A722DB2546620600B6064B /* Base */,
 				BE67BFC726DBC57600B09345 /* es */,
+				1CC490D22819102200C3EC87 /* ja */,
 			);
 			name = GitHubContributionsWidget.intentdefinition;
 			sourceTree = "<group>";
@@ -516,6 +528,7 @@
 			children = (
 				77BD1E992540EDDF00830186 /* en */,
 				77A722762546572500B6064B /* es */,
+				1CC490D32819102200C3EC87 /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

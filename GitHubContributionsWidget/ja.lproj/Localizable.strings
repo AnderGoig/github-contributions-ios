@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  GitHubContributions
+
+  Created by Ander Goig on 22/10/2020.
+  
+*/
+
+"widget-graph-display-name" = "Graph";
+"widget-graph-description" = "ホーム画面でContributionsを確認できます";
+
+"contributions-empty-text" = "ユーザー名を設定しましょう";
+"contributions-fetch-error" = "Contributionsを取得する際にエラーが発生しました";

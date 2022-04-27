@@ -1,0 +1,48 @@
+/* 
+  Localizable.strings
+  GitHubContributions
+
+  Created by Ander Goig on 22/10/2020.
+  
+*/
+
+"app-title" = "Contributions";
+"app-version-%@" = "バージョン %@";
+
+"contributions-loading" = "Loading...";
+
+"contributions-empty-title" = "No contributions";
+"contributions-empty-subtitle" = "「＋」ボタンからGithubアカウントを追加しましょう";
+
+"contributions-add-title" = "Githubアカウントの追加";
+"contributions-add-placeholder" = "ユーザー名を入力してください";
+"contributions-add-accept" = "追加";
+"contributions-add-cancel" = "キャンセル";
+
+"settings-title" = "Settings";
+
+"settings-row-widget-guide-title" = "Widget Setup";
+"settings-row-widget-guide-subtitle" = "ウィジェットのカスタマイズ方法について";
+
+"settings-row-rate-title" = "Rate the App";
+"settings-row-rate-subtitle" = "アプリは使いやすいですか？";
+
+"settings-row-share-title" = "Share";
+"settings-row-share-subtitle" = "友達に共有しましょう！";
+
+"settings-row-feedback-title" = "Feedback";
+"settings-row-feedback-subtitle" = "goig.ander@icloud.com";
+
+"settings-row-open-source-title" = "Open Source";
+"settings-row-open-source-subtitle" = "自由に開発に参加しましょう！";
+
+"widget-guide-title" = "Widget Setup";
+
+"widget-guide-step-%u-title" = "Step %u";
+"widget-guide-step-1-subtitle" = "画面上に何もない場所を\nアプリが動くまで長押しします";
+"widget-guide-step-2-subtitle" = "左上の「＋」をタップし、\nウィジェットメニューを表示させます";
+"widget-guide-step-3-subtitle" = "「Contributions」を検索し、\n1件目をタップします";
+"widget-guide-step-4-subtitle" = "ウィジェットのサイズを選択し、\n「ウィジェットを追加」をタップします";
+"widget-guide-step-5-subtitle" = "画像の状態でウィジェットをタップすると、\nウィジェットの設定メニューが表示されます";
+"widget-guide-step-6-subtitle" = "GitHubのユーザー名とテーマカラーを設定します";
+"widget-guide-step-7-subtitle" = "これで設定が完了です！";
