@@ -27,7 +27,7 @@ struct StepView: View {
                     .lineLimit(2)
             }
 
-            KFImage(colorScheme == .dark ? step.darkImage : step.lightImage)
+            KFImage(colorScheme == .dark ? step.darkImageURL : step.lightImageURL)
                 .backgroundDecode()
                 .placeholder {
                     ProgressView()

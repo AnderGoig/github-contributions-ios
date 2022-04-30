@@ -20,7 +20,7 @@ extension GitHub {
         /// Level of contributions.
         public let level: Level
 
-        /// Constants that indicate the amount of contributions:
+        /// Constants that indicate the amount of contributions.
         /// Level `.zero` means zero contributions.
         public enum Level: Int, CaseIterable {
             case zero, first, second, third, fourth
@@ -32,6 +32,17 @@ extension GitHub {
             self.level = level
         }
 
+    }
+
+}
+
+// MARK: - Convenience
+
+public extension CaseIterable {
+
+    /// Returns a random element of the collection.
+    static func random() -> Self {
+        allCases.randomElement()!
     }
 
 }

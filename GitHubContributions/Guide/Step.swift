@@ -19,12 +19,16 @@ enum Step: Int, CaseIterable {
         NSLocalizedString("widget-guide-step-\(rawValue)-subtitle", comment: "")
     }
 
-    var lightImage: URL {
-        URL(string: "https://raw.githubusercontent.com/AnderGoig/github-contributions-ios/develop/.assets/widgets-step-\(rawValue).png")!
+    var lightImageURL: URL? {
+        assetsURL?.appendingPathComponent("widgets-step-\(rawValue).png")
     }
 
-    var darkImage: URL {
-        URL(string: "https://raw.githubusercontent.com/AnderGoig/github-contributions-ios/develop/.assets/widgets-step-dark-\(rawValue).png")!
+    var darkImageURL: URL? {
+        assetsURL?.appendingPathComponent("widgets-step-dark-\(rawValue).png")
+    }
+
+    private var assetsURL: URL? {
+        URL(string: "https://raw.githubusercontent.com/AnderGoig/github-contributions-ios/develop/.assets")
     }
 
 }

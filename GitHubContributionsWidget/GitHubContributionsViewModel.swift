@@ -33,7 +33,7 @@ struct GitHubContributionsViewModel {
         username
     }
 
-    var topTrailingText: String? {
+    var topTrailingText: String {
         let contributionsCount = contributions.reduce(0) { $0 + $1.count }
         return .localizedStringWithFormat(NSLocalizedString("contributions-count", comment: ""), contributionsCount)
     }

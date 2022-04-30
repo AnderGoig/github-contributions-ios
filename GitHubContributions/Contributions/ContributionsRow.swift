@@ -23,11 +23,7 @@ struct ContributionsRow: View {
         )
         .frame(height: 136)
         .padding(.vertical, 12)
-        .onAppear(perform: getContributions)
-    }
-
-    private func getContributions() {
-        viewModel.getContributions()
+        .onAppear(perform: viewModel.getContributions)
     }
 
 }

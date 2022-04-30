@@ -53,13 +53,3 @@ extension GitHubContributionsViewModel: TimelineEntry {
     }
 
 }
-
-// MARK: -
-
-private extension GitHub.Contribution.Level {
-
-    static func random() -> Self {
-        allCases.randomElement()!
-    }
-
-}
