@@ -44,10 +44,10 @@
 		77BF7AE725435FB1006DA340 /* GitHubContributionsGraphWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF7AE625435FB1006DA340 /* GitHubContributionsGraphWidgetView.swift */; };
 		77BF7B3D2543B33B006DA340 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF7B3C2543B33A006DA340 /* StepView.swift */; };
 		77BF7B432543B361006DA340 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF7B422543B361006DA340 /* Step.swift */; };
-		B97389AD27F9C976001C5A5E /* InterfaceKit in Frameworks */ = {isa = PBXBuildFile; productRef = B97389AC27F9C976001C5A5E /* InterfaceKit */; };
-		B97389AF27F9C979001C5A5E /* NetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = B97389AE27F9C979001C5A5E /* NetworkKit */; };
-		B97389B127F9C985001C5A5E /* InterfaceKit in Frameworks */ = {isa = PBXBuildFile; productRef = B97389B027F9C985001C5A5E /* InterfaceKit */; };
-		B97389B327F9C988001C5A5E /* NetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = B97389B227F9C988001C5A5E /* NetworkKit */; };
+		B96A619B284A719A00CB7B55 /* InterfaceKit in Frameworks */ = {isa = PBXBuildFile; productRef = B96A619A284A719A00CB7B55 /* InterfaceKit */; };
+		B96A619D284A719A00CB7B55 /* NetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = B96A619C284A719A00CB7B55 /* NetworkKit */; };
+		B96A619F284A71A100CB7B55 /* InterfaceKit in Frameworks */ = {isa = PBXBuildFile; productRef = B96A619E284A71A100CB7B55 /* InterfaceKit */; };
+		B96A61A1284A71A100CB7B55 /* NetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = B96A61A0284A71A100CB7B55 /* NetworkKit */; };
 		BE67BFC326DBBF3B00B09345 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BE67BFC226DBBF3B00B09345 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
@@ -126,8 +126,8 @@
 		77BF7AE625435FB1006DA340 /* GitHubContributionsGraphWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubContributionsGraphWidgetView.swift; sourceTree = "<group>"; };
 		77BF7B3C2543B33A006DA340 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 		77BF7B422543B361006DA340 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
-		B97389AA27F9C93B001C5A5E /* InterfaceKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = InterfaceKit; sourceTree = "<group>"; };
-		B97389AB27F9C94F001C5A5E /* NetworkKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkKit; sourceTree = "<group>"; };
+		B96A6198284A718700CB7B55 /* InterfaceKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = InterfaceKit; sourceTree = "<group>"; };
+		B96A6199284A718F00CB7B55 /* NetworkKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkKit; sourceTree = "<group>"; };
 		BE67BFC726DBC57600B09345 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/GitHubContributionsWidget.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,9 +136,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B97389AF27F9C979001C5A5E /* NetworkKit in Frameworks */,
+				B96A619D284A719A00CB7B55 /* NetworkKit in Frameworks */,
 				BE67BFC326DBBF3B00B09345 /* Kingfisher in Frameworks */,
-				B97389AD27F9C976001C5A5E /* InterfaceKit in Frameworks */,
+				B96A619B284A719A00CB7B55 /* InterfaceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,9 +146,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B97389B327F9C988001C5A5E /* NetworkKit in Frameworks */,
+				B96A61A1284A71A100CB7B55 /* NetworkKit in Frameworks */,
 				777D66562537A18D001029C4 /* SwiftUI.framework in Frameworks */,
-				B97389B127F9C985001C5A5E /* InterfaceKit in Frameworks */,
+				B96A619F284A71A100CB7B55 /* InterfaceKit in Frameworks */,
 				777D66542537A18D001029C4 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,7 +180,7 @@
 		777D65E325379A23001029C4 = {
 			isa = PBXGroup;
 			children = (
-				B97389A927F9C93B001C5A5E /* Packages */,
+				B96A6197284A718700CB7B55 /* Packages */,
 				777D65EE25379A23001029C4 /* GitHubContributions */,
 				777D66572537A18D001029C4 /* GitHubContributionsWidget */,
 				777D65ED25379A23001029C4 /* Products */,
@@ -298,11 +298,11 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		B97389A927F9C93B001C5A5E /* Packages */ = {
+		B96A6197284A718700CB7B55 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				B97389AA27F9C93B001C5A5E /* InterfaceKit */,
-				B97389AB27F9C94F001C5A5E /* NetworkKit */,
+				B96A6198284A718700CB7B55 /* InterfaceKit */,
+				B96A6199284A718F00CB7B55 /* NetworkKit */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -327,8 +327,8 @@
 			name = GitHubContributions;
 			packageProductDependencies = (
 				BE67BFC226DBBF3B00B09345 /* Kingfisher */,
-				B97389AC27F9C976001C5A5E /* InterfaceKit */,
-				B97389AE27F9C979001C5A5E /* NetworkKit */,
+				B96A619A284A719A00CB7B55 /* InterfaceKit */,
+				B96A619C284A719A00CB7B55 /* NetworkKit */,
 			);
 			productName = GitHubContributions;
 			productReference = 777D65EC25379A23001029C4 /* GitHubContributions.app */;
@@ -348,8 +348,8 @@
 			);
 			name = GitHubContributionsWidgetExtension;
 			packageProductDependencies = (
-				B97389B027F9C985001C5A5E /* InterfaceKit */,
-				B97389B227F9C988001C5A5E /* NetworkKit */,
+				B96A619E284A71A100CB7B55 /* InterfaceKit */,
+				B96A61A0284A71A100CB7B55 /* NetworkKit */,
 			);
 			productName = GitHubContributionsWidgetExtension;
 			productReference = 777D66522537A18D001029C4 /* GitHubContributionsWidgetExtension.appex */;
@@ -792,19 +792,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B97389AC27F9C976001C5A5E /* InterfaceKit */ = {
+		B96A619A284A719A00CB7B55 /* InterfaceKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = InterfaceKit;
 		};
-		B97389AE27F9C979001C5A5E /* NetworkKit */ = {
+		B96A619C284A719A00CB7B55 /* NetworkKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkKit;
 		};
-		B97389B027F9C985001C5A5E /* InterfaceKit */ = {
+		B96A619E284A71A100CB7B55 /* InterfaceKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = InterfaceKit;
 		};
-		B97389B227F9C988001C5A5E /* NetworkKit */ = {
+		B96A61A0284A71A100CB7B55 /* NetworkKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetworkKit;
 		};
