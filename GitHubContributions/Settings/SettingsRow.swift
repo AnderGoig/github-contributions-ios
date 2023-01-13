@@ -12,7 +12,7 @@ struct SettingsRow: View {
 
     var body: some View {
         Label {
-            VStack(alignment: .leading, spacing: 3) {
+            VStack(alignment: .leading, spacing: 2) {
                 Text(item.title)
                     .font(.body)
                     .foregroundColor(.primary)
@@ -33,7 +33,7 @@ struct SettingsRow: View {
                 .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
         }
         .labelStyle(SettingsLabelStyle())
-        .padding(.vertical, 4)
+        .padding(.vertical, 2)
         .lineLimit(1)
     }
 }
