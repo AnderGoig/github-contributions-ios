@@ -11,7 +11,7 @@ extension GitHub {
 
     public struct Contribution {
 
-        /// The date when the contributions ocurred.
+        /// The date when the contributions occurred.
         public let date: Date
 
         /// Number of contributions.
