@@ -27,7 +27,7 @@
 		777D66562537A18D001029C4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777D66552537A18D001029C4 /* SwiftUI.framework */; };
 		777D66592537A18D001029C4 /* GitHubContributionsWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777D66582537A18D001029C4 /* GitHubContributionsWidgetBundle.swift */; };
 		777D665C2537A18F001029C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 777D665B2537A18F001029C4 /* Assets.xcassets */; };
-		777D66622537A18F001029C4 /* GitHubContributionsWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 777D66522537A18D001029C4 /* GitHubContributionsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		777D66622537A18F001029C4 /* GitHubContributionsWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 777D66522537A18D001029C4 /* GitHubContributionsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		779B0F06253F8DA40046B7E1 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779B0F05253F8DA40046B7E1 /* SettingsViewModel.swift */; };
 		77A722D92546620600B6064B /* GitHubContributionsWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 77A722DC2546620600B6064B /* GitHubContributionsWidget.intentdefinition */; };
 		77A722DA2546620600B6064B /* GitHubContributionsWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 77A722DC2546620600B6064B /* GitHubContributionsWidget.intentdefinition */; };
@@ -62,15 +62,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		777D66632537A18F001029C4 /* Embed App Extensions */ = {
+		777D66632537A18F001029C4 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				777D66622537A18F001029C4 /* GitHubContributionsWidgetExtension.appex in Embed App Extensions */,
+				777D66622537A18F001029C4 /* GitHubContributionsWidgetExtension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -317,7 +317,7 @@
 				777D65E825379A23001029C4 /* Sources */,
 				777D65E925379A23001029C4 /* Frameworks */,
 				777D65EA25379A23001029C4 /* Resources */,
-				777D66632537A18F001029C4 /* Embed App Extensions */,
+				777D66632537A18F001029C4 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -362,7 +362,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					777D65EB25379A23001029C4 = {
 						CreatedOnToolsVersion = 12.0.1;
