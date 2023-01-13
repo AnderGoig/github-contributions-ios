@@ -20,10 +20,10 @@ struct GitHubContributionsGraphEntryView: View {
         } else {
             switch widgetFamily {
             case .systemSmall:
-                GitHubContributionsGraphWidgetView(viewModel: entry, rowsCount: 7, columnsCount: 9, showTrailingText: false)
+                GitHubContributionsGraphWidgetView(viewModel: entry, rowsCount: 7, columnsCount: 9)
                     .modifier(WidgetStyle(isPureBlackEnabled: entry.isPureBlackEnabled))
             case .systemMedium:
-                GitHubContributionsGraphWidgetView(viewModel: entry, rowsCount: 7, columnsCount: 20, showTrailingText: true)
+                GitHubContributionsGraphWidgetView(viewModel: entry, rowsCount: 7, columnsCount: 20)
                     .modifier(WidgetStyle(isPureBlackEnabled: entry.isPureBlackEnabled))
             default:
                 EmptyView()

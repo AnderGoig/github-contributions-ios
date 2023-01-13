@@ -12,9 +12,6 @@ public extension GitHub {
         /// The date when the contributions occurred.
         public let date: Date
 
-        /// Number of contributions.
-        public let count: Int
-
         /// Level of contributions.
         public let level: Level
 
@@ -24,9 +21,8 @@ public extension GitHub {
             case zero, first, second, third, fourth
         }
 
-        public init(date: Date, count: Int, level: Level) {
+        public init(date: Date, level: Level) {
             self.date = date
-            self.count = count
             self.level = level
         }
     }

@@ -12,7 +12,6 @@ import NetworkKit
 final class ContributionsRowViewModel: ObservableObject {
     struct Contributions {
         var levels: [[GitHub.Contribution.Level]] = []
-        var count: Int = .zero
     }
 
     static let rowsCount = 7
@@ -42,8 +41,7 @@ final class ContributionsRowViewModel: ObservableObject {
         guard let lastDate = contributions.last?.date else { return .init() }
         let tilesCount = rowsCount * columnsCount - (rowsCount - Calendar.current.component(.weekday, from: lastDate))
         let levels = contributions.suffix(tilesCount).map(\.level).chunked(into: rowsCount)
-        let count = contributions.reduce(0) { $0 + $1.count }
-        return Contributions(levels: levels, count: count)
+        return Contributions(levels: levels)
     }
 }
 

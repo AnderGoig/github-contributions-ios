@@ -44,15 +44,11 @@ public enum GitHub {
     }
 
     private static func contribution(from htmlElement: Element) throws -> Contribution? {
-        let dataCount = try htmlElement.attr("data-count")
         let dataDate = try htmlElement.attr("data-date")
         let dataLevel = try htmlElement.attr("data-level")
 
-        guard let level = Int(dataLevel),
-              let count = Int(dataCount),
-              let date = dateFormatter.date(from: dataDate)
-        else { return nil }
+        guard let level = Int(dataLevel), let date = dateFormatter.date(from: dataDate) else { return nil }
 
-        return Contribution(date: date, count: count, level: Contribution.Level(rawValue: level) ?? .zero)
+        return Contribution(date: date, level: Contribution.Level(rawValue: level) ?? .zero)
     }
 }

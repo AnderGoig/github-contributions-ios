@@ -18,14 +18,14 @@ final class GitHubContributionsProvider: IntentTimelineProvider {
     func placeholder(in context: Context) -> Entry {
         let currentDate = Date.now
         let dateRange = Calendar.current.date(byAdding: .year, value: -1, to: currentDate)?.range(to: currentDate) ?? []
-        let contributions = dateRange.map { GitHub.Contribution(date: $0, count: 0, level: .zero) }
+        let contributions = dateRange.map { GitHub.Contribution(date: $0, level: .zero) }
         return Entry(contributions: contributions, configuration: ConfigurationIntent())
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Entry) -> Void) {
         let currentDate = Date.now
         let dateRange = Calendar.current.date(byAdding: .year, value: -1, to: currentDate)?.range(to: currentDate) ?? []
-        let contributions = dateRange.map { GitHub.Contribution(date: $0, count: .random(in: 0 ... 20), level: .random()) }
+        let contributions = dateRange.map { GitHub.Contribution(date: $0, level: .random()) }
         completion(Entry(contributions: contributions, configuration: configuration))
     }
 

@@ -17,7 +17,6 @@ struct ContributionsRow: View {
             columnsCount: ContributionsRowViewModel.columnsCount,
             colors: viewModel.contributions.levels.map { $0.map(\.color) },
             topLeadingText: viewModel.username,
-            topTrailingText: .localizedStringWithFormat(NSLocalizedString("contributions-count", comment: ""), viewModel.contributions.count),
             emptyText: NSLocalizedString("contributions-loading", comment: "")
         )
         .frame(height: 136)
