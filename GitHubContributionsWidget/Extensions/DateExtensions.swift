@@ -10,7 +10,6 @@ import Foundation
 // MARK: - Methods
 
 extension Date {
-
     func range(to: Date) -> [Date] {
         var tempDate = self
         var array = [tempDate]
@@ -20,5 +19,4 @@ extension Date {
         }
         return array
     }
-
 }

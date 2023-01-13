@@ -5,11 +5,10 @@
 //  Created by Ander Goig on 24/10/2020.
 //
 
-import SwiftUI
 import InterfaceKit
+import SwiftUI
 
 struct ContributionsRow: View {
-
     @ObservedObject var viewModel: ContributionsRowViewModel
 
     var body: some View {
@@ -25,5 +24,4 @@ struct ContributionsRow: View {
         .padding(.vertical, 12)
         .onAppear(perform: viewModel.getContributions)
     }
-
 }

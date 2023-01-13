@@ -6,11 +6,10 @@
 //
 
 import Combine
-import WidgetKit
 import NetworkKit
+import WidgetKit
 
 final class GitHubContributionsProvider: IntentTimelineProvider {
-
     public typealias Entry = GitHubContributionsViewModel
 
     private var timelineCancellable: AnyCancellable?
@@ -26,7 +25,7 @@ final class GitHubContributionsProvider: IntentTimelineProvider {
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Entry) -> Void) {
         let currentDate = Date.now
         let dateRange = Calendar.current.date(byAdding: .year, value: -1, to: currentDate)?.range(to: currentDate) ?? []
-        let contributions = dateRange.map { GitHub.Contribution(date: $0, count: .random(in: 0...20), level: .random()) }
+        let contributions = dateRange.map { GitHub.Contribution(date: $0, count: .random(in: 0 ... 20), level: .random()) }
         completion(Entry(contributions: contributions, configuration: configuration))
     }
 
@@ -41,15 +40,12 @@ final class GitHubContributionsProvider: IntentTimelineProvider {
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: completion)
     }
-
 }
 
 // MARK: -
 
 extension GitHubContributionsViewModel: TimelineEntry {
-
     var date: Date {
         lastContributionDate ?? .now
     }
-
 }

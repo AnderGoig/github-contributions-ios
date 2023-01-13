@@ -8,7 +8,6 @@
 import Foundation
 
 enum Step: Int, CaseIterable {
-
     case one = 1, two, three, four, five, six, seven
 
     var title: String {
@@ -30,5 +29,4 @@ enum Step: Int, CaseIterable {
     private var assetsURL: URL? {
         URL(string: "https://raw.githubusercontent.com/AnderGoig/github-contributions-ios/develop/.assets")
     }
-
 }

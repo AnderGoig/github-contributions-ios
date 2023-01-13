@@ -5,11 +5,10 @@
 //  Created by Ander Goig on 06/02/2021.
 //
 
-import SwiftUI
 import InterfaceKit
+import SwiftUI
 
 struct ContributionsList: View {
-
     @State private var showsAlert = false
     @ObservedObject var viewModel: ContributionsListViewModel
 
@@ -79,5 +78,4 @@ struct ContributionsList: View {
     private func onMove(source: IndexSet, destination: Int) {
         viewModel.moveContributions(fromOffsets: source, to: destination)
     }
-
 }

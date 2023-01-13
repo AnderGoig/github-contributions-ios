@@ -10,7 +10,6 @@ import SwiftUI
 import WidgetKit
 
 struct GitHubContributionsGraphWidget: Widget {
-
     let kind: String = "GitHubContributionsGraphWidget"
 
     var body: some WidgetConfiguration {
@@ -21,5 +20,4 @@ struct GitHubContributionsGraphWidget: Widget {
         .description("widget-graph-description")
         .supportedFamilies([.systemSmall, .systemMedium])
     }
-
 }

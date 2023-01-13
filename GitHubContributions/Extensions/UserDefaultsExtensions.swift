@@ -8,7 +8,6 @@
 import Foundation
 
 extension UserDefaults {
-
     func set<Element: Codable>(value: Element, forKey key: String) {
         let data = try? JSONEncoder().encode(value)
         setValue(data, forKey: key)
@@ -18,5 +17,4 @@ extension UserDefaults {
         guard let data = data(forKey: key) else { return nil }
         return try? JSONDecoder().decode(Element.self, from: data)
     }
-
 }

@@ -5,11 +5,10 @@
 //  Created by Ander Goig on 14/10/2020.
 //
 
-import SwiftUI
 import InterfaceKit
+import SwiftUI
 
 struct SettingsView: View {
-
     @ObservedObject var viewModel: SettingsViewModel
 
     // MARK: -
@@ -78,13 +77,11 @@ struct SettingsView: View {
 
         topController.present(viewController, animated: animated, completion: completion)
     }
-
 }
 
 // MARK: -
 
 private extension UIApplication {
-
     var keyWindow: UIWindow? {
         UIApplication.shared.connectedScenes
             .filter { $0.activationState == .foregroundActive }
@@ -92,5 +89,4 @@ private extension UIApplication {
             .flatMap { $0 as? UIWindowScene }?.windows
             .first(where: \.isKeyWindow)
     }
-
 }

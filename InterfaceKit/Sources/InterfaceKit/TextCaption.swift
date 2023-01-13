@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TextCaption: ViewModifier {
-
     func body(content: Content) -> some View {
         content
             .font(.caption2)
@@ -16,15 +15,12 @@ struct TextCaption: ViewModifier {
             .textCase(.uppercase)
             .lineLimit(1)
     }
-
 }
 
 // MARK: - Convenience
 
 extension View {
-
     func captionStyle() -> some View {
         modifier(TextCaption())
     }
-
 }

@@ -5,11 +5,10 @@
 //  Created by Ander Goig on 22/10/2020.
 //
 
-import SwiftUI
 import NetworkKit
+import SwiftUI
 
 extension GitHub.Contribution.Level {
-
     var color: Color {
         switch self {
         case .zero: return .emptyTile
@@ -19,5 +18,4 @@ extension GitHub.Contribution.Level {
         case .fourth: return .greenLevel4
         }
     }
-
 }

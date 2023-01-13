@@ -8,7 +8,6 @@
 import Foundation
 
 final class ContributionsListViewModel: ObservableObject {
-
     @Published private(set) var contributions: [ContributionsRowViewModel] = []
 
     private var usernames: [String] {
@@ -40,5 +39,4 @@ final class ContributionsListViewModel: ObservableObject {
     private func updateStorage() {
         usernames = contributions.map(\.username)
     }
-
 }

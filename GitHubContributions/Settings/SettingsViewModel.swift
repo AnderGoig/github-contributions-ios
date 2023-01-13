@@ -8,7 +8,6 @@
 import Foundation
 
 final class SettingsViewModel: ObservableObject {
-
     @Published private(set) var topItems: [SettingsItem] = [.widgetGuide]
     @Published private(set) var footerItems: [SettingsItem] = [.rate, .share, .feedback, .openSource]
 
@@ -27,5 +26,4 @@ final class SettingsViewModel: ObservableObject {
     var openSourceURL: URL {
         URL(string: "https://github.com/AnderGoig/github-contributions-ios")!
     }
-
 }

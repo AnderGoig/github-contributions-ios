@@ -5,12 +5,11 @@
 //  Created by Ander Goig on 15/10/2020.
 //
 
-import Foundation
 import Combine
+import Foundation
 import SwiftSoup
 
-public struct GitHub {
-
+public enum GitHub {
     // MARK: - Private Properties
 
     private static let dateFormatter: DateFormatter = {
@@ -56,5 +55,4 @@ public struct GitHub {
 
         return Contribution(date: date, count: count, level: Contribution.Level(rawValue: level) ?? .zero)
     }
-
 }

@@ -10,7 +10,6 @@ import Foundation
 import NetworkKit
 
 final class ContributionsRowViewModel: ObservableObject {
-
     struct Contributions {
         var levels: [[GitHub.Contribution.Level]] = []
         var count: Int = .zero
@@ -46,17 +45,14 @@ final class ContributionsRowViewModel: ObservableObject {
         let count = contributions.reduce(0) { $0 + $1.count }
         return Contributions(levels: levels, count: count)
     }
-
 }
 
 // MARK: -
 
 private extension Array {
-
     func chunked(into size: Int) -> [[Element]] {
         stride(from: 0, to: count, by: size).map {
             Array(self[$0 ..< Swift.min($0 + size, count)])
         }
     }
-
 }

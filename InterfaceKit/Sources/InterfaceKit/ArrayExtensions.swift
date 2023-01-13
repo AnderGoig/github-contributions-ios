@@ -8,9 +8,7 @@
 // MARK: - Methods
 
 extension Array {
-
     func element(at index: Int) -> Element? {
         index >= 0 && index < endIndex ? self[index] : nil
     }
-
 }

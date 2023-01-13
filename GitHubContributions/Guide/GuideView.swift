@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct GuideView: View {
-
     var body: some View {
         TabView {
             ForEach(Step.allCases, id: \.rawValue) { step in
@@ -20,5 +19,4 @@ struct GuideView: View {
         .navigationTitle("widget-guide-title")
         .navigationBarTitleDisplayMode(.inline)
     }
-
 }

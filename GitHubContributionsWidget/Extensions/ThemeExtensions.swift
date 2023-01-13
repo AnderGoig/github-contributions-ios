@@ -5,11 +5,10 @@
 //  Created by Ander Goig on 20/10/2020.
 //
 
-import SwiftUI
 import NetworkKit
+import SwiftUI
 
 extension Theme {
-
     func color(for level: GitHub.Contribution.Level) -> Color {
         switch level {
         case .zero: return Color.emptyTile
@@ -59,5 +58,4 @@ extension Theme {
         case .purple: return .purpleLevel4
         }
     }
-
 }

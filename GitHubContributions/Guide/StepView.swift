@@ -5,12 +5,11 @@
 //  Created by Ander Goig on 24/10/2020.
 //
 
-import SwiftUI
 import Kingfisher
+import SwiftUI
 
 struct StepView: View {
-
-    @Environment (\.colorScheme) var colorScheme: ColorScheme
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     let step: Step
 
     var body: some View {
@@ -41,5 +40,4 @@ struct StepView: View {
         .padding(.bottom, 64)
         .padding(.top, 32)
     }
-
 }

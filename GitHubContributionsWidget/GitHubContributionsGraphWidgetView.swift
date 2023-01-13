@@ -5,11 +5,10 @@
 //  Created by Ander Goig on 23/10/2020.
 //
 
-import SwiftUI
 import InterfaceKit
+import SwiftUI
 
 struct GitHubContributionsGraphWidgetView: View {
-
     let viewModel: GitHubContributionsViewModel
     let rowsCount: Int
     let columnsCount: Int
@@ -26,5 +25,4 @@ struct GitHubContributionsGraphWidgetView: View {
         )
         .redacted(reason: viewModel.showPlaceholders ? .placeholder : .init())
     }
-
 }

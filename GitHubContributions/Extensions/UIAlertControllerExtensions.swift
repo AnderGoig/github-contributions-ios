@@ -18,7 +18,6 @@ struct TextAlert {
 // MARK: -
 
 struct AlertWrapper<Content: View>: UIViewControllerRepresentable {
-
     @Binding var isPresented: Bool
     let alert: TextAlert
     let content: Content
@@ -54,24 +53,20 @@ struct AlertWrapper<Content: View>: UIViewControllerRepresentable {
     func makeCoordinator() -> Coordinator {
         Coordinator()
     }
-
 }
 
 // MARK: -
 
 extension View {
-
     func alert(isPresented: Binding<Bool>, _ alert: TextAlert) -> some View {
         AlertWrapper(isPresented: isPresented, alert: alert, content: self)
             .ignoresSafeArea()
     }
-
 }
 
 // MARK: -
 
 extension UIAlertController {
-
     convenience init(alert: TextAlert) {
         self.init(title: alert.title, message: nil, preferredStyle: .alert)
         addTextField { $0.placeholder = alert.placeholder }
@@ -83,5 +78,4 @@ extension UIAlertController {
             alert.action(textField?.text)
         })
     }
-
 }

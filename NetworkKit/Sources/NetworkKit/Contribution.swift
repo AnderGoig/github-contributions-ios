@@ -7,10 +7,8 @@
 
 import Foundation
 
-extension GitHub {
-
-    public struct Contribution {
-
+public extension GitHub {
+    struct Contribution {
         /// The date when the contributions occurred.
         public let date: Date
 
@@ -31,18 +29,14 @@ extension GitHub {
             self.count = count
             self.level = level
         }
-
     }
-
 }
 
 // MARK: - Convenience
 
 public extension CaseIterable {
-
     /// Returns a random element of the collection.
     static func random() -> Self {
         allCases.randomElement()!
     }
-
 }

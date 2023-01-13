@@ -10,10 +10,8 @@ import WidgetKit
 
 @main
 struct GitHubContributionsWidgetBundle: WidgetBundle {
-
     @WidgetBundleBuilder
     var body: some Widget {
         GitHubContributionsGraphWidget()
     }
-
 }

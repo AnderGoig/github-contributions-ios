@@ -8,7 +8,6 @@
 import SwiftUI
 
 enum SettingsItem: Int {
-
     case widgetGuide, rate, share, feedback, openSource
 
     var title: LocalizedStringKey {
@@ -50,5 +49,4 @@ enum SettingsItem: Int {
         case .openSource: return .orange
         }
     }
-
 }

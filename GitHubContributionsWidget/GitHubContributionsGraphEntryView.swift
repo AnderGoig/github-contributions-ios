@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct GitHubContributionsGraphEntryView: View {
-
     @Environment(\.widgetFamily) var widgetFamily
     let entry: GitHubContributionsViewModel
 
@@ -31,13 +30,11 @@ struct GitHubContributionsGraphEntryView: View {
             }
         }
     }
-
 }
 
 // MARK: -
 
 struct WidgetStyle: ViewModifier {
-
     @Environment(\.colorScheme) var colorScheme
     let isPureBlackEnabled: Bool
 
@@ -51,5 +48,4 @@ struct WidgetStyle: ViewModifier {
             .padding()
             .background(backgroundColor)
     }
-
 }

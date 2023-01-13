@@ -10,7 +10,6 @@ import SwiftUI
 // MARK: - Properties
 
 public extension Color {
-
     static var widgetBackground: Color {
         Color(.init { trait in
             trait.userInterfaceStyle == .dark
@@ -55,7 +54,7 @@ public extension Color {
     static let redLevel2 = Color("RedLevel2", bundle: .module)
     static let redLevel3 = Color("RedLevel3", bundle: .module)
     static let redLevel4 = Color("RedLevel4", bundle: .module)
-    
+
     // MARK: - Purple Theme
 
     static let purpleLevel1 = Color("PurpleLevel1", bundle: .module)

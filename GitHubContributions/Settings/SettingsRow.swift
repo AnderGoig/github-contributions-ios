@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SettingsRow: View {
-
     let item: SettingsItem
 
     var body: some View {
@@ -37,18 +36,15 @@ struct SettingsRow: View {
         .padding(.vertical, 4)
         .lineLimit(1)
     }
-
 }
 
 // MARK: -
 
 struct SettingsLabelStyle: LabelStyle {
-
     func makeBody(configuration: Configuration) -> some View {
         HStack(spacing: 12) {
             configuration.icon
             configuration.title
         }
     }
-
 }

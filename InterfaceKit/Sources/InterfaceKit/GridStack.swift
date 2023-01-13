@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct GridStack<Content: View>: View {
-
     let rows: Int
     let columns: Int
     let spacing: CGFloat?
@@ -32,5 +31,4 @@ struct GridStack<Content: View>: View {
         self.spacing = spacing
         self.content = content
     }
-
 }

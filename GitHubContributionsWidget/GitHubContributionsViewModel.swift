@@ -9,7 +9,6 @@ import Foundation
 import NetworkKit
 
 struct GitHubContributionsViewModel {
-
     private let contributions: [GitHub.Contribution]
     private let configuration: ConfigurationIntent
 
@@ -56,5 +55,4 @@ struct GitHubContributionsViewModel {
         self.contributions = contributions
         self.configuration = configuration
     }
-
 }

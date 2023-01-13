@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct GitHubContributionsApp: App {
-
     var body: some Scene {
         WindowGroup {
             TabView {
@@ -27,13 +26,11 @@ struct GitHubContributionsApp: App {
             }
         }
     }
-
 }
 
 // MARK: -
 
 extension GitHubContributionsApp {
-
     /// App's current version.
     static var version: String? {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
@@ -50,5 +47,4 @@ extension GitHubContributionsApp {
         guard let build = build else { return version }
         return "\(version) (\(build))"
     }
-
 }

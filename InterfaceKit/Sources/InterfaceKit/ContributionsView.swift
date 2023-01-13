@@ -8,7 +8,6 @@
 import SwiftUI
 
 public struct ContributionsView: View {
-
     @Environment(\.redactionReasons) var redactionReasons
 
     let rowsCount: Int
@@ -62,5 +61,4 @@ public struct ContributionsView: View {
         self.topTrailingText = topTrailingText
         self.emptyText = emptyText
     }
-
 }
