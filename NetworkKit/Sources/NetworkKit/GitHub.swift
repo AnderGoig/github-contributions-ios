@@ -27,7 +27,7 @@ public enum GitHub {
                     let url = try contributionsURL(for: username)
                     let html = try String(contentsOf: url, encoding: .utf8)
                     let document = try SwiftSoup.parse(html)
-                    let contributions = try document.select("rect").compactMap(contribution)
+                    let contributions = try document.select("td").compactMap(contribution).sorted()
                     promise(.success(contributions))
                 } catch {
                     promise(.failure(error))

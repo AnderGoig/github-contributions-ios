@@ -28,6 +28,14 @@ public extension GitHub {
     }
 }
 
+// MARK: - Comparable
+
+extension GitHub.Contribution: Comparable {
+    public static func < (lhs: GitHub.Contribution, rhs: GitHub.Contribution) -> Bool {
+        lhs.date < rhs.date
+    }
+}
+
 // MARK: - Convenience
 
 public extension CaseIterable {
