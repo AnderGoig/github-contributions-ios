@@ -22,7 +22,7 @@ Quickly check in on your GitHub contributions from your iOS Home Screen!
 ## Contributing
 
 If you have feature requests or bug reports, feel free to help out by sending pull requests or by [creating new issues](https://github.com/AnderGoig/github-contributions-ios/issues/new). Please take a moment to
-review the [CONTRIBUTING](.github/CONTRIBUTING.md) guidelines.
+review the [CONTRIBUTING](CONTRIBUTING.md) guidelines.
 
 ## Credits
 
