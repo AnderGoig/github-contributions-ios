@@ -19,5 +19,6 @@ struct GitHubContributionsGraphWidget: Widget {
         .configurationDisplayName("widget-graph-display-name")
         .description("widget-graph-description")
         .supportedFamilies([.systemSmall, .systemMedium])
+        .contentMarginsDisabled()
     }
 }
