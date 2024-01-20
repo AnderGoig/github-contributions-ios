@@ -53,7 +53,14 @@ public struct ContributionsView: View {
         }
     }
 
-    public init(rowsCount: Int, columnsCount: Int, colors: [[Color]], topLeadingText: String? = nil, topTrailingText: String? = nil, emptyText: String? = nil) {
+    public init(
+        rowsCount: Int,
+        columnsCount: Int,
+        colors: [[Color]],
+        topLeadingText: String? = nil,
+        topTrailingText: String? = nil,
+        emptyText: String? = nil
+    ) {
         self.rowsCount = rowsCount
         self.columnsCount = columnsCount
         self.colors = colors

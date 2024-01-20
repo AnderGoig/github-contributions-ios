@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "NetworkKit",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v13),
     ],
     products: [
         .library(
@@ -15,11 +15,10 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/scinfu/SwiftSoup",
-            .upToNextMinor(from: "2.6.1"))
+            .upToNextMinor(from: "2.7.0")),
     ],
     targets: [
         .target(
             name: "NetworkKit",
             dependencies: ["SwiftSoup"]),
-    ]
-)
+    ])
