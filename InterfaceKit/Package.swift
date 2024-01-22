@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "InterfaceKit",
     platforms: [
-        .iOS(.v14)
+        .iOS(.v14),
     ],
     products: [
         .library(
@@ -17,7 +17,6 @@ let package = Package(
             name: "InterfaceKit",
             dependencies: [],
             resources: [
-                .process("Resources")
+                .process("Resources"),
             ]),
-    ]
-)
+    ])

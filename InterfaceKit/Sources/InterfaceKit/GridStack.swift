@@ -25,7 +25,12 @@ struct GridStack<Content: View>: View {
         }
     }
 
-    init(rows: Int, columns: Int, spacing: CGFloat? = nil, @ViewBuilder content: @escaping (Int, Int) -> Content) {
+    init(
+        rows: Int,
+        columns: Int,
+        spacing: CGFloat? = nil,
+        @ViewBuilder content: @escaping (Int, Int) -> Content
+    ) {
         self.rows = rows
         self.columns = columns
         self.spacing = spacing

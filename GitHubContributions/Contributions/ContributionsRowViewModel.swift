@@ -20,6 +20,10 @@ final class ContributionsRowViewModel: ObservableObject {
     let username: String
     @Published private(set) var contributions: Contributions = .init()
 
+    var gitHubAccountURL: URL? {
+        URL(string: "https://github.com/\(username)")
+    }
+
     private let queue = DispatchQueue(label: "com.andergoig.GitHubContributions.network")
 
     init(username: String) {

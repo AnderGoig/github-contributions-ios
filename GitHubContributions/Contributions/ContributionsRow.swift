@@ -9,6 +9,7 @@ import InterfaceKit
 import SwiftUI
 
 struct ContributionsRow: View {
+    @Environment(\.openURL) var openURL
     @ObservedObject var viewModel: ContributionsRowViewModel
 
     var body: some View {
@@ -21,6 +22,13 @@ struct ContributionsRow: View {
         )
         .frame(height: 136)
         .padding(.vertical, 12)
+        .onTapGesture(perform: onTap)
         .onAppear(perform: viewModel.getContributions)
+    }
+
+    private func onTap() {
+        if let accountURL = viewModel.gitHubAccountURL {
+            openURL(accountURL)
+        }
     }
 }

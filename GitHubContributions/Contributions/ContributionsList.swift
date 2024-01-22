@@ -42,7 +42,7 @@ struct ContributionsList: View {
                 .foregroundColor(.secondary)
         }
         .multilineTextAlignment(.center)
-        .padding(EdgeInsets(top: 0, leading: 44, bottom: 0, trailing: 44))
+        .padding(.horizontal, 44)
     }
 
     private var listView: some View {
