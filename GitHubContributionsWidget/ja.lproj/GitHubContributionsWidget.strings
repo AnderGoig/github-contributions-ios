@@ -6,6 +6,10 @@
 
 "O7wabU" = "紫";
 
+"ub2khZ" = "黄";
+
+"ywLI12" = "反転";
+
 "VR1ovj" = "ユーザー名";
 
 "cJPOzQ" = "false";
@@ -31,6 +35,8 @@
 "tJlB2z-H5rp44" = "There are ${count} options matching ‘Blue’.";
 
 "tJlB2z-O7wabU" = "There are ${count} options matching ‘Purple’.";
+
+"tJlB2z-ywLI12" = "There are ${count} options matching ‘Invert’.";
 
 "tJlB2z-lRU6xh" = "There are ${count} options matching ‘Red’.";
 
