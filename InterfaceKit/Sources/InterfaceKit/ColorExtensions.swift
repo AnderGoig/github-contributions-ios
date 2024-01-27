@@ -68,5 +68,12 @@ public extension Color {
     static let yellowLevel2 = Color("YellowLevel2", bundle: .module)
     static let yellowLevel3 = Color("YellowLevel3", bundle: .module)
     static let yellowLevel4 = Color("YellowLevel4", bundle: .module)
+    
+    // MARK: - Invert Theme
+
+    static let invertLevel1 = Color("InvertLevel1", bundle: .module)
+    static let invertLevel2 = Color("InvertLevel2", bundle: .module)
+    static let invertLevel3 = Color("InvertLevel3", bundle: .module)
+    static let invertLevel4 = Color("InvertLevel4", bundle: .module)
 
 }

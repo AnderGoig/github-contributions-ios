@@ -75,6 +75,16 @@
 					<key>INEnumValueName</key>
 					<string>yellow</string>
 				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>Invert</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>ywLI12</string>
+					<key>INEnumValueIndex</key>
+					<integer>6</integer>
+					<key>INEnumValueName</key>
+					<string>invert</string>
+				</dict>
 			</array>
 		</dict>
 	</array>

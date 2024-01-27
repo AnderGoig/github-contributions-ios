@@ -18,6 +18,8 @@
 
 "kOVQ6y-ub2khZ" = "Just to confirm, you wanted ‘Yellow’?";
 
+"kOVQ6y-ywLI12" = "Just to confirm, you wanted ‘Invert’?";
+
 "lRU6xh" = "Rojo";
 
 "pwN466" = "Tema";
@@ -27,6 +29,8 @@
 "O7wabU" = "Morado";
 
 "ub2khZ" = "Amarillo";
+
+"ywLI12" = "Inversión";
 
 "tJlB2z-H5rp44" = "There are ${count} options matching ‘Blue’.";
 
@@ -39,6 +43,8 @@
 "tJlB2z-z6kbyG" = "There are ${count} options matching ‘Green’.";
 
 "tJlB2z-ub2khZ" = "There are ${count} options matching ‘Yellow’.";
+
+"tJlB2z-ywLI12" = "There are ${count} options matching ‘Invert’.";
 
 "tVvJ9c" = "Personalizar widget.";
 

@@ -27,6 +27,7 @@ extension Theme {
         case .red: return .redLevel1
         case .purple: return .purpleLevel1
         case .yellow: return .yellowLevel1
+        case .invert: return .invertLevel1
         }
     }
 
@@ -38,6 +39,7 @@ extension Theme {
         case .red: return .redLevel2
         case .purple: return .purpleLevel2
         case .yellow: return .yellowLevel2
+        case .invert: return .invertLevel2
         }
     }
 
@@ -49,6 +51,7 @@ extension Theme {
         case .red: return .redLevel3
         case .purple: return .purpleLevel3
         case .yellow: return .yellowLevel3
+        case .invert: return .invertLevel3
         }
     }
 
@@ -60,6 +63,7 @@ extension Theme {
         case .red: return .redLevel4
         case .purple: return .purpleLevel4
         case .yellow: return .yellowLevel4
+        case .invert: return .invertLevel4
         }
     }
 }
