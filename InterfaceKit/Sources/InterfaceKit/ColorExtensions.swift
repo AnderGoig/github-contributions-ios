@@ -61,4 +61,12 @@ public extension Color {
     static let purpleLevel2 = Color("PurpleLevel2", bundle: .module)
     static let purpleLevel3 = Color("PurpleLevel3", bundle: .module)
     static let purpleLevel4 = Color("PurpleLevel4", bundle: .module)
+
+    // MARK: - Yellow Theme
+
+    static let yellowLevel1 = Color("YellowLevel1", bundle: .module)
+    static let yellowLevel2 = Color("YellowLevel2", bundle: .module)
+    static let yellowLevel3 = Color("YellowLevel3", bundle: .module)
+    static let yellowLevel4 = Color("YellowLevel4", bundle: .module)
+
 }
