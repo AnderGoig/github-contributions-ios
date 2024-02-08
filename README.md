@@ -1,6 +1,5 @@
 <img align="right" src=".assets/app-icon-rounded.png" width="70" alt="Contribution Graphs for GitHub">
 
-# GitHub Contribution Graphs for iOS
 
 <a href="https://apps.apple.com/app/id1537192731"><img align="right" src=".assets/app-store-badge.svg" alt="App Store Badge"></a>
 
