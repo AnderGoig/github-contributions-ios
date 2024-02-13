@@ -71,9 +71,9 @@ public extension Color {
     
     // MARK: - Invert Theme
 
-    static let invertLevel1 = Color("InvertLevel1", bundle: .module)
-    static let invertLevel2 = Color("InvertLevel2", bundle: .module)
-    static let invertLevel3 = Color("InvertLevel3", bundle: .module)
-    static let invertLevel4 = Color("InvertLevel4", bundle: .module)
+    static let invertedLevel1 = Color("InvertedLevel1", bundle: .module)
+    static let invertedLevel2 = Color("InvertedLevel2", bundle: .module)
+    static let invertedLevel3 = Color("InvertedLevel3", bundle: .module)
+    static let invertedLevel4 = Color("InvertedLevel4", bundle: .module)
 
 }

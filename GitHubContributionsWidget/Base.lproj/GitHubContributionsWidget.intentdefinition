@@ -77,13 +77,13 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>Invert</string>
+					<string>Inverted</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>ywLI12</string>
 					<key>INEnumValueIndex</key>
 					<integer>6</integer>
 					<key>INEnumValueName</key>
-					<string>invert</string>
+					<string>inverted</string>
 				</dict>
 			</array>
 		</dict>
