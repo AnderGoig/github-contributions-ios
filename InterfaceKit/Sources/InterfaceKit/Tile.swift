@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct Tile: ViewModifier {
+    let cornerRadius: CGFloat
+    
     func body(content: Content) -> some View {
         content
-            .overlay(RoundedRectangle(cornerRadius: 2, style: .continuous).stroke(Color.tileBorder, lineWidth: 1))
-            .cornerRadius(2)
+            .overlay(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous).stroke(Color.tileBorder, lineWidth: 1))
+            .cornerRadius(cornerRadius)
     }
 }
 
 // MARK: - Convenience
 
 extension View {
-    func tileStyle() -> some View {
-        modifier(Tile())
+    func tileStyle(cornerRadius: CGFloat = 2) -> some View {
+        modifier(Tile(cornerRadius: cornerRadius))
     }
 }
