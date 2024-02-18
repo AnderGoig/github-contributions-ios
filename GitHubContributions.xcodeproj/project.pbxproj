@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7702E18A25CF2DC9003ECC3D /* ContributionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702E18925CF2DC9003ECC3D /* ContributionsList.swift */; };
 		771E3B54253CEB7600984A0B /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3B4E253CEADD00984A0B /* ArrayExtensions.swift */; };
 		771E3B5A253CEBCE00984A0B /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3B59253CEBCE00984A0B /* DateExtensions.swift */; };
-		771E3BA9253E423700984A0B /* GitHubContributionsGraphWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3BA8253E423700984A0B /* GitHubContributionsGraphWidget.swift */; };
 		771E3BAF253E42BA00984A0B /* GitHubContributionsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3BAE253E42BA00984A0B /* GitHubContributionsProvider.swift */; };
 		771E3BB9253E440500984A0B /* ThemeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3BB8253E440500984A0B /* ThemeExtensions.swift */; };
 		7761A6F52543BD82000871E3 /* ContributionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A6F42543BD82000871E3 /* ContributionsRow.swift */; };
@@ -49,6 +48,7 @@
 		B96A619F284A71A100CB7B55 /* InterfaceKit in Frameworks */ = {isa = PBXBuildFile; productRef = B96A619E284A71A100CB7B55 /* InterfaceKit */; };
 		B96A61A1284A71A100CB7B55 /* NetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = B96A61A0284A71A100CB7B55 /* NetworkKit */; };
 		BE67BFC326DBBF3B00B09345 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BE67BFC226DBBF3B00B09345 /* Kingfisher */; };
+		F4A146922B6505AB00354A8B /* GitHubContributionsGraphWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3BA8253E423700984A0B /* GitHubContributionsGraphWidget.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -453,8 +453,8 @@
 				771E3B5A253CEBCE00984A0B /* DateExtensions.swift in Sources */,
 				777D66592537A18D001029C4 /* GitHubContributionsWidgetBundle.swift in Sources */,
 				771E3BB9253E440500984A0B /* ThemeExtensions.swift in Sources */,
-				771E3BA9253E423700984A0B /* GitHubContributionsGraphWidget.swift in Sources */,
 				771E3B54253CEB7600984A0B /* ArrayExtensions.swift in Sources */,
+				F4A146922B6505AB00354A8B /* GitHubContributionsGraphWidget.swift in Sources */,
 				77BF7ACF2543537E006DA340 /* GitHubContributionsViewModel.swift in Sources */,
 				77BF7AE725435FB1006DA340 /* GitHubContributionsGraphWidgetView.swift in Sources */,
 				77A722DA2546620600B6064B /* GitHubContributionsWidget.intentdefinition in Sources */,
