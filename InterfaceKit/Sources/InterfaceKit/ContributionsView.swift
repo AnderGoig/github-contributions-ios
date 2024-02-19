@@ -34,20 +34,23 @@ public struct ContributionsView: View {
             }
             .captionStyle()
 
+            Spacer()
+
             if colors.isEmpty {
-                Spacer()
                 Label(emptyText ?? "", systemImage: "info.circle")
                     .font(.callout.weight(.semibold))
                     .foregroundColor(.blue)
                     .unredacted()
                 Spacer()
             } else {
-                GridStack(rows: rowsCount, columns: columnsCount, spacing: tileSpacing) { row, column in
-                    if let color = colors.element(at: row)?.element(at: column) {
-                        color.tileStyle()
-                    } else {
-                        Color.clear
+                GeometryReader { geometry in
+                    let tileSize = (geometry.size.width - CGFloat(columnsCount - 1) * tileSpacing) / CGFloat(columnsCount)
+                    GridStack(rows: rowsCount, columns: columnsCount, spacing: tileSpacing) { row, column in
+                        (colors.element(at: row)?.element(at: column) ?? .clear)
+                            .frame(width: tileSize, height: tileSize)
+                            .tileStyle()
                     }
+                    .position(x: geometry.frame(in: .local).midX, y: geometry.frame(in: .local).midY)
                 }
             }
         }

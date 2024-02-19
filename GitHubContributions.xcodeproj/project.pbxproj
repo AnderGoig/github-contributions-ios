@@ -10,7 +10,6 @@
 		7702E18A25CF2DC9003ECC3D /* ContributionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702E18925CF2DC9003ECC3D /* ContributionsList.swift */; };
 		771E3B54253CEB7600984A0B /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3B4E253CEADD00984A0B /* ArrayExtensions.swift */; };
 		771E3B5A253CEBCE00984A0B /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3B59253CEBCE00984A0B /* DateExtensions.swift */; };
-		771E3BA9253E423700984A0B /* GitHubContributionsGraphWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3BA8253E423700984A0B /* GitHubContributionsGraphWidget.swift */; };
 		771E3BAF253E42BA00984A0B /* GitHubContributionsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3BAE253E42BA00984A0B /* GitHubContributionsProvider.swift */; };
 		771E3BB9253E440500984A0B /* ThemeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3BB8253E440500984A0B /* ThemeExtensions.swift */; };
 		7761A6F52543BD82000871E3 /* ContributionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A6F42543BD82000871E3 /* ContributionsRow.swift */; };
@@ -49,6 +48,7 @@
 		B96A619F284A71A100CB7B55 /* InterfaceKit in Frameworks */ = {isa = PBXBuildFile; productRef = B96A619E284A71A100CB7B55 /* InterfaceKit */; };
 		B96A61A1284A71A100CB7B55 /* NetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = B96A61A0284A71A100CB7B55 /* NetworkKit */; };
 		BE67BFC326DBBF3B00B09345 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BE67BFC226DBBF3B00B09345 /* Kingfisher */; };
+		F4A146922B6505AB00354A8B /* GitHubContributionsGraphWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3BA8253E423700984A0B /* GitHubContributionsGraphWidget.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -361,8 +361,9 @@
 		777D65E425379A23001029C4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					777D65EB25379A23001029C4 = {
 						CreatedOnToolsVersion = 12.0.1;
@@ -453,8 +454,8 @@
 				771E3B5A253CEBCE00984A0B /* DateExtensions.swift in Sources */,
 				777D66592537A18D001029C4 /* GitHubContributionsWidgetBundle.swift in Sources */,
 				771E3BB9253E440500984A0B /* ThemeExtensions.swift in Sources */,
-				771E3BA9253E423700984A0B /* GitHubContributionsGraphWidget.swift in Sources */,
 				771E3B54253CEB7600984A0B /* ArrayExtensions.swift in Sources */,
+				F4A146922B6505AB00354A8B /* GitHubContributionsGraphWidget.swift in Sources */,
 				77BF7ACF2543537E006DA340 /* GitHubContributionsViewModel.swift in Sources */,
 				77BF7AE725435FB1006DA340 /* GitHubContributionsGraphWidgetView.swift in Sources */,
 				77A722DA2546620600B6064B /* GitHubContributionsWidget.intentdefinition in Sources */,
@@ -574,6 +575,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -636,6 +638,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -661,7 +664,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_ASSET_PATHS = "\"GitHubContributions/Preview Content\"";
 				DEVELOPMENT_TEAM = 75Z728ZJJT;
 				ENABLE_PREVIEWS = YES;
@@ -685,7 +688,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_ASSET_PATHS = "\"GitHubContributions/Preview Content\"";
 				DEVELOPMENT_TEAM = 75Z728ZJJT;
 				ENABLE_PREVIEWS = YES;
@@ -708,7 +711,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 75Z728ZJJT;
 				INFOPLIST_FILE = GitHubContributionsWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -731,7 +734,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 75Z728ZJJT;
 				INFOPLIST_FILE = GitHubContributionsWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -786,7 +789,7 @@
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 7.10.2;
+				minimumVersion = 7.11.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
