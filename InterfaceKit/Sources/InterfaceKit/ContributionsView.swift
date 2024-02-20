@@ -46,9 +46,11 @@ public struct ContributionsView: View {
                 GeometryReader { geometry in
                     let tileSize = (geometry.size.width - CGFloat(columnsCount - 1) * tileSpacing) / CGFloat(columnsCount)
                     GridStack(rows: rowsCount, columns: columnsCount, spacing: tileSpacing) { row, column in
-                        (colors.element(at: row)?.element(at: column) ?? .clear)
-                            .frame(width: tileSize, height: tileSize)
-                            .tileStyle()
+                        if let color = colors.element(at: row)?.element(at: column) {
+                            color.tileStyle().frame(width: tileSize, height: tileSize)
+                        } else {
+                            Color.clear.frame(width: tileSize, height: tileSize)
+                        }
                     }
                     .position(x: geometry.frame(in: .local).midX, y: geometry.frame(in: .local).midY)
                 }
