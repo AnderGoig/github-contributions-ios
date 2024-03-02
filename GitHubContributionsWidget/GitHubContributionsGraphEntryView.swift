@@ -34,6 +34,21 @@ struct GitHubContributionsGraphEntryView: View {
 
 // MARK: -
 
+
+// fix "please adopt containerbackground api" in widget after ios 17.0; ref-> https://stackoverflow.com/a/76842922/8262079
+extension View {
+    func widgetBackground(_ backgroundView: some View) -> some View {
+        if #available(iOSApplicationExtension 17.0, *) {
+            return containerBackground(for: .widget) {
+                backgroundView
+            }
+        } else {
+            return background(backgroundView)
+        }
+    }
+}
+
+
 struct WidgetStyle: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
     let isPureBlackEnabled: Bool
@@ -46,6 +61,6 @@ struct WidgetStyle: ViewModifier {
         content
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding()
-            .background(backgroundColor)
+            .widgetBackground(backgroundColor)
     }
 }
