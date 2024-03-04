@@ -34,7 +34,6 @@ struct GitHubContributionsGraphEntryView: View {
 
 // MARK: -
 
-
 // fix "please adopt containerbackground api" in widget after ios 17.0; ref-> https://stackoverflow.com/a/76842922/8262079
 extension View {
     func widgetBackground(_ backgroundView: some View) -> some View {
