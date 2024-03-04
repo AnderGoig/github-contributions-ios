@@ -46,8 +46,6 @@ extension View {
         }
     }
 }
-
-
 struct WidgetStyle: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
     let isPureBlackEnabled: Bool
