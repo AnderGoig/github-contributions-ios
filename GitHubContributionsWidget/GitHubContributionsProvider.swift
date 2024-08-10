@@ -10,10 +10,16 @@ import NetworkKit
 import WidgetKit
 
 final class GitHubContributionsProvider: IntentTimelineProvider {
+    // MARK: - Types
+
     public typealias Entry = GitHubContributionsViewModel
+
+    // MARK: - Properties
 
     private var timelineCancellable: AnyCancellable?
     private let queue = DispatchQueue(label: "com.andergoig.GitHubContributionsWidget.network")
+
+    // MARK: - Methods
 
     func placeholder(in context: Context) -> Entry {
         let currentDate = Date.now

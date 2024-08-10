@@ -9,9 +9,13 @@ import InterfaceKit
 import SwiftUI
 
 struct GitHubContributionsGraphWidgetView: View {
+    // MARK: - Properties
+
     let viewModel: GitHubContributionsViewModel
     let rowsCount: Int
     let columnsCount: Int
+
+    // MARK: - View
 
     var body: some View {
         ContributionsView(

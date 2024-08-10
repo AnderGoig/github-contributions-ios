@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct GitHubContributionsGraphEntryView: View {
+    // MARK: - Properties
+
     @Environment(\.widgetFamily) var widgetFamily
     let entry: GitHubContributionsViewModel
+
+    // MARK: - Init
 
     var body: some View {
         if entry.showError {
@@ -34,7 +38,6 @@ struct GitHubContributionsGraphEntryView: View {
 
 // MARK: -
 
-// fix "please adopt containerbackground api" in widget after ios 17.0; ref-> https://stackoverflow.com/a/76842922/8262079
 extension View {
     func widgetBackground(_ backgroundView: some View) -> some View {
         if #available(iOSApplicationExtension 17.0, *) {
@@ -46,6 +49,9 @@ extension View {
         }
     }
 }
+
+// MARK: -
+
 struct WidgetStyle: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
     let isPureBlackEnabled: Bool

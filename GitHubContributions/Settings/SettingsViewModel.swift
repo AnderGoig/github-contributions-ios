@@ -8,6 +8,8 @@
 import Foundation
 
 final class SettingsViewModel: ObservableObject {
+    // MARK: - Properties
+
     @Published private(set) var topItems: [SettingsItem] = [.widgetGuide]
     @Published private(set) var footerItems: [SettingsItem] = [.rate, .share, .feedback, .openSource]
 

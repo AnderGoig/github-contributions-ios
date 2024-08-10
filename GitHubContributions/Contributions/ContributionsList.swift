@@ -9,18 +9,32 @@ import InterfaceKit
 import SwiftUI
 
 struct ContributionsList: View {
+    // MARK: - Properties
+
+    @State private var username = ""
     @State private var showsAlert = false
     @ObservedObject var viewModel: ContributionsListViewModel
 
+    // MARK: - View
+
     var body: some View {
         NavigationView {
-            Group {
+            List {
+                ForEach(viewModel.contributions, id: \.username) { viewModel in
+                    ContributionsRow(viewModel: viewModel)
+                }
+                .onDelete(perform: onDelete)
+                .onMove(perform: onMove)
+                .listRowSeparator(.hidden)
+            }
+            .overlay {
                 if viewModel.contributions.isEmpty {
                     emptyView
-                } else {
-                    listView
                 }
             }
+            .animation(.default, value: viewModel.contributions.count)
+            .background(Color(uiColor: .systemGroupedBackground))
+            .ignoresSafeArea(.keyboard)
             .navigationTitle("app-title")
             .toolbar {
                 Button(action: { showsAlert = true }) {
@@ -28,7 +42,11 @@ struct ContributionsList: View {
                 }
             }
         }
-        .alert(isPresented: $showsAlert, addContributionsAlert)
+        .alert("contributions-add-title", isPresented: $showsAlert) {
+            TextField("contributions-add-placeholder", text: $username).textInputAutocapitalization(.never).autocorrectionDisabled()
+            Button("contributions-add-accept", action: onAddUsername)
+            Button("contributions-add-cancel", role: .cancel, action: resetUsername)
+        }
     }
 
     private var emptyView: some View {
@@ -43,32 +61,18 @@ struct ContributionsList: View {
         }
         .multilineTextAlignment(.center)
         .padding(.horizontal, 44)
+        .transition(.scale(scale: 0.8).combined(with: .opacity).animation(.snappy.speed(2)))
     }
 
-    private var listView: some View {
-        List {
-            ForEach(viewModel.contributions, id: \.username) { viewModel in
-                ContributionsRow(viewModel: viewModel)
-            }
-            .onDelete(perform: onDelete)
-            .onMove(perform: onMove)
-        }
-        .ignoresSafeArea(.keyboard)
-    }
+    // MARK: - Private Methods
 
-    private var addContributionsAlert: TextAlert {
-        TextAlert(
-            title: NSLocalizedString("contributions-add-title", comment: ""),
-            placeholder: NSLocalizedString("contributions-add-placeholder", comment: ""),
-            accept: NSLocalizedString("contributions-add-accept", comment: ""),
-            cancel: NSLocalizedString("contributions-add-cancel", comment: ""),
-            action: onAdd
-        )
-    }
-
-    private func onAdd(username: String?) {
-        guard let username = username else { return }
+    private func onAddUsername() {
         viewModel.addContributions(from: username)
+        resetUsername()
+    }
+
+    private func resetUsername() {
+        username = ""
     }
 
     private func onDelete(offsets: IndexSet) {

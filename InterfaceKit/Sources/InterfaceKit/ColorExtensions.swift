@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-// MARK: - Properties
-
 public extension Color {
+    // MARK: - Properties
+
     static var widgetBackground: Color {
         Color(.init { trait in
             trait.userInterfaceStyle == .dark
@@ -68,12 +68,11 @@ public extension Color {
     static let yellowLevel2 = Color("YellowLevel2", bundle: .module)
     static let yellowLevel3 = Color("YellowLevel3", bundle: .module)
     static let yellowLevel4 = Color("YellowLevel4", bundle: .module)
-    
+
     // MARK: - Invert Theme
 
     static let invertedLevel1 = Color("InvertedLevel1", bundle: .module)
     static let invertedLevel2 = Color("InvertedLevel2", bundle: .module)
     static let invertedLevel3 = Color("InvertedLevel3", bundle: .module)
     static let invertedLevel4 = Color("InvertedLevel4", bundle: .module)
-
 }

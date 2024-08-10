@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GuideView: View {
+    // MARK: - View
+
     var body: some View {
         TabView {
             ForEach(Step.allCases, id: \.rawValue) { step in

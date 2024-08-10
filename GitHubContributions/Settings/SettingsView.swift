@@ -9,9 +9,11 @@ import InterfaceKit
 import SwiftUI
 
 struct SettingsView: View {
+    // MARK: - Properties
+
     @ObservedObject var viewModel: SettingsViewModel
 
-    // MARK: -
+    // MARK: - View
 
     var body: some View {
         NavigationView {
@@ -47,7 +49,7 @@ struct SettingsView: View {
             .listRowInsets(EdgeInsets(top: 24, leading: 0, bottom: 24, trailing: 0))
     }
 
-    // MARK: -
+    // MARK: - Private Methods
 
     private func handleTapOnItem(_ item: SettingsItem) {
         switch item {

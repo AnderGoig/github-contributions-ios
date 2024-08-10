@@ -8,6 +8,8 @@
 import SwiftUI
 
 public struct ContributionsView: View {
+    // MARK: - Properties
+
     @Environment(\.redactionReasons) var redactionReasons
 
     let rowsCount: Int
@@ -18,6 +20,8 @@ public struct ContributionsView: View {
     let emptyText: String?
 
     private let tileSpacing: CGFloat = 3.0
+
+    // MARK: - View
 
     public var body: some View {
         VStack {
@@ -57,6 +61,8 @@ public struct ContributionsView: View {
             }
         }
     }
+
+    // MARK: - Init
 
     public init(
         rowsCount: Int,

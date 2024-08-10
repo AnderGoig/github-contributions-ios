@@ -8,10 +8,16 @@
 import SwiftUI
 
 struct GridStack<Content: View>: View {
-    let rows: Int
-    let columns: Int
-    let spacing: CGFloat?
-    let content: (Int, Int) -> Content
+    // MARK: - Properties
+
+    var rows: Int
+    var columns: Int
+    var spacing: CGFloat?
+
+    @ViewBuilder
+    var content: (Int, Int) -> Content
+
+    // MARK: - View
 
     var body: some View {
         HStack(spacing: spacing) {
@@ -23,17 +29,5 @@ struct GridStack<Content: View>: View {
                 }
             }
         }
-    }
-
-    init(
-        rows: Int,
-        columns: Int,
-        spacing: CGFloat? = nil,
-        @ViewBuilder content: @escaping (Int, Int) -> Content
-    ) {
-        self.rows = rows
-        self.columns = columns
-        self.spacing = spacing
-        self.content = content
     }
 }
