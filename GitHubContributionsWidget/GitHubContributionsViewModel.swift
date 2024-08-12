@@ -9,8 +9,12 @@ import Foundation
 import NetworkKit
 
 struct GitHubContributionsViewModel {
+    // MARK: - Properties
+
     private let contributions: [GitHub.Contribution]
     private let configuration: ConfigurationIntent
+
+    // MARK: - Outputs
 
     var theme: Theme {
         configuration.theme
@@ -45,6 +49,8 @@ struct GitHubContributionsViewModel {
         let tilesCount = rowsCount * columnsCount - (rowsCount - Calendar.current.component(.weekday, from: lastDate))
         return contributions.suffix(tilesCount).map(\.level).chunked(into: rowsCount)
     }
+
+    // MARK: - Init
 
     init(contributions: [GitHub.Contribution], configuration: ConfigurationIntent) {
         self.contributions = contributions

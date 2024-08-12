@@ -10,7 +10,7 @@ import Foundation
 import SwiftSoup
 
 public enum GitHub {
-    // MARK: - Private Properties
+    // MARK: - Properties
 
     private static let dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()

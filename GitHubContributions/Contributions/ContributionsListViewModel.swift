@@ -8,16 +8,22 @@
 import Foundation
 
 final class ContributionsListViewModel: ObservableObject {
+    // MARK: - Properties
+
+    private let storage: ContributionsStorage
+
     @Published private(set) var contributions: [ContributionsRowViewModel] = []
 
-    private var usernames: [String] {
-        get { UserDefaults.standard.codable(forKey: "usernames") ?? [] }
-        set { UserDefaults.standard.set(value: newValue, forKey: "usernames") }
+    // MARK: - Init
+
+    init(storage: ContributionsStorage) {
+        self.storage = storage
+        Task {
+            contributions = await storage.usernames.map(ContributionsRowViewModel.init)
+        }
     }
 
-    init() {
-        contributions = usernames.map(ContributionsRowViewModel.init)
-    }
+    // MARK: - Inputs
 
     func addContributions(from username: String) {
         if !username.trimmingCharacters(in: .whitespaces).isEmpty, !contributions.contains(where: { $0.username.lowercased() == username.lowercased() }) {
@@ -36,7 +42,11 @@ final class ContributionsListViewModel: ObservableObject {
         updateStorage()
     }
 
+    // MARK: - Private Methods
+
     private func updateStorage() {
-        usernames = contributions.map(\.username)
+        Task(priority: .background) {
+            await storage.setUsernames(contributions.map(\.username))
+        }
     }
 }

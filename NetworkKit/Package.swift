@@ -15,7 +15,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/scinfu/SwiftSoup",
-            .upToNextMinor(from: "2.7.1")),
+            .upToNextMinor(from: "2.7.3")),
     ],
     targets: [
         .target(

@@ -9,17 +9,17 @@
 "app-title" = "Contributions";
 "app-version-%@" = "バージョン %@";
 
-"contributions-loading" = "Loading...";
+"contributions-loading" = "読み込み中...";
 
 "contributions-empty-title" = "No contributions";
-"contributions-empty-subtitle" = "「＋」ボタンからGithubアカウントを追加しましょう";
+"contributions-empty-subtitle" = "「＋」ボタンをタップして、Githubアカウントを追加しましょう";
 
 "contributions-add-title" = "Githubアカウントの追加";
 "contributions-add-placeholder" = "ユーザー名を入力してください";
 "contributions-add-accept" = "追加";
 "contributions-add-cancel" = "キャンセル";
 
-"settings-title" = "Settings";
+"settings-title" = "設定";
 
 "settings-row-widget-guide-title" = "Widget Setup";
 "settings-row-widget-guide-subtitle" = "ウィジェットのカスタマイズ方法について";
@@ -28,7 +28,7 @@
 "settings-row-rate-subtitle" = "アプリは使いやすいですか？";
 
 "settings-row-share-title" = "Share";
-"settings-row-share-subtitle" = "友達に共有しましょう！";
+"settings-row-share-subtitle" = "友達と共有しましょう！";
 
 "settings-row-feedback-title" = "Feedback";
 "settings-row-feedback-subtitle" = "goig.ander@icloud.com";
@@ -36,7 +36,7 @@
 "settings-row-open-source-title" = "Open Source";
 "settings-row-open-source-subtitle" = "自由に開発に参加しましょう！";
 
-"widget-guide-title" = "Widget Setup";
+"widget-guide-title" = "ウィジェットの設定";
 
 "widget-guide-step-%u-title" = "Step %u";
 "widget-guide-step-1-subtitle" = "画面上に何もない場所を\nアプリが動くまで長押しします";

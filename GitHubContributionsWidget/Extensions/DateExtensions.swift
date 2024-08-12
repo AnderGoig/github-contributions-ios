@@ -7,8 +7,6 @@
 
 import Foundation
 
-// MARK: - Methods
-
 extension Date {
     func range(to: Date) -> [Date] {
         var tempDate = self

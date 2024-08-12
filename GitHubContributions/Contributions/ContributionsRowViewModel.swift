@@ -10,9 +10,13 @@ import Foundation
 import NetworkKit
 
 final class ContributionsRowViewModel: ObservableObject {
+    // MARK: - Types
+
     struct Contributions {
         var levels: [[GitHub.Contribution.Level]] = []
     }
+
+    // MARK: - Properties
 
     static let rowsCount = 7
     static let columnsCount = 20
@@ -24,11 +28,15 @@ final class ContributionsRowViewModel: ObservableObject {
         URL(string: "https://github.com/\(username)")
     }
 
-    private let queue = DispatchQueue(label: "com.andergoig.GitHubContributions.network")
+    private let queue = DispatchQueue(label: "com.andergoig.GitHubContributions.network", attributes: .concurrent)
+
+    // MARK: - Init
 
     init(username: String) {
         self.username = username
     }
+
+    // MARK: - Inputs
 
     func getContributions() {
         guard contributions.levels.isEmpty else { return }
@@ -40,6 +48,8 @@ final class ContributionsRowViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .assign(to: &$contributions)
     }
+
+    // MARK: - Private Methods
 
     private static func mapContributions(_ contributions: [GitHub.Contribution]) -> Contributions {
         guard let lastDate = contributions.last?.date else { return .init() }

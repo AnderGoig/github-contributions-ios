@@ -12,7 +12,7 @@
 "contributions-loading" = "Cargando...";
 
 "contributions-empty-title" = "Sin contribuciones";
-"contributions-empty-subtitle" = "Toca el botón '+' para añadir tus usuarios de GitHub favoritos";
+"contributions-empty-subtitle" = "Toca el botón '+' para añadir tus usuarios de GitHub favoritos.";
 
 "contributions-add-title" = "Añadir contribuciones";
 "contributions-add-placeholder" = "Ingresa un nombre de usuario de GitHub";
@@ -22,27 +22,27 @@
 "settings-title" = "Ajustes";
 
 "settings-row-widget-guide-title" = "Configuración del widget";
-"settings-row-widget-guide-subtitle" = "Personaliza tu pantalla de inicio";
+"settings-row-widget-guide-subtitle" = "Personaliza la pantalla de inicio";
 
 "settings-row-rate-title" = "Valorar la App";
-"settings-row-rate-subtitle" = "¿Te está gustando?";
+"settings-row-rate-subtitle" = "¿Te gusta la app?";
 
 "settings-row-share-title" = "Compartir";
-"settings-row-share-subtitle" = "¡Corre la voz!";
+"settings-row-share-subtitle" = "¡Comparte con tus amigos!";
 
 "settings-row-feedback-title" = "Contacto";
 "settings-row-feedback-subtitle" = "goig.ander@icloud.com";
 
-"settings-row-open-source-title" = "Código libre";
+"settings-row-open-source-title" = "Código abierto";
 "settings-row-open-source-subtitle" = "¡Contribuye al proyecto!";
 
 "widget-guide-title" = "Configuración del widget";
 
 "widget-guide-step-%u-title" = "Paso %u";
-"widget-guide-step-1-subtitle" = "Mantén presionada tu pantalla hasta que tus aplicaciones se muevan.";
-"widget-guide-step-2-subtitle" = "Toque el signo \"más\" en la esquina superior izquierda para abrir el menú de widgets.";
-"widget-guide-step-3-subtitle" = "Busque por \"Contribuciones\" y toque el primer resultado de la lista.";
-"widget-guide-step-4-subtitle" = "Desliza para elegir el tamaño y la forma del widget, luego toca \"Añadir widget\".";
-"widget-guide-step-5-subtitle" = "Toque el widget mientras se mueve para abrir el menú de configuración.";
-"widget-guide-step-6-subtitle" = "Ajuste el widget con el nombre de usuario de GitHub y color que quieras.";
-"widget-guide-step-7-subtitle" = "... ¡ya estás listo! ¡Disfruta de tu widget de contribuciones de GitHub!";
+"widget-guide-step-1-subtitle" = "Mantén presionada la pantalla hasta que las aplicaciones se muevan.";
+"widget-guide-step-2-subtitle" = "Toca el signo '+' en la esquina superior izquierda para abrir el menú de widgets.";
+"widget-guide-step-3-subtitle" = "Busca por 'Contribuciones' y escoge el primer resultado.";
+"widget-guide-step-4-subtitle" = "Elige el tamaño del widget y luego pulsa 'Añadir widget'.";
+"widget-guide-step-5-subtitle" = "Toca el widget mientras se mueve para abrir el menú de configuración.";
+"widget-guide-step-6-subtitle" = "Configura el widget con el nombre de usuario de GitHub y color que prefieras.";
+"widget-guide-step-7-subtitle" = "... ¡Listo! ¡Disfruta de tu widget de contribuciones de GitHub!";

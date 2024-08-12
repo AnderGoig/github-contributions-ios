@@ -10,7 +10,11 @@ import SwiftUI
 import WidgetKit
 
 struct GitHubContributionsGraphWidget: Widget {
+    // MARK: - Properties
+
     let kind: String = "GitHubContributionsGraphWidget"
+
+    // MARK: - View
 
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: GitHubContributionsProvider()) { entry in

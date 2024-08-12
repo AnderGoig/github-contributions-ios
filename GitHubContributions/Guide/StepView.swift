@@ -9,8 +9,12 @@ import Kingfisher
 import SwiftUI
 
 struct StepView: View {
+    // MARK: - Properties
+
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     let step: Step
+
+    // MARK: - View
 
     var body: some View {
         VStack(spacing: 32) {

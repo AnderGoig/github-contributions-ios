@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct SettingsRow: View {
+    // MARK: - Properties
+
     let item: SettingsItem
+
+    // MARK: - vIEW
 
     var body: some View {
         Label {
