@@ -5,6 +5,7 @@
 //  Created by Ander Goig on 14/10/2020.
 //
 
+import InterfaceKit
 import SwiftUI
 
 @main
@@ -12,17 +13,20 @@ struct GitHubContributionsApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                ContributionsList(viewModel: .init(storage: DefaultContributionsStorage()))
-                    .tabItem {
-                        Image(systemName: "square.grid.3x3.fill")
-                        Text("app-title")
-                    }
+                Group {
+                    ContributionsList(viewModel: .init(storage: DefaultContributionsStorage()))
+                        .tabItem {
+                            Image(systemName: "square.grid.3x3.fill")
+                            Text("app-title")
+                        }
 
-                SettingsView(viewModel: .init())
-                    .tabItem {
-                        Image(systemName: "gearshape.fill")
-                        Text("settings-title")
-                    }
+                    SettingsView(viewModel: .init())
+                        .tabItem {
+                            Image(systemName: "gearshape.fill")
+                            Text("settings-title")
+                        }
+                }
+                .toolbarBackground(Color.backgroundPrimary, for: .tabBar)
             }
         }
     }
