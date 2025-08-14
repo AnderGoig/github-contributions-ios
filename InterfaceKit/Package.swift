@@ -10,7 +10,8 @@ let package = Package(
     products: [
         .library(
             name: "InterfaceKit",
-            targets: ["InterfaceKit"]),
+            targets: ["InterfaceKit"]
+        ),
     ],
     targets: [
         .target(
@@ -18,5 +19,7 @@ let package = Package(
             dependencies: [],
             resources: [
                 .process("Resources"),
-            ]),
-    ])
+            ]
+        ),
+    ]
+)
