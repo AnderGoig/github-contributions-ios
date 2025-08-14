@@ -27,7 +27,7 @@ public struct ContributionsView: View {
         VStack {
             HStack {
                 HStack(spacing: 6) {
-                    Image("GitHubMark", bundle: .module)
+                    Image(.gitHubMark)
                         .resizable()
                         .frame(width: 12, height: 12)
                         .unredacted()
