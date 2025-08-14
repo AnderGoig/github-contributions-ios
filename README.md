@@ -16,8 +16,8 @@ Quickly check in on your GitHub contributions from your iOS Home Screen!
 
 ## Requirements
 
-- iOS 15.0+
-- Xcode 13.0+
+- iOS 16.0+
+- Xcode 14.0+
 
 ## Contributing
 
