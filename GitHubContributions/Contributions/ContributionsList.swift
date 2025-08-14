@@ -25,7 +25,9 @@ struct ContributionsList: View {
                 }
                 .onDelete(perform: onDelete)
                 .onMove(perform: onMove)
-                .listRowSeparator(.hidden)
+                .listRowBackground(Color.backgroundSecondary)
+                .listRowSeparatorTint(Color.backgroundSeparator)
+                .alignmentGuide(.listRowSeparatorLeading) { _ in 0 }
             }
             .overlay {
                 if viewModel.contributions.isEmpty {
@@ -33,7 +35,8 @@ struct ContributionsList: View {
                 }
             }
             .animation(.default, value: viewModel.contributions.count)
-            .background(Color(uiColor: .systemGroupedBackground))
+            .scrollContentBackground(.hidden)
+            .background(Color.backgroundPrimary)
             .ignoresSafeArea(.keyboard)
             .navigationTitle("app-title")
             .toolbar {

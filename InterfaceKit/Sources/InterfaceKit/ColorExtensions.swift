@@ -8,71 +8,56 @@
 import SwiftUI
 
 public extension Color {
-    // MARK: - Properties
+    // MARK: - Background
 
-    static var widgetBackground: Color {
-        Color(.init { trait in
-            trait.userInterfaceStyle == .dark
-                ? UIColor.systemGray6
-                : UIColor.white
-        })
-    }
+    static let backgroundPrimary = Color(.Background.primary)
+    static let backgroundSecondary = Color(.Background.secondary)
+    static let backgroundSeparator = Color(.Background.separator)
 
-    static var tileBorder: Color {
-        Color(.init { trait in
-            trait.userInterfaceStyle == .dark
-                ? UIColor(red: 0.329, green: 0.329, blue: 0.345, alpha: 0.2)
-                : UIColor(red: 0.106, green: 0.122, blue: 0.137, alpha: 0.04)
-        })
-    }
+    // MARK: - Tile
 
-    static var emptyTile: Color {
-        Color(.init { trait in
-            trait.userInterfaceStyle == .dark
-                ? UIColor.quaternarySystemFill
-                : UIColor(red: 0.922, green: 0.929, blue: 0.941, alpha: 1.0)
-        })
-    }
+    static let tileBorder = Color(.Tile.border)
+    static let tileEmpty = Color(.Tile.empty)
 
     // MARK: - Blue Theme
 
-    static let blueLevel1 = Color("BlueLevel1", bundle: .module)
-    static let blueLevel2 = Color("BlueLevel2", bundle: .module)
-    static let blueLevel3 = Color("BlueLevel3", bundle: .module)
-    static let blueLevel4 = Color("BlueLevel4", bundle: .module)
+    static let blueLevel1 = Color(.Blue.level1)
+    static let blueLevel2 = Color(.Blue.level2)
+    static let blueLevel3 = Color(.Blue.level3)
+    static let blueLevel4 = Color(.Blue.level4)
 
     // MARK: - Green Theme
 
-    static let greenLevel1 = Color("GreenLevel1", bundle: .module)
-    static let greenLevel2 = Color("GreenLevel2", bundle: .module)
-    static let greenLevel3 = Color("GreenLevel3", bundle: .module)
-    static let greenLevel4 = Color("GreenLevel4", bundle: .module)
+    static let greenLevel1 = Color(.Green.level1)
+    static let greenLevel2 = Color(.Green.level2)
+    static let greenLevel3 = Color(.Green.level3)
+    static let greenLevel4 = Color(.Green.level4)
 
     // MARK: - Red Theme
 
-    static let redLevel1 = Color("RedLevel1", bundle: .module)
-    static let redLevel2 = Color("RedLevel2", bundle: .module)
-    static let redLevel3 = Color("RedLevel3", bundle: .module)
-    static let redLevel4 = Color("RedLevel4", bundle: .module)
+    static let redLevel1 = Color(.Red.level1)
+    static let redLevel2 = Color(.Red.level2)
+    static let redLevel3 = Color(.Red.level3)
+    static let redLevel4 = Color(.Red.level4)
 
     // MARK: - Purple Theme
 
-    static let purpleLevel1 = Color("PurpleLevel1", bundle: .module)
-    static let purpleLevel2 = Color("PurpleLevel2", bundle: .module)
-    static let purpleLevel3 = Color("PurpleLevel3", bundle: .module)
-    static let purpleLevel4 = Color("PurpleLevel4", bundle: .module)
+    static let purpleLevel1 = Color(.Purple.level1)
+    static let purpleLevel2 = Color(.Purple.level2)
+    static let purpleLevel3 = Color(.Purple.level3)
+    static let purpleLevel4 = Color(.Purple.level4)
 
     // MARK: - Yellow Theme
 
-    static let yellowLevel1 = Color("YellowLevel1", bundle: .module)
-    static let yellowLevel2 = Color("YellowLevel2", bundle: .module)
-    static let yellowLevel3 = Color("YellowLevel3", bundle: .module)
-    static let yellowLevel4 = Color("YellowLevel4", bundle: .module)
+    static let yellowLevel1 = Color(.Yellow.level1)
+    static let yellowLevel2 = Color(.Yellow.level2)
+    static let yellowLevel3 = Color(.Yellow.level3)
+    static let yellowLevel4 = Color(.Yellow.level4)
 
-    // MARK: - Invert Theme
+    // MARK: - Inverted Theme
 
-    static let invertedLevel1 = Color("InvertedLevel1", bundle: .module)
-    static let invertedLevel2 = Color("InvertedLevel2", bundle: .module)
-    static let invertedLevel3 = Color("InvertedLevel3", bundle: .module)
-    static let invertedLevel4 = Color("InvertedLevel4", bundle: .module)
+    static let invertedLevel1 = Color(.Inverted.level1)
+    static let invertedLevel2 = Color(.Inverted.level2)
+    static let invertedLevel3 = Color(.Inverted.level3)
+    static let invertedLevel4 = Color(.Inverted.level4)
 }

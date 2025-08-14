@@ -24,6 +24,8 @@ struct SettingsView: View {
                             SettingsRow(item: item)
                         }
                     }
+                    .listRowBackground(Color.backgroundSecondary)
+                    .listRowSeparatorTint(Color.backgroundSeparator)
                 }
 
                 Section(footer: footer) {
@@ -32,8 +34,12 @@ struct SettingsView: View {
                             SettingsRow(item: item)
                         }
                     }
+                    .listRowBackground(Color.backgroundSecondary)
+                    .listRowSeparatorTint(Color.backgroundSeparator)
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(Color.backgroundPrimary)
             .navigationTitle("settings-title")
         }
     }

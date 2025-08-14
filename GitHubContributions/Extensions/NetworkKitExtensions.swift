@@ -11,7 +11,7 @@ import SwiftUI
 extension GitHub.Contribution.Level {
     var color: Color {
         switch self {
-        case .zero: return .emptyTile
+        case .zero: return .tileEmpty
         case .first: return .greenLevel1
         case .second: return .greenLevel2
         case .third: return .greenLevel3

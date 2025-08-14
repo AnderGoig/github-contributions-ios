@@ -11,7 +11,7 @@ import SwiftUI
 extension Theme {
     func color(for level: GitHub.Contribution.Level) -> Color {
         switch level {
-        case .zero: return Color.emptyTile
+        case .zero: return .tileEmpty
         case .first: return firstLevelColor
         case .second: return secondLevelColor
         case .third: return thirdLevelColor
