@@ -2,13 +2,15 @@
 
 # GitHub Contribution Graphs for iOS
 
-<a href="https://apps.apple.com/app/id1537192731"><img align="right" src=".assets/app-store-badge.svg" alt="App Store Badge"></a>
+<a href="https://apps.apple.com/app/id1537192731">
+  <img align="right" src=".assets/app-store-badge.svg" alt="Download on the App Store">
+</a>
 
-Quickly check in on your GitHub contributions from your iOS Home Screen!
+Stay on top of your GitHub contributions, right from your iOS Home Screen.
 
-- Select the Widget size that suits you better
-- Type your GitHub username
-- Choose between different color themes
+- View your GitHub contributions directly in a widget
+- Pick the widget size that works best for you
+- Customize colors with multiple themes
 
 ## Screenshots
 
@@ -21,8 +23,8 @@ Quickly check in on your GitHub contributions from your iOS Home Screen!
 
 ## Contributing
 
-If you have feature requests or bug reports, feel free to help out by sending pull requests or by [creating new issues](https://github.com/AnderGoig/github-contributions-ios/issues/new). Please take a moment to
-review the [CONTRIBUTING](CONTRIBUTING.md) guidelines.
+If you have feature requests or bug reports, feel free to send pull requests or [open an issue](https://github.com/AnderGoig/github-contributions-ios/issues/new).
+Please check out the [CONTRIBUTING](CONTRIBUTING.md) guide before contributing.
 
 ## Credits
 
@@ -30,8 +32,9 @@ review the [CONTRIBUTING](CONTRIBUTING.md) guidelines.
 
 ### Third-Party Libraries
 
-"Contribution Graphs for GitHub" uses [Kingfisher](https://github.com/onevcat/Kingfisher) by [@onevcat](https://github.com/onevcat) and [SwiftSoup](https://github.com/scinfu/SwiftSoup) by [@scinfu](https://github.com/scinfu).
+- [Kingfisher](https://github.com/onevcat/Kingfisher) by [@onevcat](https://github.com/onevcat)
+- [SwiftSoup](https://github.com/scinfu/SwiftSoup) by [@scinfu](https://github.com/scinfu)
 
 ## License
 
-"Contribution Graphs for GitHub" is released under the MIT license. See [LICENSE](LICENSE) for details.
+This project is released under the MIT license. See [LICENSE](LICENSE) for details.
