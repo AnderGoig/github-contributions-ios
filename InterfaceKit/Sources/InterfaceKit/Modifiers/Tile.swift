@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct Tile: ViewModifier {
     // MARK: - Properties
 
     let cornerRadius: CGFloat
+
+    @Environment(\.widgetRenderingMode)
+    private var widgetRenderingMode
 
     // MARK: - View
 
@@ -18,6 +22,7 @@ struct Tile: ViewModifier {
         content
             .overlay(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous).stroke(Color.tileBorder, lineWidth: 1))
             .cornerRadius(cornerRadius)
+            .accented(widgetRenderingMode == .accented)
     }
 }
 
@@ -26,5 +31,14 @@ struct Tile: ViewModifier {
 extension View {
     func tileStyle(cornerRadius: CGFloat = 2) -> some View {
         modifier(Tile(cornerRadius: cornerRadius))
+    }
+
+    @ViewBuilder
+    func accented(_ isAccented: Bool = true) -> some View {
+        if isAccented {
+            self.luminanceToAlpha().widgetAccentable(true)
+        } else {
+            self
+        }
     }
 }

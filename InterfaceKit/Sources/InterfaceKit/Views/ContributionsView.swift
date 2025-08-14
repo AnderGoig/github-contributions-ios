@@ -10,8 +10,6 @@ import SwiftUI
 public struct ContributionsView: View {
     // MARK: - Properties
 
-    @Environment(\.redactionReasons) var redactionReasons
-
     let rowsCount: Int
     let columnsCount: Int
     let colors: [[Color]]
