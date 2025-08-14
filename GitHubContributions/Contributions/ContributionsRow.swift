@@ -27,7 +27,7 @@ struct ContributionsRow: View {
         .frame(height: 136)
         .padding(.vertical, 12)
         .onTapGesture(perform: onTap)
-        .onAppear(perform: viewModel.getContributions)
+        .task(viewModel.loadContributions)
     }
 
     // MARK: - Private Methods

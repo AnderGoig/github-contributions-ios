@@ -34,6 +34,7 @@ struct ContributionsList: View {
                     emptyView
                 }
             }
+            .task(viewModel.loadContributions)
             .animation(.default, value: viewModel.contributions.count)
             .scrollContentBackground(.hidden)
             .background(Color.backgroundPrimary)
@@ -46,7 +47,10 @@ struct ContributionsList: View {
             }
         }
         .alert("contributions-add-title", isPresented: $showsAlert) {
-            TextField("contributions-add-placeholder", text: $username).textInputAutocapitalization(.never).autocorrectionDisabled()
+            TextField("contributions-add-placeholder", text: $username)
+                .textInputAutocapitalization(.never)
+                .autocorrectionDisabled()
+
             Button("contributions-add-accept", action: onAddUsername)
             Button("contributions-add-cancel", role: .cancel, action: resetUsername)
         }
@@ -70,19 +74,25 @@ struct ContributionsList: View {
     // MARK: - Private Methods
 
     private func onAddUsername() {
-        viewModel.addContributions(from: username)
-        resetUsername()
+        Task {
+            await viewModel.addContributions(from: username)
+            resetUsername()
+        }
+    }
+
+    private func onDelete(offsets: IndexSet) {
+        Task {
+            await viewModel.removeContributions(atOffsets: offsets)
+        }
+    }
+
+    private func onMove(source: IndexSet, destination: Int) {
+        Task {
+            await viewModel.moveContributions(fromOffsets: source, to: destination)
+        }
     }
 
     private func resetUsername() {
         username = ""
-    }
-
-    private func onDelete(offsets: IndexSet) {
-        viewModel.removeContributions(atOffsets: offsets)
-    }
-
-    private func onMove(source: IndexSet, destination: Int) {
-        viewModel.moveContributions(fromOffsets: source, to: destination)
     }
 }

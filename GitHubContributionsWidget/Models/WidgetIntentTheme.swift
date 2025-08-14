@@ -1,14 +1,34 @@
 //
-//  ThemeExtensions.swift
-//  GitHubContributionsWidgetExtension
+//  WidgetIntentTheme.swift
+//  GitHubContributions
 //
-//  Created by Ander Goig on 20/10/2020.
+//  Created by Ander Goig on 14/8/25.
 //
 
 import NetworkKit
 import SwiftUI
 
-extension Theme {
+enum WidgetIntentTheme: Int, Sendable {
+    case unknown
+    case green
+    case blue
+    case red
+    case purple
+    case yellow
+    case inverted
+
+    init(theme: Theme) {
+        switch theme {
+        case .unknown: self = .unknown
+        case .green: self = .green
+        case .blue: self = .blue
+        case .red: self = .red
+        case .purple: self = .purple
+        case .yellow: self = .yellow
+        case .inverted: self = .inverted
+        }
+    }
+
     func color(for level: GitHub.Contribution.Level) -> Color {
         switch level {
         case .zero: return .tileEmpty
@@ -19,7 +39,7 @@ extension Theme {
         }
     }
 
-    var firstLevelColor: Color {
+    private var firstLevelColor: Color {
         switch self {
         case .unknown: return .greenLevel1
         case .green: return .greenLevel1
@@ -31,7 +51,7 @@ extension Theme {
         }
     }
 
-    var secondLevelColor: Color {
+    private var secondLevelColor: Color {
         switch self {
         case .unknown: return .greenLevel2
         case .green: return .greenLevel2
@@ -43,7 +63,7 @@ extension Theme {
         }
     }
 
-    var thirdLevelColor: Color {
+    private var thirdLevelColor: Color {
         switch self {
         case .unknown: return .greenLevel3
         case .green: return .greenLevel3
@@ -55,7 +75,7 @@ extension Theme {
         }
     }
 
-    var fourthLevelColor: Color {
+    private var fourthLevelColor: Color {
         switch self {
         case .unknown: return .greenLevel4
         case .green: return .greenLevel4

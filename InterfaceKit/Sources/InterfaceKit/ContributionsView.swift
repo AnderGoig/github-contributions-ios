@@ -31,9 +31,12 @@ public struct ContributionsView: View {
                         .resizable()
                         .frame(width: 12, height: 12)
                         .unredacted()
+
                     topLeadingText.map(Text.init)
                 }
+
                 Spacer()
+
                 topTrailingText.map(Text.init)
             }
             .captionStyle()
@@ -45,6 +48,7 @@ public struct ContributionsView: View {
                     .font(.callout.weight(.semibold))
                     .foregroundColor(.blue)
                     .unredacted()
+
                 Spacer()
             } else {
                 GeometryReader { geometry in

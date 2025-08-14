@@ -12,16 +12,16 @@ struct GitHubContributionsViewModel {
     // MARK: - Properties
 
     private let contributions: [GitHub.Contribution]
-    private let configuration: ConfigurationIntent
+    private let configuration: WidgetIntentConfiguration
 
     // MARK: - Outputs
 
-    var theme: Theme {
+    var theme: WidgetIntentTheme {
         configuration.theme
     }
 
     var isPureBlackEnabled: Bool {
-        configuration.pureBlack?.boolValue ?? false
+        configuration.isPureBlackEnabled
     }
 
     var username: String? {
@@ -52,7 +52,7 @@ struct GitHubContributionsViewModel {
 
     // MARK: - Init
 
-    init(contributions: [GitHub.Contribution], configuration: ConfigurationIntent) {
+    init(contributions: [GitHub.Contribution], configuration: WidgetIntentConfiguration) {
         self.contributions = contributions
         self.configuration = configuration
     }

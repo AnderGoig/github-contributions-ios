@@ -15,11 +15,17 @@ protocol ContributionsStorage: Actor {
 // MARK: -
 
 actor DefaultContributionsStorage: ContributionsStorage {
+    private let userDefaults: UserDefaults
+
+    init(userDefaults: UserDefaults = .standard) {
+        self.userDefaults = userDefaults
+    }
+
     var usernames: [String] {
-        UserDefaults.standard.codable(forKey: "usernames") ?? []
+        userDefaults.codable(forKey: "usernames") ?? []
     }
 
     func setUsernames(_ usernames: [String]) {
-        UserDefaults.standard.set(value: usernames, forKey: "usernames")
+        userDefaults.set(value: usernames, forKey: "usernames")
     }
 }

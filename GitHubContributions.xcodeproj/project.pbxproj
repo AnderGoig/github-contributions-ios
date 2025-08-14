@@ -11,13 +11,14 @@
 		771E3B54253CEB7600984A0B /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3B4E253CEADD00984A0B /* ArrayExtensions.swift */; };
 		771E3B5A253CEBCE00984A0B /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3B59253CEBCE00984A0B /* DateExtensions.swift */; };
 		771E3BAF253E42BA00984A0B /* GitHubContributionsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3BAE253E42BA00984A0B /* GitHubContributionsProvider.swift */; };
-		771E3BB9253E440500984A0B /* ThemeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3BB8253E440500984A0B /* ThemeExtensions.swift */; };
 		7761A6F52543BD82000871E3 /* ContributionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A6F42543BD82000871E3 /* ContributionsRow.swift */; };
 		7761A6FB2543BDB6000871E3 /* ContributionsRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A6FA2543BDB6000871E3 /* ContributionsRowViewModel.swift */; };
 		7761A75D2544A24C000871E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7761A75F2544A24C000871E3 /* Localizable.strings */; };
 		7761A7642544A24F000871E3 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 7761A7662544A24F000871E3 /* Localizable.stringsdict */; };
 		7761A76B2544A256000871E3 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 7761A76D2544A256000871E3 /* Localizable.stringsdict */; };
 		7761A7722544A259000871E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7761A7742544A259000871E3 /* InfoPlist.strings */; };
+		7771530B2E4E923000489A4A /* WidgetIntentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7771530A2E4E922B00489A4A /* WidgetIntentConfiguration.swift */; };
+		7771530E2E4E939400489A4A /* WidgetIntentTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7771530D2E4E939100489A4A /* WidgetIntentTheme.swift */; };
 		777D65F025379A23001029C4 /* GitHubContributionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777D65EF25379A23001029C4 /* GitHubContributionsApp.swift */; };
 		777D65F225379A23001029C4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777D65F125379A23001029C4 /* SettingsView.swift */; };
 		777D65F425379A27001029C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 777D65F325379A27001029C4 /* Assets.xcassets */; };
@@ -87,13 +88,14 @@
 		771E3B59253CEBCE00984A0B /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		771E3BA8253E423700984A0B /* GitHubContributionsGraphWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubContributionsGraphWidget.swift; sourceTree = "<group>"; };
 		771E3BAE253E42BA00984A0B /* GitHubContributionsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubContributionsProvider.swift; sourceTree = "<group>"; };
-		771E3BB8253E440500984A0B /* ThemeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeExtensions.swift; sourceTree = "<group>"; };
 		7761A6F42543BD82000871E3 /* ContributionsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsRow.swift; sourceTree = "<group>"; };
 		7761A6FA2543BDB6000871E3 /* ContributionsRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsRowViewModel.swift; sourceTree = "<group>"; };
 		7761A75E2544A24C000871E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7761A7652544A24F000871E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		7761A76C2544A256000871E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		7761A7732544A259000871E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7771530A2E4E922B00489A4A /* WidgetIntentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetIntentConfiguration.swift; sourceTree = "<group>"; };
+		7771530D2E4E939100489A4A /* WidgetIntentTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetIntentTheme.swift; sourceTree = "<group>"; };
 		777D65EC25379A23001029C4 /* GitHubContributions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubContributions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		777D65EF25379A23001029C4 /* GitHubContributionsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubContributionsApp.swift; sourceTree = "<group>"; };
 		777D65F125379A23001029C4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -173,9 +175,17 @@
 			children = (
 				771E3B4E253CEADD00984A0B /* ArrayExtensions.swift */,
 				771E3B59253CEBCE00984A0B /* DateExtensions.swift */,
-				771E3BB8253E440500984A0B /* ThemeExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7771530C2E4E938700489A4A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7771530A2E4E922B00489A4A /* WidgetIntentConfiguration.swift */,
+				7771530D2E4E939100489A4A /* WidgetIntentTheme.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		777D65E325379A23001029C4 = {
@@ -238,6 +248,7 @@
 				77BF7AE625435FB1006DA340 /* GitHubContributionsGraphWidgetView.swift */,
 				77BF7AC925435329006DA340 /* GitHubContributionsViewModel.swift */,
 				771E3BAE253E42BA00984A0B /* GitHubContributionsProvider.swift */,
+				7771530C2E4E938700489A4A /* Models */,
 				771E3B4D253CEACD00984A0B /* Extensions */,
 				77BF7B512543B405006DA340 /* Resources */,
 			);
@@ -450,12 +461,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7771530B2E4E923000489A4A /* WidgetIntentConfiguration.swift in Sources */,
 				77BF7AE125435ECD006DA340 /* GitHubContributionsGraphEntryView.swift in Sources */,
 				771E3B5A253CEBCE00984A0B /* DateExtensions.swift in Sources */,
 				777D66592537A18D001029C4 /* GitHubContributionsWidgetBundle.swift in Sources */,
-				771E3BB9253E440500984A0B /* ThemeExtensions.swift in Sources */,
 				771E3B54253CEB7600984A0B /* ArrayExtensions.swift in Sources */,
 				F4A146922B6505AB00354A8B /* GitHubContributionsGraphWidget.swift in Sources */,
+				7771530E2E4E939400489A4A /* WidgetIntentTheme.swift in Sources */,
 				77BF7ACF2543537E006DA340 /* GitHubContributionsViewModel.swift in Sources */,
 				77BF7AE725435FB1006DA340 /* GitHubContributionsGraphWidgetView.swift in Sources */,
 				77A722DA2546620600B6064B /* GitHubContributionsWidget.intentdefinition in Sources */,
@@ -599,6 +611,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -657,6 +670,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -677,7 +691,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.andergoig.GitHubContributions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -699,7 +712,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.andergoig.GitHubContributions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -721,7 +733,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.andergoig.GitHubContributions.GitHubContributionsWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -743,7 +754,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.andergoig.GitHubContributions.GitHubContributionsWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
