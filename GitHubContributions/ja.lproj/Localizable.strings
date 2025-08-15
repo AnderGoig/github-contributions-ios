@@ -42,7 +42,7 @@
 
 "widget-guide-step-%u-title" = "Step %u";
 "widget-guide-step-1-subtitle" = "画面上に何もない場所を\nアプリが動くまで長押しします";
-"widget-guide-step-2-subtitle" = "左上の「＋」をタップし、\nウィジェットメニューを表示させます";
+"widget-guide-step-2-subtitle" = "新しいウィジェットを追加するには、左上隅の「編集」ボタンをタップします";
 "widget-guide-step-3-subtitle" = "「Contributions」を検索し、\n1件目をタップします";
 "widget-guide-step-4-subtitle" = "ウィジェットのサイズを選択し、\n「ウィジェットを追加」をタップします";
 "widget-guide-step-5-subtitle" = "画像の状態でウィジェットをタップすると、\nウィジェットの設定メニューが表示されます";

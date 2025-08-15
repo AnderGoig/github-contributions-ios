@@ -14,7 +14,7 @@ Stay on top of your GitHub contributions, right from your iOS Home Screen.
 
 ## Screenshots
 
-<img src=".assets/app-screenshot-1.png" width="250" alt="App Screenshot 1"> <img src=".assets/app-screenshot-2.png" width="250" alt="App Screenshot 2">
+<img src=".assets/app-screenshot-1.jpg" width="250" alt="App Screenshot 1"> <img src=".assets/app-screenshot-2.jpg" width="250" alt="App Screenshot 2">
 
 ## Requirements
 

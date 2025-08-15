@@ -42,7 +42,7 @@
 
 "widget-guide-step-%u-title" = "Paso %u";
 "widget-guide-step-1-subtitle" = "Mantén presionada la pantalla hasta que las aplicaciones se muevan.";
-"widget-guide-step-2-subtitle" = "Toca el signo '+' en la esquina superior izquierda para abrir el menú de widgets.";
+"widget-guide-step-2-subtitle" = "Pulsa el botón 'Editar' en la esquina superior izquierda para añadir widgets.";
 "widget-guide-step-3-subtitle" = "Busca por 'Contribuciones' y escoge el primer resultado.";
 "widget-guide-step-4-subtitle" = "Elige el tamaño del widget y luego pulsa 'Añadir widget'.";
 "widget-guide-step-5-subtitle" = "Toca el widget mientras se mueve para abrir el menú de configuración.";
