@@ -12,7 +12,7 @@
 "contributions-loading" = "Loading...";
 
 "contributions-empty-title" = "No contributions";
-"contributions-empty-subtitle" = "Tap the '+' button to add your favorite GitHub usernames.";
+"contributions-empty-subtitle" = "Add your favorite GitHub usernames.";
 
 "contributions-add-title" = "Add Contributions";
 "contributions-add-placeholder" = "Enter a GitHub username";
