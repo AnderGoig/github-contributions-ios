@@ -45,14 +45,16 @@ struct ContributionsList: View {
                     .font(.title2)
             }
         }
-        .alert("contributions-add-title", isPresented: $showsAlert) {
+        .alert("contributions-add-title", isPresented: $showsAlert, actions: {
             TextField("contributions-add-placeholder", text: $username)
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
 
             Button("contributions-add-accept", action: onAddUsername)
             Button("contributions-add-cancel", role: .cancel, action: resetUsername)
-        }
+        }, message: {
+            Text("contributions-add-message")
+        })
     }
 
     @ViewBuilder

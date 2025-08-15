@@ -15,7 +15,8 @@
 "contributions-empty-subtitle" = "Add your favorite GitHub usernames.";
 
 "contributions-add-title" = "Add Contributions";
-"contributions-add-placeholder" = "Enter a GitHub username";
+"contributions-add-message" = "Enter a GitHub username.";
+"contributions-add-placeholder" = "Username";
 "contributions-add-accept" = "Add";
 "contributions-add-cancel" = "Cancel";
 

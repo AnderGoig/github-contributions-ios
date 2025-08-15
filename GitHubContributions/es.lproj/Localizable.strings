@@ -15,7 +15,8 @@
 "contributions-empty-subtitle" = "Añade tus usuarios de GitHub favoritos.";
 
 "contributions-add-title" = "Añadir contribuciones";
-"contributions-add-placeholder" = "Ingresa un nombre de usuario de GitHub";
+"contributions-add-message" = "Ingresa un nombre de usuario de GitHub.";
+"contributions-add-placeholder" = "Nombre de usuario";
 "contributions-add-accept" = "Añadir";
 "contributions-add-cancel" = "Cancelar";
 

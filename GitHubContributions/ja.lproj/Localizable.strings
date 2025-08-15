@@ -15,7 +15,8 @@
 "contributions-empty-subtitle" = "お気に入りの GitHub ユーザー名を追加します";
 
 "contributions-add-title" = "GitHubアカウントの追加";
-"contributions-add-placeholder" = "ユーザー名を入力してください";
+"contributions-add-message" = "GitHub ユーザー名を入力します";
+"contributions-add-placeholder" = "ユーザー名";
 "contributions-add-accept" = "追加";
 "contributions-add-cancel" = "キャンセル";
 
