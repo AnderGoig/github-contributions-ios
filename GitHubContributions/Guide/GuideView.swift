@@ -20,6 +20,5 @@ struct GuideView: View {
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
         .navigationTitle("widget-guide-title")
         .navigationBarTitleDisplayMode(.inline)
-        .background(Color.backgroundPrimary)
     }
 }

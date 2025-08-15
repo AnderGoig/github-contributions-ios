@@ -42,6 +42,6 @@ struct StepView: View {
         .frame(maxHeight: .infinity, alignment: .top)
         .padding(.horizontal, 24)
         .padding(.bottom, 64)
-        .padding(.top, 32)
+        .padding(.top, 24)
     }
 }

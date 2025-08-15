@@ -18,32 +18,31 @@ struct ContributionsList: View {
     // MARK: - View
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(viewModel.contributions, id: \.username) { viewModel in
-                    ContributionsRow(viewModel: viewModel)
-                }
-                .onDelete(perform: onDelete)
-                .onMove(perform: onMove)
-                .listRowBackground(Color.backgroundSecondary)
-                .listRowSeparatorTint(Color.backgroundSeparator)
-                .alignmentGuide(.listRowSeparatorLeading) { _ in 0 }
+        List {
+            ForEach(viewModel.contributions, id: \.username) { viewModel in
+                ContributionsRow(viewModel: viewModel)
             }
-            .overlay {
-                if viewModel.contributions.isEmpty {
-                    emptyView
-                }
+            .onDelete(perform: onDelete)
+            .onMove(perform: onMove)
+            .listRowBackground(Color.backgroundSecondary)
+            .listRowSeparatorTint(Color.backgroundSeparator)
+            .alignmentGuide(.listRowSeparatorLeading) { _ in 0 }
+        }
+        .overlay {
+            if viewModel.contributions.isEmpty {
+                emptyView.transition(.scale(scale: 0.8).combined(with: .opacity).animation(.snappy.speed(2)))
             }
-            .task(viewModel.loadContributions)
-            .animation(.default, value: viewModel.contributions.count)
-            .scrollContentBackground(.hidden)
-            .background(Color.backgroundPrimary)
-            .ignoresSafeArea(.keyboard)
-            .navigationTitle("app-title")
-            .toolbar {
-                Button(action: { showsAlert = true }) {
-                    Image(systemName: "plus.circle.fill")
-                }
+        }
+        .task(viewModel.loadContributions)
+        .animation(.default, value: viewModel.contributions.count)
+        .scrollContentBackground(.hidden)
+        .background(Color.backgroundPrimary)
+        .ignoresSafeArea(.keyboard)
+        .navigationTitle("app-title")
+        .toolbar {
+            Button(action: { showsAlert = true }) {
+                Image(systemName: "plus.circle.fill")
+                    .font(.title2)
             }
         }
         .alert("contributions-add-title", isPresented: $showsAlert) {
@@ -56,19 +55,31 @@ struct ContributionsList: View {
         }
     }
 
+    @ViewBuilder
     private var emptyView: some View {
-        VStack(spacing: 6) {
-            Text("contributions-empty-title")
-                .font(.headline)
-                .foregroundColor(.primary)
+        if #available(iOS 17.0, *) {
+            ContentUnavailableView {
+                Label("contributions-empty-title", systemImage: "plus.app.fill")
+            } description: {
+                Text("contributions-empty-subtitle")
+            } actions: {
+                Button("contributions-add-accept", action: { showsAlert = true })
+                    .buttonStyle(.bordered)
+                    .font(.headline)
+            }
+        } else {
+            VStack(spacing: 6) {
+                Text("contributions-empty-title")
+                    .font(.headline)
+                    .foregroundColor(.primary)
 
-            Text("contributions-empty-subtitle")
-                .font(.subheadline)
-                .foregroundColor(.secondary)
+                Text("contributions-empty-subtitle")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+            .multilineTextAlignment(.center)
+            .padding(.horizontal, 44)
         }
-        .multilineTextAlignment(.center)
-        .padding(.horizontal, 44)
-        .transition(.scale(scale: 0.8).combined(with: .opacity).animation(.snappy.speed(2)))
     }
 
     // MARK: - Private Methods

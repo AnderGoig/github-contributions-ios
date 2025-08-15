@@ -37,6 +37,7 @@
 "settings-row-open-source-subtitle" = "¡Contribuye al proyecto!";
 
 "widget-guide-title" = "Configuración del widget";
+"widget-guide-done" = "Hecho";
 
 "widget-guide-step-%u-title" = "Paso %u";
 "widget-guide-step-1-subtitle" = "Mantén presionada la pantalla hasta que las aplicaciones se muevan.";
