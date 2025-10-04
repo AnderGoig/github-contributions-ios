@@ -15,6 +15,16 @@ struct ContributionsList: View {
     @State private var showsAlert = false
     @ObservedObject var viewModel: ContributionsListViewModel
 
+    private var plusSymbolVariant: SymbolVariants {
+        if #available(*, iOS 26) { return .none }
+        return .circle.fill
+    }
+
+    private var plusSymbolFont: Font {
+        if #available(*, iOS 26) { return .headline }
+        return .title2
+    }
+
     // MARK: - View
 
     var body: some View {
@@ -41,8 +51,9 @@ struct ContributionsList: View {
         .navigationTitle("app-title")
         .toolbar {
             Button(action: { showsAlert = true }) {
-                Image(systemName: "plus.circle.fill")
-                    .font(.title2)
+                Image(systemName: "plus")
+                    .symbolVariant(plusSymbolVariant)
+                    .font(plusSymbolFont)
             }
         }
         .alert("contributions-add-title", isPresented: $showsAlert, actions: {
