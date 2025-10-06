@@ -15,71 +15,108 @@ struct ContributionsList: View {
     @State private var showsAlert = false
     @ObservedObject var viewModel: ContributionsListViewModel
 
+    private var plusSymbolVariant: SymbolVariants {
+        if #available(*, iOS 26) { return .none }
+        return .circle.fill
+    }
+
+    private var plusSymbolFont: Font {
+        if #available(*, iOS 26) { return .headline }
+        return .title2
+    }
+
     // MARK: - View
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(viewModel.contributions, id: \.username) { viewModel in
-                    ContributionsRow(viewModel: viewModel)
-                }
-                .onDelete(perform: onDelete)
-                .onMove(perform: onMove)
-                .listRowSeparator(.hidden)
+        List {
+            ForEach(viewModel.contributions, id: \.username) { viewModel in
+                ContributionsRow(viewModel: viewModel)
             }
-            .overlay {
-                if viewModel.contributions.isEmpty {
-                    emptyView
-                }
-            }
-            .animation(.default, value: viewModel.contributions.count)
-            .background(Color(uiColor: .systemGroupedBackground))
-            .ignoresSafeArea(.keyboard)
-            .navigationTitle("app-title")
-            .toolbar {
-                Button(action: { showsAlert = true }) {
-                    Image(systemName: "plus.circle.fill")
-                }
+            .onDelete(perform: onDelete)
+            .onMove(perform: onMove)
+            .listRowBackground(Color.backgroundSecondary)
+            .listRowSeparatorTint(Color.backgroundSeparator)
+            .alignmentGuide(.listRowSeparatorLeading) { _ in 0 }
+        }
+        .overlay {
+            if viewModel.contributions.isEmpty {
+                emptyView.transition(.scale(scale: 0.8).combined(with: .opacity).animation(.snappy.speed(2)))
             }
         }
-        .alert("contributions-add-title", isPresented: $showsAlert) {
-            TextField("contributions-add-placeholder", text: $username).textInputAutocapitalization(.never).autocorrectionDisabled()
+        .task(viewModel.loadContributions)
+        .animation(.default, value: viewModel.contributions.count)
+        .scrollContentBackground(.hidden)
+        .background(Color.backgroundPrimary)
+        .ignoresSafeArea(.keyboard)
+        .navigationTitle("app-title")
+        .toolbar {
+            Button(action: { showsAlert = true }) {
+                Image(systemName: "plus")
+                    .symbolVariant(plusSymbolVariant)
+                    .font(plusSymbolFont)
+            }
+        }
+        .alert("contributions-add-title", isPresented: $showsAlert, actions: {
+            TextField("contributions-add-placeholder", text: $username)
+                .textInputAutocapitalization(.never)
+                .autocorrectionDisabled()
+
             Button("contributions-add-accept", action: onAddUsername)
             Button("contributions-add-cancel", role: .cancel, action: resetUsername)
-        }
+        }, message: {
+            Text("contributions-add-message")
+        })
     }
 
+    @ViewBuilder
     private var emptyView: some View {
-        VStack(spacing: 6) {
-            Text("contributions-empty-title")
-                .font(.headline)
-                .foregroundColor(.primary)
+        if #available(iOS 17.0, *) {
+            ContentUnavailableView {
+                Label("contributions-empty-title", systemImage: "plus.app.fill")
+            } description: {
+                Text("contributions-empty-subtitle")
+            } actions: {
+                Button("contributions-add-accept", action: { showsAlert = true })
+                    .buttonStyle(.bordered)
+                    .font(.headline)
+            }
+        } else {
+            VStack(spacing: 6) {
+                Text("contributions-empty-title")
+                    .font(.headline)
+                    .foregroundColor(.primary)
 
-            Text("contributions-empty-subtitle")
-                .font(.subheadline)
-                .foregroundColor(.secondary)
+                Text("contributions-empty-subtitle")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+            .multilineTextAlignment(.center)
+            .padding(.horizontal, 44)
         }
-        .multilineTextAlignment(.center)
-        .padding(.horizontal, 44)
-        .transition(.scale(scale: 0.8).combined(with: .opacity).animation(.snappy.speed(2)))
     }
 
     // MARK: - Private Methods
 
     private func onAddUsername() {
-        viewModel.addContributions(from: username)
-        resetUsername()
+        Task {
+            await viewModel.addContributions(from: username)
+            resetUsername()
+        }
+    }
+
+    private func onDelete(offsets: IndexSet) {
+        Task {
+            await viewModel.removeContributions(atOffsets: offsets)
+        }
+    }
+
+    private func onMove(source: IndexSet, destination: Int) {
+        Task {
+            await viewModel.moveContributions(fromOffsets: source, to: destination)
+        }
     }
 
     private func resetUsername() {
         username = ""
-    }
-
-    private func onDelete(offsets: IndexSet) {
-        viewModel.removeContributions(atOffsets: offsets)
-    }
-
-    private func onMove(source: IndexSet, destination: Int) {
-        viewModel.moveContributions(fromOffsets: source, to: destination)
     }
 }

@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/onevcat/Kingfisher",
         "state": {
           "branch": null,
-          "revision": "2ef543ee21d63734e1c004ad6c870255e8716c50",
-          "version": "7.12.0"
+          "revision": "2015fda791daa72c8058619545a593bf8c1dd59f",
+          "version": "8.5.0"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/scinfu/SwiftSoup.git",
         "state": {
           "branch": null,
-          "revision": "e2d11208519549c2e5798d70190472045633f22f",
-          "version": "2.7.3"
+          "revision": "04a5da442816f764b2a8513c38420b4e6605145b",
+          "version": "2.10.1"
         }
       }
     ]

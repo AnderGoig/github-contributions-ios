@@ -11,30 +11,48 @@ import SwiftUI
 struct SettingsView: View {
     // MARK: - Properties
 
+    @State var isGuidePresented = false
     @ObservedObject var viewModel: SettingsViewModel
 
     // MARK: - View
 
     var body: some View {
-        NavigationView {
-            List {
-                Section {
-                    ForEach(viewModel.topItems, id: \.rawValue) { item in
-                        NavigationLink(destination: GuideView()) {
-                            SettingsRow(item: item)
-                        }
+        List {
+            Section {
+                ForEach(viewModel.topItems, id: \.rawValue) { item in
+                    Button(action: { isGuidePresented = true }) {
+                        SettingsRow(item: item)
                     }
-                }
-
-                Section(footer: footer) {
-                    ForEach(viewModel.footerItems, id: \.rawValue) { item in
-                        Button(action: { handleTapOnItem(item) }) {
-                            SettingsRow(item: item)
-                        }
-                    }
+                    .listRowBackground(Color.backgroundSecondary)
+                    .listRowSeparatorTint(Color.backgroundSeparator)
                 }
             }
-            .navigationTitle("settings-title")
+
+            Section(footer: footer) {
+                ForEach(viewModel.footerItems, id: \.rawValue) { item in
+                    Button(action: { handleTapOnItem(item) }) {
+                        SettingsRow(item: item)
+                    }
+                    .listRowBackground(Color.backgroundSecondary)
+                    .listRowSeparatorTint(Color.backgroundSeparator)
+                }
+            }
+        }
+        .scrollContentBackground(.hidden)
+        .background(Color.backgroundPrimary)
+        .navigationTitle("settings-title")
+        .sheet(isPresented: $isGuidePresented) {
+            NavigationView {
+                GuideView()
+                    .toolbar {
+                        ToolbarItem(placement: .primaryAction) {
+                            Button("widget-guide-done") {
+                                isGuidePresented = false
+                            }
+                            .font(.headline)
+                        }
+                    }
+            }
         }
     }
 

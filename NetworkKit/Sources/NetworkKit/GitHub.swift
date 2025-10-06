@@ -5,7 +5,6 @@
 //  Created by Ander Goig on 15/10/2020.
 //
 
-import Combine
 import Foundation
 import SwiftSoup
 
@@ -20,20 +19,11 @@ public enum GitHub {
 
     // MARK: - Public Methods
 
-    public static func getContributions(for username: String, queue: DispatchQueue) -> Future<[Contribution], Error> {
-        Future { promise in
-            queue.async {
-                do {
-                    let url = try contributionsURL(for: username)
-                    let html = try String(contentsOf: url, encoding: .utf8)
-                    let document = try SwiftSoup.parse(html)
-                    let contributions = try document.select("td").compactMap(contribution).sorted()
-                    promise(.success(contributions))
-                } catch {
-                    promise(.failure(error))
-                }
-            }
-        }
+    public static func getContributions(for username: String) async throws -> [Contribution] {
+        let url = try contributionsURL(for: username)
+        let html = try String(contentsOf: url, encoding: .utf8)
+        let document = try SwiftSoup.parse(html)
+        return try document.select("td").compactMap(contribution).sorted()
     }
 
     // MARK: - Private Methods

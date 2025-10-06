@@ -12,10 +12,11 @@
 "contributions-loading" = "Loading...";
 
 "contributions-empty-title" = "No contributions";
-"contributions-empty-subtitle" = "Tap the '+' button to add your favorite GitHub usernames.";
+"contributions-empty-subtitle" = "Add your favorite GitHub usernames.";
 
 "contributions-add-title" = "Add Contributions";
-"contributions-add-placeholder" = "Enter a GitHub username";
+"contributions-add-message" = "Enter a GitHub username.";
+"contributions-add-placeholder" = "Username";
 "contributions-add-accept" = "Add";
 "contributions-add-cancel" = "Cancel";
 
@@ -37,10 +38,11 @@
 "settings-row-open-source-subtitle" = "Feel free to contribute!";
 
 "widget-guide-title" = "Widget Setup";
+"widget-guide-done" = "Done";
 
 "widget-guide-step-%u-title" = "Step %u";
 "widget-guide-step-1-subtitle" = "Touch and hold an empty area on your screen until your apps jiggle.";
-"widget-guide-step-2-subtitle" = "Tap the plus sign in the upper-left corner to bring up the widgets menu.";
+"widget-guide-step-2-subtitle" = "Tap the 'Edit' button in the upper-left corner to add new widgets.";
 "widget-guide-step-3-subtitle" = "Search for the 'Contributions' widget and tap the first result.";
 "widget-guide-step-4-subtitle" = "Swipe left and right to choose the widget's size and shape, then tap 'Add Widget'.";
 "widget-guide-step-5-subtitle" = "Tap the widget while it jiggles and you'll bring up the Widget settings menu.";

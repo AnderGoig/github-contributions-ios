@@ -1,24 +1,28 @@
-// swift-tools-version:5.3
+// swift-tools-version:6.0
 
 import PackageDescription
 
 let package = Package(
     name: "NetworkKit",
     platforms: [
-        .iOS(.v13),
+        .iOS(.v16),
     ],
     products: [
         .library(
             name: "NetworkKit",
-            targets: ["NetworkKit"]),
+            targets: ["NetworkKit"]
+        ),
     ],
     dependencies: [
         .package(
             url: "https://github.com/scinfu/SwiftSoup",
-            .upToNextMinor(from: "2.7.3")),
+            .upToNextMinor(from: "2.10.1")
+        ),
     ],
     targets: [
         .target(
             name: "NetworkKit",
-            dependencies: ["SwiftSoup"]),
-    ])
+            dependencies: ["SwiftSoup"]
+        ),
+    ]
+)

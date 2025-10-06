@@ -27,6 +27,6 @@ enum Step: Int, CaseIterable {
     }
 
     private var assetsURL: URL? {
-        URL(string: "https://raw.githubusercontent.com/AnderGoig/github-contributions-ios/develop/.assets")
+        URL(string: "https://raw.githubusercontent.com/AnderGoig/github-contributions-ios/develop/.assets/v2")
     }
 }

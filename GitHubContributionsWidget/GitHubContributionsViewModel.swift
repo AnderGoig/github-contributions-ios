@@ -8,24 +8,17 @@
 import Foundation
 import NetworkKit
 
+@dynamicMemberLookup
 struct GitHubContributionsViewModel {
     // MARK: - Properties
 
     private let contributions: [GitHub.Contribution]
-    private let configuration: ConfigurationIntent
+    private let configuration: WidgetIntentConfiguration
 
     // MARK: - Outputs
 
-    var theme: Theme {
-        configuration.theme
-    }
-
-    var isPureBlackEnabled: Bool {
-        configuration.pureBlack?.boolValue ?? false
-    }
-
-    var username: String? {
-        configuration.username
+    subscript<T>(dynamicMember keyPath: KeyPath<WidgetIntentConfiguration, T>) -> T {
+        configuration[keyPath: keyPath]
     }
 
     var showPlaceholders: Bool {
@@ -33,11 +26,11 @@ struct GitHubContributionsViewModel {
     }
 
     var topLeadingText: String? {
-        username
+        configuration.username
     }
 
     var showError: Bool {
-        username != .none && contributions.isEmpty
+        configuration.username != .none && contributions.isEmpty
     }
 
     var lastContributionDate: Date? {
@@ -52,7 +45,7 @@ struct GitHubContributionsViewModel {
 
     // MARK: - Init
 
-    init(contributions: [GitHub.Contribution], configuration: ConfigurationIntent) {
+    init(contributions: [GitHub.Contribution], configuration: WidgetIntentConfiguration) {
         self.contributions = contributions
         self.configuration = configuration
     }

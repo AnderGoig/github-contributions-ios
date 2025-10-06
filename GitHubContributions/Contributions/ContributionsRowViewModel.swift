@@ -5,10 +5,10 @@
 //  Created by Ander Goig on 24/10/2020.
 //
 
-import Combine
 import Foundation
 import NetworkKit
 
+@MainActor
 final class ContributionsRowViewModel: ObservableObject {
     // MARK: - Types
 
@@ -22,13 +22,11 @@ final class ContributionsRowViewModel: ObservableObject {
     static let columnsCount = 20
 
     let username: String
-    @Published private(set) var contributions: Contributions = .init()
+    @Published private(set) var contributions = Contributions()
 
     var gitHubAccountURL: URL? {
         URL(string: "https://github.com/\(username)")
     }
-
-    private let queue = DispatchQueue(label: "com.andergoig.GitHubContributions.network", attributes: .concurrent)
 
     // MARK: - Init
 
@@ -38,21 +36,16 @@ final class ContributionsRowViewModel: ObservableObject {
 
     // MARK: - Inputs
 
-    func getContributions() {
+    @Sendable func loadContributions() async {
         guard contributions.levels.isEmpty else { return }
-
-        GitHub.getContributions(for: username, queue: queue)
-            .subscribe(on: queue)
-            .replaceError(with: [])
-            .map(Self.mapContributions)
-            .receive(on: DispatchQueue.main)
-            .assign(to: &$contributions)
+        let gitHubContributions = try? await GitHub.getContributions(for: username)
+        contributions = gitHubContributions.map(Self.mapContributions) ?? Contributions()
     }
 
     // MARK: - Private Methods
 
     private static func mapContributions(_ contributions: [GitHub.Contribution]) -> Contributions {
-        guard let lastDate = contributions.last?.date else { return .init() }
+        guard let lastDate = contributions.last?.date else { return Contributions() }
         let tilesCount = rowsCount * columnsCount - (rowsCount - Calendar.current.component(.weekday, from: lastDate))
         let levels = contributions.suffix(tilesCount).map(\.level).chunked(into: rowsCount)
         return Contributions(levels: levels)

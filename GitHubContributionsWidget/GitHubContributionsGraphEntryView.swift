@@ -57,7 +57,7 @@ struct WidgetStyle: ViewModifier {
     let isPureBlackEnabled: Bool
 
     var backgroundColor: Color {
-        colorScheme == .dark && isPureBlackEnabled ? .black : .widgetBackground
+        colorScheme == .dark && isPureBlackEnabled ? .black : .backgroundSecondary
     }
 
     func body(content: Content) -> some View {

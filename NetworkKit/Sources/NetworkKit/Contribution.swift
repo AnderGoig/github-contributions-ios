@@ -8,7 +8,7 @@
 import Foundation
 
 public extension GitHub {
-    struct Contribution {
+    struct Contribution: Sendable {
         // MARK: - Properties
 
         /// The date when the contributions occurred.
@@ -21,7 +21,7 @@ public extension GitHub {
 
         /// Constants that indicate the amount of contributions.
         /// Level `.zero` means zero contributions.
-        public enum Level: Int, CaseIterable {
+        public enum Level: Int, CaseIterable, Sendable {
             case zero, first, second, third, fourth
         }
 
