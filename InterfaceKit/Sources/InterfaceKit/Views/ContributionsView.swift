@@ -58,7 +58,8 @@ public struct ContributionsView: View {
                             Color.clear.frame(width: tileSize, height: tileSize)
                         }
                     }
-                    .position(x: geometry.frame(in: .local).midX, y: geometry.frame(in: .local).midY)
+                    .frame(maxHeight: .infinity, alignment: .bottom)
+                    .concentricClipShape()
                 }
             }
         }
@@ -80,5 +81,16 @@ public struct ContributionsView: View {
         self.topLeadingText = topLeadingText
         self.topTrailingText = topTrailingText
         self.emptyText = emptyText
+    }
+}
+
+private extension View {
+    @available(iOS, obsoleted: 26, message: "Can be removed once we only support iOS 17+")
+    @ViewBuilder func concentricClipShape(isUniform: Bool = false) -> some View {
+        if #available(iOS 26, *) {
+            self.clipShape(.rect(corners: .concentric, isUniform: isUniform))
+        } else {
+            self
+        }
     }
 }
