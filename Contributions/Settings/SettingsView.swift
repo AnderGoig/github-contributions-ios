@@ -1,0 +1,112 @@
+//
+//  SettingsView.swift
+//  Contributions
+//
+//  Created by Ander Goig on 14/10/2020.
+//
+
+import InterfaceKit
+import SwiftUI
+
+struct SettingsView: View {
+    // MARK: - Properties
+
+    @State var isGuidePresented = false
+    @ObservedObject var viewModel: SettingsViewModel
+
+    // MARK: - View
+
+    var body: some View {
+        List {
+            Section {
+                ForEach(viewModel.topItems, id: \.rawValue) { item in
+                    Button(action: { isGuidePresented = true }) {
+                        SettingsRow(item: item)
+                    }
+                    .listRowBackground(Color.backgroundSecondary)
+                    .listRowSeparatorTint(Color.backgroundSeparator)
+                }
+            }
+
+            Section(footer: footer) {
+                ForEach(viewModel.footerItems, id: \.rawValue) { item in
+                    Button(action: { handleTapOnItem(item) }) {
+                        SettingsRow(item: item)
+                    }
+                    .listRowBackground(Color.backgroundSecondary)
+                    .listRowSeparatorTint(Color.backgroundSeparator)
+                }
+            }
+        }
+        .scrollContentBackground(.hidden)
+        .background(Color.backgroundPrimary)
+        .navigationTitle("settings-title")
+        .sheet(isPresented: $isGuidePresented) {
+            NavigationView {
+                GuideView()
+                    .toolbar {
+                        ToolbarItem(placement: .primaryAction) {
+                            Button("widget-guide-done") {
+                                isGuidePresented = false
+                            }
+                            .font(.headline)
+                        }
+                    }
+            }
+        }
+    }
+
+    var footer: some View {
+        ContributionsApp.fullVersion
+            .map { Text("app-version-\($0)") }
+            .textCase(.uppercase)
+            .foregroundColor(.secondary)
+            .font(.caption2)
+            .multilineTextAlignment(.center)
+            .frame(maxWidth: .infinity)
+            .listRowInsets(EdgeInsets(top: 24, leading: 0, bottom: 24, trailing: 0))
+    }
+
+    // MARK: - Private Methods
+
+    private func handleTapOnItem(_ item: SettingsItem) {
+        switch item {
+        case .widgetGuide:
+            break
+        case .rate:
+            openURL(viewModel.rateURL)
+        case .share:
+            present(UIActivityViewController(activityItems: [viewModel.shareURL], applicationActivities: nil), animated: true)
+        case .feedback:
+            openURL(viewModel.feedbackURL)
+        case .openSource:
+            openURL(viewModel.openSourceURL)
+        }
+    }
+
+    private func openURL(_ url: URL) {
+        UIApplication.shared.open(url)
+    }
+
+    private func present(_ viewController: UIViewController, animated: Bool, completion: (() -> Void)? = nil) {
+        guard var topController = UIApplication.shared.keyWindow?.rootViewController else { return }
+
+        while let presentedViewController = topController.presentedViewController {
+            topController = presentedViewController
+        }
+
+        topController.present(viewController, animated: animated, completion: completion)
+    }
+}
+
+// MARK: -
+
+private extension UIApplication {
+    var keyWindow: UIWindow? {
+        UIApplication.shared.connectedScenes
+            .filter { $0.activationState == .foregroundActive }
+            .first { $0 is UIWindowScene }
+            .flatMap { $0 as? UIWindowScene }?.windows
+            .first(where: \.isKeyWindow)
+    }
+}
