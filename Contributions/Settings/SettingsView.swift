@@ -26,9 +26,11 @@ struct SettingsView: View {
                     .listRowBackground(Color.backgroundSecondary)
                     .listRowSeparatorTint(Color.backgroundSeparator)
                 }
+            } header: {
+                Text("settings-help")
             }
 
-            Section(footer: footer) {
+            Section {
                 ForEach(viewModel.footerItems, id: \.rawValue) { item in
                     Button(action: { handleTapOnItem(item) }) {
                         SettingsRow(item: item)
@@ -36,11 +38,16 @@ struct SettingsView: View {
                     .listRowBackground(Color.backgroundSecondary)
                     .listRowSeparatorTint(Color.backgroundSeparator)
                 }
+            } header: {
+                Text("setting-about")
+            } footer: {
+                footer
             }
         }
         .scrollContentBackground(.hidden)
         .background(Color.backgroundPrimary)
         .navigationTitle("settings-title")
+        .inlineLargeToolbarTitle()
         .sheet(isPresented: $isGuidePresented) {
             NavigationView {
                 GuideView()
@@ -60,11 +67,10 @@ struct SettingsView: View {
         ContributionsApp.fullVersion
             .map { Text("app-version-\($0)") }
             .textCase(.uppercase)
-            .foregroundColor(.secondary)
             .font(.caption2)
             .multilineTextAlignment(.center)
             .frame(maxWidth: .infinity)
-            .listRowInsets(EdgeInsets(top: 24, leading: 0, bottom: 24, trailing: 0))
+            .listRowInsets(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
     }
 
     // MARK: - Private Methods

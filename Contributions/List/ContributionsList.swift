@@ -37,7 +37,7 @@ struct ContributionsList: View {
                 ForEach(viewModel.contributions, id: \.username) { contribution in
                     ContributionsRow(viewModel: contribution)
                         .padding(.horizontal, 16)
-                        .background(Color.backgroundSecondary, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+                        .background(Color.backgroundSecondary, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                         .contextMenu {
                             Button(role: .destructive, action: { onDelete(contribution) }) {
                                 Label("contributions-delete", systemImage: "trash")
@@ -57,6 +57,7 @@ struct ContributionsList: View {
         .background(Color.backgroundPrimary)
         .ignoresSafeArea(.keyboard)
         .navigationTitle("app-title")
+        .inlineLargeToolbarTitle()
         .toolbar {
             Button(action: { showsAlert = true }) {
                 Image(systemName: "plus")
