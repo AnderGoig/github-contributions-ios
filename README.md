@@ -18,8 +18,8 @@ Stay on top of your GitHub contributions, right from your iOS Home Screen.
 
 ## Requirements
 
-- iOS 16.0+
-- Xcode 14.0+
+- iOS 16.6+
+- Xcode 26.0+
 
 ## Contributing
 
