@@ -13,7 +13,7 @@ struct ContributionsApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                NavigationView {
+                NavigationStack {
                     ContributionsList(viewModel: .init(storage: DefaultContributionsStorage()))
                 }
                 .tabItem {
@@ -21,7 +21,7 @@ struct ContributionsApp: App {
                     Text("app-title")
                 }
 
-                NavigationView {
+                NavigationStack {
                     SettingsView(viewModel: .init())
                 }
                 .tabItem {

@@ -34,13 +34,8 @@ final class ContributionsListViewModel: ObservableObject {
         await updateStorage()
     }
 
-    func removeContributions(atOffsets offsets: IndexSet) async {
-        contributions.remove(atOffsets: offsets)
-        await updateStorage()
-    }
-
-    func moveContributions(fromOffsets source: IndexSet, to destination: Int) async {
-        contributions.move(fromOffsets: source, toOffset: destination)
+    func removeContributions(_ contribution: ContributionsRowViewModel) async {
+        contributions.removeAll { $0.username == contribution.username }
         await updateStorage()
     }
 

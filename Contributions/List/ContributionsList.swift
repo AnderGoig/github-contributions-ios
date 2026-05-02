@@ -15,6 +15,10 @@ struct ContributionsList: View {
     @State private var showsAlert = false
     @ObservedObject var viewModel: ContributionsListViewModel
 
+    private let columns = [
+        GridItem(.adaptive(minimum: 300), spacing: 16)
+    ]
+
     private var plusSymbolVariant: SymbolVariants {
         if #available(*, iOS 26) { return .none }
         return .circle.fill
@@ -28,15 +32,20 @@ struct ContributionsList: View {
     // MARK: - View
 
     var body: some View {
-        List {
-            ForEach(viewModel.contributions, id: \.username) { viewModel in
-                ContributionsRow(viewModel: viewModel)
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 16) {
+                ForEach(viewModel.contributions, id: \.username) { contribution in
+                    ContributionsRow(viewModel: contribution)
+                        .padding(.horizontal, 16)
+                        .background(Color.backgroundSecondary, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+                        .contextMenu {
+                            Button(role: .destructive, action: { onDelete(contribution) }) {
+                                Label("contributions-delete", systemImage: "trash")
+                            }
+                        }
+                }
             }
-            .onDelete(perform: onDelete)
-            .onMove(perform: onMove)
-            .listRowBackground(Color.backgroundSecondary)
-            .listRowSeparatorTint(Color.backgroundSeparator)
-            .alignmentGuide(.listRowSeparatorLeading) { _ in 0 }
+            .padding(16)
         }
         .overlay {
             if viewModel.contributions.isEmpty {
@@ -45,7 +54,6 @@ struct ContributionsList: View {
         }
         .task(viewModel.loadContributions)
         .animation(.default, value: viewModel.contributions.count)
-        .scrollContentBackground(.hidden)
         .background(Color.backgroundPrimary)
         .ignoresSafeArea(.keyboard)
         .navigationTitle("app-title")
@@ -104,15 +112,9 @@ struct ContributionsList: View {
         }
     }
 
-    private func onDelete(offsets: IndexSet) {
+    private func onDelete(_ contribution: ContributionsRowViewModel) {
         Task {
-            await viewModel.removeContributions(atOffsets: offsets)
-        }
-    }
-
-    private func onMove(source: IndexSet, destination: Int) {
-        Task {
-            await viewModel.moveContributions(fromOffsets: source, to: destination)
+            await viewModel.removeContributions(contribution)
         }
     }
 
