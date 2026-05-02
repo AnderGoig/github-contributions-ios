@@ -11,12 +11,11 @@
 		771E3B54253CEB7600984A0B /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3B4E253CEADD00984A0B /* ArrayExtensions.swift */; };
 		771E3B5A253CEBCE00984A0B /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3B59253CEBCE00984A0B /* DateExtensions.swift */; };
 		771E3BAF253E42BA00984A0B /* GitHubContributionsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E3BAE253E42BA00984A0B /* GitHubContributionsProvider.swift */; };
+		774E5BDD2FA5F45B00AADE79 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 774E5BDC2FA5F45B00AADE79 /* Localizable.xcstrings */; };
+		774E5BDF2FA5F45B00AADE79 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 774E5BDE2FA5F45B00AADE79 /* Localizable.xcstrings */; };
+		774E5BE12FA5F45B00AADE79 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 774E5BE02FA5F45B00AADE79 /* InfoPlist.xcstrings */; };
 		7761A6F52543BD82000871E3 /* ContributionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A6F42543BD82000871E3 /* ContributionsRow.swift */; };
 		7761A6FB2543BDB6000871E3 /* ContributionsRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761A6FA2543BDB6000871E3 /* ContributionsRowViewModel.swift */; };
-		7761A75D2544A24C000871E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7761A75F2544A24C000871E3 /* Localizable.strings */; };
-		7761A7642544A24F000871E3 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 7761A7662544A24F000871E3 /* Localizable.stringsdict */; };
-		7761A76B2544A256000871E3 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 7761A76D2544A256000871E3 /* Localizable.stringsdict */; };
-		7761A7722544A259000871E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7761A7742544A259000871E3 /* InfoPlist.strings */; };
 		7771530B2E4E923000489A4A /* WidgetIntentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7771530A2E4E922B00489A4A /* WidgetIntentConfiguration.swift */; };
 		7771530E2E4E939400489A4A /* WidgetIntentTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7771530D2E4E939100489A4A /* WidgetIntentTheme.swift */; };
 		777D65F025379A23001029C4 /* GitHubContributionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777D65EF25379A23001029C4 /* GitHubContributionsApp.swift */; };
@@ -34,7 +33,6 @@
 		77A73F242C67BB6C000CA518 /* ContributionsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A73F232C67BB6C000CA518 /* ContributionsStorage.swift */; };
 		77B39CB825CF59B000B5D0B8 /* ContributionsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B39CB725CF59B000B5D0B8 /* ContributionsListViewModel.swift */; };
 		77B39CC225CF5ACF00B5D0B8 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B39CC125CF5ACF00B5D0B8 /* UserDefaultsExtensions.swift */; };
-		77BD1E982540EDDF00830186 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77BD1E9A2540EDDF00830186 /* Localizable.strings */; };
 		77BD1EA02540EF0800830186 /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BD1E9F2540EF0800830186 /* SettingsRow.swift */; };
 		77BD1EA62540EF4300830186 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BD1EA52540EF4300830186 /* SettingsItem.swift */; };
 		77BD1EAC2540EFB500830186 /* NetworkKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BD1EAB2540EFB500830186 /* NetworkKitExtensions.swift */; };
@@ -78,22 +76,16 @@
 
 /* Begin PBXFileReference section */
 		1CC490D22819102200C3EC87 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/GitHubContributionsWidget.strings; sourceTree = "<group>"; };
-		1CC490D32819102200C3EC87 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1CC490D42819102200C3EC87 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ja; path = ja.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
-		1CC490D52819102200C3EC87 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1CC490D62819102200C3EC87 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1CC490D72819102200C3EC87 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ja; path = ja.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		7702E18925CF2DC9003ECC3D /* ContributionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsList.swift; sourceTree = "<group>"; };
 		771E3B4E253CEADD00984A0B /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		771E3B59253CEBCE00984A0B /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		771E3BA8253E423700984A0B /* GitHubContributionsGraphWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubContributionsGraphWidget.swift; sourceTree = "<group>"; };
 		771E3BAE253E42BA00984A0B /* GitHubContributionsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubContributionsProvider.swift; sourceTree = "<group>"; };
+		774E5BDC2FA5F45B00AADE79 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		774E5BDE2FA5F45B00AADE79 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		774E5BE02FA5F45B00AADE79 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		7761A6F42543BD82000871E3 /* ContributionsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsRow.swift; sourceTree = "<group>"; };
 		7761A6FA2543BDB6000871E3 /* ContributionsRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsRowViewModel.swift; sourceTree = "<group>"; };
-		7761A75E2544A24C000871E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		7761A7652544A24F000871E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
-		7761A76C2544A256000871E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
-		7761A7732544A259000871E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7771530A2E4E922B00489A4A /* WidgetIntentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetIntentConfiguration.swift; sourceTree = "<group>"; };
 		7771530D2E4E939100489A4A /* WidgetIntentTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetIntentTheme.swift; sourceTree = "<group>"; };
 		777D65EC25379A23001029C4 /* GitHubContributions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubContributions.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,16 +101,10 @@
 		777D665B2537A18F001029C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		777D665D2537A18F001029C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		779B0F05253F8DA40046B7E1 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		77A722762546572500B6064B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		77A7227B2546572500B6064B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = es; path = es.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
-		77A7227C2546572500B6064B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		77A7227D2546572500B6064B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		77A7227E2546572500B6064B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = es; path = es.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		77A722DB2546620600B6064B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/GitHubContributionsWidget.intentdefinition; sourceTree = "<group>"; };
 		77A73F232C67BB6C000CA518 /* ContributionsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsStorage.swift; sourceTree = "<group>"; };
 		77B39CB725CF59B000B5D0B8 /* ContributionsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionsListViewModel.swift; sourceTree = "<group>"; };
 		77B39CC125CF5ACF00B5D0B8 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
-		77BD1E992540EDDF00830186 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		77BD1E9F2540EF0800830186 /* SettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRow.swift; sourceTree = "<group>"; };
 		77BD1EA52540EF4300830186 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
 		77BD1EAB2540EFB500830186 /* NetworkKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkKitExtensions.swift; sourceTree = "<group>"; };
@@ -289,9 +275,8 @@
 			isa = PBXGroup;
 			children = (
 				777D65F325379A27001029C4 /* Assets.xcassets */,
-				77BD1E9A2540EDDF00830186 /* Localizable.strings */,
-				7761A76D2544A256000871E3 /* Localizable.stringsdict */,
-				7761A7742544A259000871E3 /* InfoPlist.strings */,
+				774E5BDC2FA5F45B00AADE79 /* Localizable.xcstrings */,
+				774E5BE02FA5F45B00AADE79 /* InfoPlist.xcstrings */,
 				777D65F825379A27001029C4 /* Info.plist */,
 			);
 			name = Resources;
@@ -301,8 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				777D665B2537A18F001029C4 /* Assets.xcassets */,
-				7761A75F2544A24C000871E3 /* Localizable.strings */,
-				7761A7662544A24F000871E3 /* Localizable.stringsdict */,
+				774E5BDE2FA5F45B00AADE79 /* Localizable.xcstrings */,
 				77A722DC2546620600B6064B /* GitHubContributionsWidget.intentdefinition */,
 				777D665D2537A18F001029C4 /* Info.plist */,
 			);
@@ -414,10 +398,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				777D65F725379A27001029C4 /* Preview Assets.xcassets in Resources */,
-				7761A76B2544A256000871E3 /* Localizable.stringsdict in Resources */,
-				77BD1E982540EDDF00830186 /* Localizable.strings in Resources */,
+				774E5BE12FA5F45B00AADE79 /* InfoPlist.xcstrings in Resources */,
+				774E5BDD2FA5F45B00AADE79 /* Localizable.xcstrings in Resources */,
 				777D65F425379A27001029C4 /* Assets.xcassets in Resources */,
-				7761A7722544A259000871E3 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,8 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				777D665C2537A18F001029C4 /* Assets.xcassets in Resources */,
-				7761A75D2544A24C000871E3 /* Localizable.strings in Resources */,
-				7761A7642544A24F000871E3 /* Localizable.stringsdict in Resources */,
+				774E5BDF2FA5F45B00AADE79 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,46 +468,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7761A75F2544A24C000871E3 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7761A75E2544A24C000871E3 /* en */,
-				77A7227D2546572500B6064B /* es */,
-				1CC490D62819102200C3EC87 /* ja */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		7761A7662544A24F000871E3 /* Localizable.stringsdict */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7761A7652544A24F000871E3 /* en */,
-				77A7227E2546572500B6064B /* es */,
-				1CC490D72819102200C3EC87 /* ja */,
-			);
-			name = Localizable.stringsdict;
-			sourceTree = "<group>";
-		};
-		7761A76D2544A256000871E3 /* Localizable.stringsdict */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7761A76C2544A256000871E3 /* en */,
-				77A7227B2546572500B6064B /* es */,
-				1CC490D42819102200C3EC87 /* ja */,
-			);
-			name = Localizable.stringsdict;
-			sourceTree = "<group>";
-		};
-		7761A7742544A259000871E3 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7761A7732544A259000871E3 /* en */,
-				77A7227C2546572500B6064B /* es */,
-				1CC490D52819102200C3EC87 /* ja */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		77A722DC2546620600B6064B /* GitHubContributionsWidget.intentdefinition */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -534,16 +476,6 @@
 				1CC490D22819102200C3EC87 /* ja */,
 			);
 			name = GitHubContributionsWidget.intentdefinition;
-			sourceTree = "<group>";
-		};
-		77BD1E9A2540EDDF00830186 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				77BD1E992540EDDF00830186 /* en */,
-				77A722762546572500B6064B /* es */,
-				1CC490D32819102200C3EC87 /* ja */,
-			);
-			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -605,12 +537,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 6.0;
 			};
@@ -666,11 +600,13 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 6.0;
 				VALIDATE_PRODUCT = YES;
